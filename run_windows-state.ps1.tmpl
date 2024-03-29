@@ -17,7 +17,7 @@
 
 # Winget setup
 $basePath = $env:USERPROFILE\.winget_configure
-Get-ChildItem $basePath -Filter *.dsc.yml |
+Get-ChildItem -Path $basePath -Recurse -Filter *.dsc.yml |
 Foreach-Object {
     winget configuration -f $_.FullName --disable-interactivity --accept-configuration-agreements
     # winget configuration -f $env:USERPROFILE\.win-setup\winget_dsc\winget_settings.yaml --disable-interactivity
