@@ -1,12 +1,6 @@
 {{- if eq .chezmoi.os "windows" }}
 # we want to ensure the state every time we run chezmoi apply.
 
-# TODO: figure out how to bootstrap on windows
-# winget install --id=twpayne.chezmoi --accept-package-agreements --accept-source-agreements
-# # Initialize dotfiles manager
-# $chezmoiPath = "$env:USERPROFILE\AppData\Local\Microsoft\WinGet\Links\chezmoi.exe"
-# & $chezmoiPath init
-
 # https://petri.com/how-to-manage-windows-update-using-powershell/
 # TODO: elevate script / see if we can use dsc
     # TODO: (run_once)
