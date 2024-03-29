@@ -183,7 +183,7 @@ properties:
         Ensure: Present
         RestartExplorer: true # Required to apply changes
   ### WINDOWS UPDATE
-  - resource: xWindowsUpdate/xHotfix
+  - resource: xWindowsUpdate/xWindowsUpdateAgent
     directives:
       allowPrerelease: true
     settings:
