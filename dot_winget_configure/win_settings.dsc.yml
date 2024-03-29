@@ -8,6 +8,13 @@
 properties:
   configurationVersion: 0.2.0
   resources:
+  - resource: CommonTasks/ComputerSettings
+    ComputerSettings:
+      Name: desktop
+      Description: This is my windows computer.
+      # TimeZone: Fiji Standard Time
+      AllowRemoteDesktop: true
+      RemoteDesktopUserAuthentication: Secure
   - resource: ComputerManagementDsc/PSResourceRepository
     id: PSResourceRepository
     directives:
@@ -55,7 +62,7 @@ properties:
       description: Set computer settings
     settings:
       IsSingleInstance: "Yes"
-      Name: "localhost"
+      Name: "desktop"
       Description: "This is my windows computer."
   - resource: ComputerManagementDsc/VirtualMemory
     id: Computer
