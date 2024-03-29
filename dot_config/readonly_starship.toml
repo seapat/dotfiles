@@ -1,0 +1,17 @@
+continuation_prompt = "▶▶ "
+format = "$all"
+right_format = "$memory$time"
+[character]
+error_symbol = "[▶](red)"
+success_symbol = "[▶](purple)"
+
+[memory_usage]
+disabled = false
+format = " [${ram}( | ${swap})]($style) "
+
+[shell]
+disabled = false
+unknown_indicator = "?"
+
+[time]
+disabled = false

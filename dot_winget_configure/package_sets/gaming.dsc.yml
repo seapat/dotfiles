@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: "0.2.0"
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: "Installs Heroic Games Launcher"
+        allowPrerelease: true
+      settings:
+        id: "HeroicGamesLauncher.HeroicGamesLauncher"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: "Installs Steam"
+        allowPrerelease: true
+      settings:
+        id: "Valve.Steam"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: "Installs My Games (allods)"
+        allowPrerelease: true
+      settings:
+        id: "MyGames.GameCenter"
+        source: winget
+# 
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: "Installs League Of Legends (EUW)"
+        allowPrerelease: true
+      settings:
+        id: "RiotGames.LeagueOfLegends.EUW"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: "Installs Blitz (for LoL)"
+        allowPrerelease: true
+      settings:
+        id: "Blitz.Blitz"
+        source: winget

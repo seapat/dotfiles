@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: "Installs PowerShell 7-x64"
+        allowPrerelease: true
+      settings:
+        id: "Microsoft.PowerShell"
+        source: winget
+    - resource: PowerShellModule/PSModuleResource
+      id: psmpsca
+      directives:
+        description: Install psmodule PSScriptAnalyzer
+      settings:
+        module_name: PSScriptAnalyzer
+# TODO setup powershell profile
+    - resource: PowerShellModule/PSModuleResource
+    # TODO:  https://gist.github.com/markwragg/6301bfcd56ce86c3de2bd7e2f09a8839
+    # Import-Module Terminal-Icons
+      id: psmterminalicons
+      directives:
+        description: Install psmodule Terminal-Icons
+      settings:
+        module_name: Terminal-Icons
+    - resource: PowerShellModule/PSModuleResource
+      # colorizes list views like ls
+      id: psmchilditemcolour 
+      directives:
+        description: Install psmodule Get-ChildItemColor
+      settings:
+        module_name: Get-ChildItemColor

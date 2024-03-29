@@ -1,0 +1,26 @@
+{{- if eq .chezmoi.os "windows" }}
+# we want to ensure the state every time we run chezmoi apply.
+
+# TODO: figure out how to bootstrap on windows
+# winget install --id=twpayne.chezmoi --accept-package-agreements --accept-source-agreements
+# # Initialize dotfiles manager
+# $chezmoiPath = "$env:USERPROFILE\AppData\Local\Microsoft\WinGet\Links\chezmoi.exe"
+# & $chezmoiPath init
+
+# https://petri.com/how-to-manage-windows-update-using-powershell/
+# TODO: elevate script / see if we can use dsc
+    # TODO: (run_once)
+    # Install-Module -Name PSWindowsUpdate -Force # install module 
+    # Add-WUServiceManager -MicrosoftUpdate # allow updates of installed software
+# Get-WindowsUpdate -AcceptAll # Check for updates
+# Install-WindowsUpdate -MicrosoftUpdate -acceptEula -AcceptAll | Out-File "\\dc1\logs\($env.computername-Get-Date -f yyyy-MM-dd)-PSWindowsUpdate.log" -Force # install all cumulative updates
+
+# Winget setup
+$basePath = $env:USERPROFILE\.winget_configure
+Get-ChildItem $basePath -Filter *.dsc.yml |
+Foreach-Object {
+    winget configuration -f $_.FullName --disable-interactivity --accept-configuration-agreements
+    # winget configuration -f $env:USERPROFILE\.win-setup\winget_dsc\winget_settings.yaml --disable-interactivity
+}
+# Chocolatey installations
+choco install $env:USERPROFILE\.win-setup\chocolatey.config

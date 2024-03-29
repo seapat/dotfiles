@@ -1,0 +1,240 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+# Interesting DSC
+# https://github.com/dsccommunity/ComputerManagementDsc/wiki/ScheduledTask
+# https://github.com/dsccommunity/ComputerManagementDsc/wiki/SmbShare
+# https://github.com/dsccommunity/ComputerManagementDsc/wiki/WindowsCapability
+# https://github.com/dsccommunity/NetworkingDsc/wiki/HostsFile
+properties:
+  configurationVersion: 0.2.0
+  resources:
+  - resource: ComputerManagementDsc/PSResourceRepository
+    id: PSResourceRepository
+    directives:
+      allowPrerelease: true
+      description: 'Register PSGallery PSRepository'
+    settings:
+      Name: 'PSGallery'
+      Ensure: 'Present'
+      Default: '$true'    
+  - resource: ComputerManagementDsc/RemoteDesktopAdmin
+    id: RemoteDesktopAdmin
+    directives:
+      allowPrerelease: true
+      description: 'RemoteDesktopSettings'
+    settings:
+      IsSingleInstance: 'yes'
+      Ensure: 'Present'
+      UserAuthentication: 'Secure'
+
+  - resource: ComputerManagementDsc/WindowsEventLog
+    id: WindowsEventLogApp
+    directives:
+      allowPrerelease: true
+      description: 'WindowsEventLog Application'
+    settings:
+      LogName: 'Application'
+      IsEnabled: '$false'
+      LogMode: 'Circular'
+      MaximumSizeInBytes: '4096MB'
+  - resource: ComputerManagementDsc/WindowsEventLog
+    id: WindowsEventLogApp
+    directives:
+      allowPrerelease: true
+      description: 'WindowsEventLog Application'
+    settings:
+      LogName: 'System'
+      IsEnabled: '$false'
+      # LogMode: 'Circular'
+      # MaximumSizeInBytes: '4096MB'
+
+  - resource: ComputerManagementDsc/Computer
+    id: Computer
+    directives:
+      allowPrerelease: true
+      description: Set computer settings
+    settings:
+      IsSingleInstance: "Yes"
+      Name: "localhost"
+      Description: "This is my windows computer."
+  - resource: ComputerManagementDsc/VirtualMemory
+    id: Computer
+    directives:
+      allowPrerelease: true
+      description: Set Computer
+    settings:
+      Drive: 'C'
+      Type: 'SystemManagedSize' #'CustomSize'
+      # InitialSize: '2048'
+      # MaximumSize: '2048'
+      Description: "This is my windows computer."
+
+  - resource: ComputerManagementDsc/IEEnhancedSecurityConfiguration
+    id: IE_sec_admin
+    directives:
+      allowPrerelease: true
+      description: disable IE security
+    settings:
+      Role: "Administrators"
+      Enabled: false
+      SuppressRestart: true
+  - resource: ComputerManagementDsc/IEEnhancedSecurityConfiguration
+    id: IE_sec_user
+    directives:
+      allowPrerelease: true
+      description: disable IE security
+    settings:
+      Role: "Users"
+      Enabled: false
+      SuppressRestart: true
+
+  # - resource: ComputerManagementDsc/PendingReboot
+  #   id: pending_reboot
+  #   directives:
+  #     allowPrerelease: true
+  #     description: disable reboots triggered by dsc
+  #   settings:
+  - resource: ComputerManagementDsc/PowerPlan
+    id: pending_reboot
+    directives:
+      allowPrerelease: true
+      description: change power plan
+    settings:
+      IsSingleInstance: "Yes"
+      Name: "High performance"
+
+  - resource: ComputerManagementDsc/PowerShellExecutionPolicy
+    id: pending_reboot
+    directives:
+      allowPrerelease: true
+    settings:
+      ExecutionPolicyScope: "CurrentUser"
+      ExecutionPolicy: "RemoteSigned"
+  - resource: ComputerManagementDsc/PowerShellExecutionPolicy
+    id: pending_reboot
+    directives:
+      allowPrerelease: true
+    settings:
+      ExecutionPolicyScope: "LocalMachine"
+      ExecutionPolicy: "RemoteSigned"
+
+  - resource: ComputerManagementDsc/SystemLocale
+    id: system_locale
+    directives:
+      allowPrerelease: true
+      description: Set system Locale
+    settings:
+      IsSingleInstance: "Yes"
+      SystemLocale: 'en-GB'
+  # - resource: ComputerManagementDsc/TimeZone
+  #   id: TimeZone
+  #   directives:
+  #     allowPrerelease: true
+  #     description: Set TimeZone
+  #   settings:
+  #     IsSingleInstance: "Yes"
+  #     TimeZone: '' # TODO
+
+  - resource: ComputerManagementDsc/UserAccountControl
+    id: uac
+    directives:
+      allowPrerelease: true
+      description: Set UserAccountControl
+    settings:
+      IsSingleInstance: "Yes"
+      NotificationLevel: 'AlwaysNotifyAndAskForCredentials' # Cant be active with below
+      # ConsentPromptBehaviorAdmin: 1
+      # EnableLUA: 1
+      # PromptOnSecureDesktop: 0 # disable dimming
+      # ConsentPromptBehaviorUser: 1
+### WINDOWS DEVELOPER MODE - https://www.powershellgallery.com/packages/Microsoft.Windows.Developer/0.2.1-alpha
+    - resource: Microsoft.Windows.Developer/DeveloperMode
+      id: Enable
+      directives:
+        description: Enable Developer Mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+
+    - resource: Microsoft.Windows.Developer/ShowSecondsInClock
+      directives:
+        description: Show seconds in clock
+        allowPrerelease: true
+      settings:
+        Ensure: Absent
+    - resource: Microsoft.Windows.Developer/UserAccessControl
+      directives:
+        description: Show seconds in clock
+        allowPrerelease: true
+      settings:
+        AdminConsentPromptBehavior: RequireConsentForNonWindowsBinaries
+    - resource: Microsoft.Windows.Developer/ShowTaskViewButton
+      directives:
+        description: Show task view button
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+
+    - resource: Microsoft.Windows.Developer/EnableDarkMode
+      directives:
+        description: Enable dark mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+        RestartExplorer: true # Required to apply changes
+  ### WINDOWS UPDATE
+  - resource: xWindowsUpdate/xHotfix
+    directives:
+      allowPrerelease: true
+    settings:
+      IsSingleInstance: 'Yes'
+      UpdateNow: false # Required to apply changes
+      Category: 
+        - 'Optional'
+        - 'Important'
+        - 'Security'
+      Notifications: 'ScheduledInstallation'
+      Source: 'MicrosoftUpdate'
+
+
+  # https://github.com/microsoft/winget-cli/issues/3348
+    # - resource: PSDscResources/WindowsOptionalFeature
+    #   directives:
+    #     description: Enable Hyper-V Feature
+    #   settings :
+    #     Name : Microsoft-Hyper-V
+    #     Ensure: Present
+    #     NoWindowsUpdateCheck: true
+    #     LogPath: "c:\hyper-v.log.txt"
+    #  - resource: PSDscResources/WindowsOptionalFeature
+    #    directives:
+    #      description: Enable Hyper-V Feature
+    #    settings :
+    #      Name : Microsoft-Hyper-V
+    #      Ensure: Present
+    #  - resource: PSDscResources/WindowsOptionalFeature
+    #    directives:
+    #      description: Enable Virtual Machine platform feature
+    #      # https://pureinfotech.com/hyperv-virtual-machine-platform-windows-hypervisor-platform/
+    #    settings:
+    #      Name : VirtualMachinePlatform
+    #      Ensure: Present
+    #  - resource: PSDscResources/WindowsOptionalFeature
+    #    id: wsl
+    #    directives:
+    #      description: Enable WSL feature
+    #    settings:
+    #      Name : Microsoft-Windows-Subsystem-Linux
+    #      Ensure: Present
+    #  - resource: PSDscResources/WindowsOptionalFeature
+    #    directives:
+    #      description: Enable Windows Containers feature
+    #    settings:
+    #      Name : Containers
+    #      Ensure: Present
+    #  - resource: PSDscResources/WindowsOptionalFeature
+    #    directives:
+    #      description: Enable Windows Sandbox feature
+    #    settings:
+    #      Name : Containers-DisposableClientVM
+    #      Ensure: Present
