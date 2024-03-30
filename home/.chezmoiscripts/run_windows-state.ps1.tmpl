@@ -1,13 +1,14 @@
 {{- if eq .chezmoi.os "windows" }}
 # we want to ensure the state every time we run chezmoi apply.
 
-# https://petri.com/how-to-manage-windows-update-using-powershell/
-# TODO: elevate script / see if we can use dsc
-    # TODO: (run_once)
-    # Install-Module -Name PSWindowsUpdate -Force # install module 
-    # Add-WUServiceManager -MicrosoftUpdate # allow updates of installed software
-# Get-WindowsUpdate -AcceptAll # Check for updates
-# Install-WindowsUpdate -MicrosoftUpdate -acceptEula -AcceptAll | Out-File "\\dc1\logs\($env.computername-Get-Date -f yyyy-MM-dd)-PSWindowsUpdate.log" -Force # install all cumulative updates
+# Self-elevate the script if required
+if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
+  if ([int](Get-CimInstance -Class Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber) -ge 6000) {
+    $CommandLine = "-NoExit -File `"" + $MyInvocation.MyCommand.Path + "`" " + $MyInvocation.UnboundArguments
+    Start-Process -Wait -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine
+    Exit
+  }
+}
 
 # Winget setup
 $basePath = $env:USERPROFILE\.winget_configure

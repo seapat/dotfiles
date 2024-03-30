@@ -1,0 +1,56 @@
+{
+  "defaultSettings": {
+    "checkUpdatesInterval": 10,
+    "enableUpdates": false,
+    "addDesktopShortcuts": false,
+    "addStartMenuShortcuts": false,
+    "autoInstallDxvk": true,
+    "autoInstallVkd3d": true,
+    "autoInstallDxvkNvapi": false,
+    "addSteamShortcuts": false,
+    "preferSystemLibs": false,
+    "checkForUpdatesOnStartup": false,
+    "autoUpdateGames": false,
+    "customWinePaths": [],
+    "defaultInstallPath": "/media/tera/Heroic",
+    "libraryTopSection": "disabled",
+    "defaultSteamPath": "/home/sean/.steam/steam",
+    "defaultWinePrefix": "/home/sean/Games/Heroic/Prefixes/default",
+    "hideChangelogsOnStartup": false,
+    "language": "en",
+    "maxWorkers": 0,
+    "minimizeOnLaunch": false,
+    "nvidiaPrime": false,
+    "enviromentOptions": [],
+    "wrapperOptions": [],
+    "showFps": false,
+    "useGameMode": false,
+    "userInfo": {
+      "epicId": "c4831dbfa7124deabd845556c54650ab",
+      "name": "sean"
+    },
+    "wineCrossoverBottle": "Heroic",
+    "winePrefix": "/home/sean/Games/Heroic/Prefixes",
+    "wineVersion": {
+      "bin": "/home/sean/.config/heroic/tools/wine/Wine-GE-Proton8-24/bin/wine",
+      "name": "Wine - Wine-GE-Proton8-24",
+      "type": "wine",
+      "lib": "/home/sean/.config/heroic/tools/wine/Wine-GE-Proton8-24/lib64",
+      "lib32": "/home/sean/.config/heroic/tools/wine/Wine-GE-Proton8-24/lib",
+      "wineserver": "/home/sean/.config/heroic/tools/wine/Wine-GE-Proton8-24/bin/wineserver"
+    },
+    "enableEsync": true,
+    "enableFsync": true,
+    "framelessWindow": true,
+    "exitToTray": true,
+    "disableLogs": false,
+    "experimentalFeatures": {
+      "enableNewShinyFeature": false,
+      "enableNewDesign": true
+    },
+    "altLegendaryBin": "",
+    "eacRuntime": false,
+    "downloadNoHttps": false
+  },
+  "version": "v0"
+}
