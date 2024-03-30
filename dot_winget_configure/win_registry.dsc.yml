@@ -28,6 +28,15 @@ properties:
         ValueType: DWord
         ValueData: 0
         Force: true
+    - resource: PSDscResources/Registry
+      directives:
+        description: enable support for long paths
+      settings:
+        Key: HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem
+        ValueName: LongPathsEnabled
+        ValueType: DWord
+        ValueData: 1
+        Force: true
 
     # THEME
     # - resource: PSDscResources/Registry
