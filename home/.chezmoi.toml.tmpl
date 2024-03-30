@@ -28,7 +28,10 @@
 {{-   $cpuThreads = (output "powershell.exe" "-NoProfile" "-NonInteractive" "-Command" "(Get-CimInstance -ClassName 'Win32_Processor').NumberOfLogicalProcessors") | trim | atoi }}
 {{- end }}
 
+encryption = "age"
+
 [data]
+    username = "seapat"
     email = {{ $email | quote }}
     chassisType = {{ $chassisType | quote }}
     cores = {{ $cpuCores }}
@@ -38,4 +41,7 @@
     autoPush = true
 [diff]
     exclude = ["scripts"]
-
+[age]
+    # identity = "/home/user/key.txt"
+    # recipient = "age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p"
+    passphrase = true
