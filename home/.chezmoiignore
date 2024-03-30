@@ -1,2 +1,12 @@
 README.md
-settings.json
+.symlinked/**/*
+
+# Ignore dirs / files specific to other operating systems
+{{ if ne .chezmoi.os "windows" }}
+Appdata/
+Roaming/
+.winget_configure/
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+.config/bottom/readonly_bottom.toml
+{{ end }}

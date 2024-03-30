@@ -29,7 +29,12 @@
 {{- end }}
 
 encryption = "age"
+mode = "file" # symlink mode does not work for encrypted or private files, can be buggy
+progress = true
 
+[add]
+    secrets = "error" # "warning"
+    templateSymlinks = false # ??
 [data]
     username = "seapat"
     email = {{ $email | quote }}
@@ -44,4 +49,4 @@ encryption = "age"
 [age]
     identity = "~/.ssh/id_ed25519"
     symmetric = true
-    # passphrase = true
+    passphrase = false 
