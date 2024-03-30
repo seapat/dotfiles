@@ -2,39 +2,84 @@
 properties:
   configurationVersion: "0.2.0"
   resources:
+# LAUNCHERS
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs Heroic Games Launcher"
         allowPrerelease: true
       settings:
         id: "HeroicGamesLauncher.HeroicGamesLauncher"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs Steam"
         allowPrerelease: true
       settings:
         id: "Valve.Steam"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs My Games (allods)"
         allowPrerelease: true
       settings:
         id: "MyGames.GameCenter"
         source: winget
-# 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs League Of Legends (EUW)"
+        allowPrerelease: true
+      settings:
+        id: "ElectronicArts.EADesktop"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "Ubisoft.Connect"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "CloudImperiumGames.RSILauncher"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "ItchIo.Itch"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "Playnite.Playnite"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "HumbleBundle.HumbleApp"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "Google.PlayGames.Beta"
+        source: winget
+# TOOLS
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
         allowPrerelease: true
       settings:
         id: "RiotGames.LeagueOfLegends.EUW"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs Blitz (for LoL)"
         allowPrerelease: true
       settings:
         id: "Blitz.Blitz"
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "KristenMcWilliam.Nyrna"
+        source: winget
+    

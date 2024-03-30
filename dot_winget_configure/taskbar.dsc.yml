@@ -22,30 +22,26 @@ properties:
         Force: true
     # - resource: Microsoft.Windows.Developer/ShowTaskViewButton
     #   directives:
-    #     description: Show task view button
     #     allowPrerelease: true
     #   settings:
     #     Ensure: Absent
-  - resource: Microsoft.Windows.Developer/TaskBarAlignment
-    directives:
-        description: Set taskbar alignment to left
-        allowPrerelease: true
-      settings:
-        Alignment: Middle # 'Left'
-    - resource: Microsoft.Windows.Developer/HideTaskBarLabels
+    # - resource: Microsoft.Windows.Developer/TaskBarAlignment
+    #   directives:
+    #       allowPrerelease: true
+    #     settings:
+    #       Alignment: Middle # 'Left'
+    #   - resource: Microsoft.Windows.Developer/HideTaskBarLabels
+    #     directives:
+    #       allowPrerelease: true
+    #     settings:
+    #       HideLabels: Always # 'WhenFull', 'Never'
+    #       RestartExplorer: true # Required to apply changes
+    - resource: Microsoft.Windows.Developer/Taskbar
       directives:
-        description: Never hide task bar labels
-        allowPrerelease: true
-      settings:
-        HideLabels: Always # 'WhenFull', 'Never'
-        RestartExplorer: true # Required to apply changes
-  - resource: Microsoft.Windows.Developer/Taskbar
-    directives:
-        description: Configure Taskbar
-        allowPrerelease: true
-      settings:
-        Alignment: Middle # 'Left'
-        HideLabelsMode: Always # WhenFull Never
-        SearchBoxMode: ShowIconOnly # Hide SearchBox ShowIconAndLabel
-        TaskViewButton: Show # Hide
-        WidgetsButton: Show # Hide
+          allowPrerelease: true
+        settings:
+          Alignment: Middle # 'Left'
+          HideLabelsMode: Always # WhenFull Never
+          SearchBoxMode: ShowIconOnly # Hide SearchBox ShowIconAndLabel
+          TaskViewButton: Show # Hide
+          WidgetsButton: Show # Hide

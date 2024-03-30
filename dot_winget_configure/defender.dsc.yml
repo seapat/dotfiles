@@ -4,9 +4,8 @@ properties:
   configurationVersion: 0.2.0
   resources:
   - resource: WindowsDefender/WindowsDefender
-    directives:
-      description: configure Defender
-      allowPrerelease: true
+    # directives:
+    #   allowPrerelease: true
     settings:
     # REFERENCE: WindowsDefender 1.0.0.4 - DSCResources/MSFT_WindowsDefender/MSFT_WindowsDefender.schema.mof
     # https://www.powershellgallery.com/packages/WindowsDefender/1.0.0.4

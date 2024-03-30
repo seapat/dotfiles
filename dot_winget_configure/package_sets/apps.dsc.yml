@@ -1,47 +1,40 @@
 # yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
 
-# TODO: Consistency: id and description fields
 properties:
   configurationVersion: "0.2.0"
   resources:
     # - resource: Microsoft.WinGet.DSC/WinGetPackage
     #   directives:
-    #     description: "Installs Discord"
     #     allowPrerelease: true
     #   settings:
     #     id: "Discord.Discord"
     #     source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Dorion
         allowPrerelease: true
       settings:
         id: SpikeHD.Dorion
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Vesktop
         allowPrerelease: true
       settings:
         id: Vencord.Vesktop
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs Spicetify"
         allowPrerelease: true
       settings:
         id: "Spicetify.Spicetify"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs SumatraPDF"
         allowPrerelease: true
       settings:
         id: "SumatraPDF.SumatraPDF"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs Wezterm"
         allowPrerelease: true
       settings:
         id: "wez.wezterm"
@@ -49,14 +42,12 @@ properties:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Bitwarden
       directives:
-        description: Install Bitwarden
         allowPrerelease: true
       settings:
         id: Bitwarden.Bitwarden
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Microsoft Teams
         allowPrerelease: true
       settings:
         id: Microsoft.Teams
@@ -78,35 +69,30 @@ properties:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: obsStudio
       directives:
-        description: Install OBS Studio
         allowPrerelease: true
       settings:
         id: OBSProject.OBSStudio
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Brave
         allowPrerelease: true
       settings:
         id: Brave.Brave
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Thunderbird
         allowPrerelease: true
       settings:
         id: Mozilla.Thunderbird
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install LibreOffice
         allowPrerelease: true
       settings:
         id: TheDocumentFoundation.LibreOffice
         source: winget
     # - resource: Microsoft.WinGet.DSC/WinGetPackage
     #   directives:
-    #     description: Install Nvidia Broadcast
     #     allowPrerelease: true
     #   settings:
     #     id: Nvidia.Broadcast

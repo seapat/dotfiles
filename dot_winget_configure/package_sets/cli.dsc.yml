@@ -5,77 +5,66 @@ properties:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
     # todo: https://github.com/ajeetdsouza/zoxide
       directives:
-        description: Install zoxide
         allowPrerelease: true
       settings:
         id: ajeetdsouza.zoxide
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs chezmoi"
         allowPrerelease: true
       settings:
         id: "twpayne.chezmoi"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs Chocolatey (Install Only)"
         allowPrerelease: true
       settings:
         id: "Chocolatey.Chocolatey"
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Starship
         allowPrerelease: true
       settings:
         id: Starship.Starship
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install tre-command
         allowPrerelease: true
       settings:
         id: ca.duan.tre-command
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install fd
         allowPrerelease: true
       settings:
         id: sharkdp.fd
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install bat
         allowPrerelease: true
       settings:
         id: sharkdp.bat
         source: winget
       - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install fzf
         allowPrerelease: true
       settings:
         id: junegunn.fzf
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install gsudo v2.4.1-fixnoninteractive
         allowPrerelease: true
       settings:
         id: gerardog.gsudo
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install RipGrep MSVC
         allowPrerelease: true
       settings:
         id: BurntSushi.ripgrep.MSVC
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Bottom
         allowPrerelease: true
       settings:
         id: Clement.bottom

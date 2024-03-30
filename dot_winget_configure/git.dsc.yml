@@ -7,26 +7,22 @@
 properties:
   resources:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Git
       directives:
-        description: Install Git
         allowPrerelease: true
       settings:
         id: Git.Git
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: Install Git LFS version 3.4.0
         allowPrerelease: true
       settings:
         id: GitHub.GitLFS
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
-        description: "Installs Github CLI"
         allowPrerelease: true
       settings:
-        id: "GitHub.cli"
+        id: GitHub.cli
         source: winget
 #### Repos
     - resource: GitDsc/GitClone
