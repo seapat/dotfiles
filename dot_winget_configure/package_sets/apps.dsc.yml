@@ -77,12 +77,6 @@ properties:
       directives:
         allowPrerelease: true
       settings:
-        id: Brave.Brave
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        allowPrerelease: true
-      settings:
         id: Mozilla.Thunderbird
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -90,6 +84,18 @@ properties:
         allowPrerelease: true
       settings:
         id: TheDocumentFoundation.LibreOffice
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: Brave.Brave
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: Mozilla.Firefox
         source: winget
     # - resource: Microsoft.WinGet.DSC/WinGetPackage
     #   directives:
