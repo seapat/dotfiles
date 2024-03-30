@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.os "windows" -}}
+AppData/Roaming # %appdata%
+{{- else -}}
+.config
+{{- end -}}
