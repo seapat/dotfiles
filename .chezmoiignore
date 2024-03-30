@@ -9,4 +9,6 @@ Roaming/
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/bottom/readonly_bottom.toml
+.config/BraveSoftware/
+.config/mpv/
 {{ end }}
