@@ -1,0 +1,6 @@
+{{- if eq .chezmoi.os "windows" }}
+
+# scoop.json hash: {{ include "scoop.json" | sha256sum }}
+scoop import {{.chezmoi.sourceDir}}/scoop.json
+
+{{ end -}}

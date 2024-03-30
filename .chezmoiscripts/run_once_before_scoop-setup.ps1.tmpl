@@ -1,0 +1,11 @@
+{{- if eq .chezmoi.os "windows" }}
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+
+scoop import {{.chezmoi.sourceDir}}/scoop.json
+
+# Hack to include files in comments and detect changes
+{{ include "scoop.json"| comment "# " }}
+
+{{ end -}}
