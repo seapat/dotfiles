@@ -1,0 +1,77 @@
+repositories:
+  windows:
+    scoop:
+      extras: https://github.com/ScoopInstaller/Extras
+      games: https://github.com/Calinou/scoop-games
+      main: https://github.com/ScoopInstaller/Main
+      nerd-fonts: https://github.com/matthewjberger/scoop-nerd-fonts
+      versions: https://github.com/ScoopInstaller/Versions
+packages:
+  windows:
+    winget:
+      - GNU.Wget2
+    scoop:
+      # - zig-dev
+      # - 7zip
+      # - age
+      # - aria2
+      # - beekeeper-studio
+      # - blender
+      # - Cascadia-Code
+      # - chezmoi
+      # - cmake
+      # - cutter
+      # - dnspyex
+      # - docker
+      # - erdtree
+      # - everything
+      # - fd
+      # - FiraCode-NF
+      # - FiraCode
+      # - FiraCode-NF-Mono
+      # - ghidra
+      # - fzf
+      # - git
+      # - gitleaks
+      # - gitui
+      # - godot-mono
+      # - graphviz
+      # - grep
+      # - Hack-NF-Mono
+      # - Hack-NF
+      # - hcloud
+      # - IntelOneMono-NF
+      # - kind
+      # - lazygit
+      # - lua
+      # - luarocks
+      # - marp
+      # - rustup
+      # - scoop-search
+      # - starship
+      # - sudo
+      # - tokei
+      # - vcpkg
+      - wget
+      # - youtube-music
+      # - yt-dlp
+      # - x64dbg
+      # - zoxide
+      # - go
+      # - powertoys
+      # - pulumi
+      # - pwsh
+      # - opentofu
+      # - ripgrep
+      # - miktex
+      # - nerdctl
+      # - nvm
+      # - helm
+      # - gzip
+      # - mingw
+      # - make
+      # - unzip
+      # - minikube
+      # - kubectl
+      # - autohotkey
+      # - vcpkg

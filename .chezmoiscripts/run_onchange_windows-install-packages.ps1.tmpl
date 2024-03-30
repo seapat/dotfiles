@@ -1,0 +1,20 @@
+{{ if eq .chezmoi.os "windows" -}}
+    {{ if ( or (.repositories.windows.scoop) (len .packages.windows.scoop gt 0)) -}}
+
+        if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){
+
+            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+            Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+        }
+        
+        {{  range $key, $value := .repositories.windows.scoop -}}
+        scoop bucket add {{ $key | quote}} {{ $value | quote}}
+    {{ end -}}
+
+    scoop install {{ range .packages.windows.scoop -}} {{ . | quote }} {{ end -}} {{ end -}}
+
+    {{ if (len .packages.windows.winget gt 0) -}}
+       winget install -e --disable-interactivity {{ range .packages.windows.winget -}} {{ . | quote }} {{ end -}} {{ end -}} 
+    {{ end -}}
+
+{{ end -}}
