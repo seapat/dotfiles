@@ -7,5 +7,8 @@
   ],
   "OnlineStatus": 0,
   "PasswordFormat": 1,
-  "SteamLogin": "kleinsean777 "
+  "SteamLogin": "kleinsean777",
+  "BotBehaviour": 0,
+  "TradingPreferences": 1,
+  "RemoteCommunication": 2
 }

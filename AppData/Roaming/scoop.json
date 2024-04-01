@@ -1,0 +1,96 @@
+{
+    "buckets": [
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2024-04-01T14:33:25+02:00",
+            "Manifests": 1999
+        },
+        {
+            "Name": "games",
+            "Source": "https://github.com/Calinou/scoop-games",
+            "Updated": "2024-04-01T14:30:26+02:00",
+            "Manifests": 298
+        },
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main.git",
+            "Updated": "2024-04-01T15:11:52+02:00",
+            "Manifests": 1310
+        },
+        {
+            "Name": "nerd-fonts",
+            "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
+            "Updated": "2024-04-01T09:17:00+02:00",
+            "Manifests": 327
+        },
+        {
+            "Name": "versions",
+            "Source": "https://github.com/ScoopInstaller/Versions",
+            "Updated": "2024-04-01T14:45:58+02:00",
+            "Manifests": 445
+        }
+    ],
+    "apps": [
+        {
+            "Updated": "2024-04-01T17:25:02.9700326+02:00",
+            "Version": "23.01",
+            "Name": "7zip",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2024-04-01T17:25:04.7107712+02:00",
+            "Version": "v22.01-v1.5.5-R3",
+            "Name": "7zip-zstd",
+            "Info": "",
+            "Source": "versions"
+        },
+        {
+            "Updated": "2024-04-01T09:34:24.3707052+02:00",
+            "Version": "6.0.0.3",
+            "Name": "archisteamfarm",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2024-04-01T09:34:24.7300955+02:00",
+            "Version": "2024-03-11",
+            "Name": "cacert",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2024-04-01T17:25:06.0444565+02:00",
+            "Version": "3.14",
+            "Name": "dark",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2024-04-01T17:25:07.1474054+02:00",
+            "Version": "0.50",
+            "Name": "innounp",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2024-04-01T15:28:40.0143153+02:00",
+            "Version": "1.4.1",
+            "Name": "scoop-search",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2024-04-01T09:34:26.3736194+02:00",
+            "Version": "1.21.4",
+            "Name": "wget",
+            "Info": "",
+            "Source": "main"
+        }
+    ],
+    "config": {
+        "scoop_branch": "master",
+        "scoop_repo": "https://github.com/ScoopInstaller/Scoop"
+    }
+}

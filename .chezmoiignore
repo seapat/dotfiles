@@ -11,4 +11,5 @@ Roaming/
 .config/bottom/readonly_bottom.toml
 .config/BraveSoftware/
 .config/mpv/
+.config/Code/
 {{ end }}

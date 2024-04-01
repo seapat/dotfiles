@@ -25,6 +25,11 @@ packages = [
     "powershell-beautifier",
     "terminal-icons",
 
+    # CLI
+    "clink",
+    "clink-completions",
+    "clink-flex-prompt"
+
 ]
 
 [winget]

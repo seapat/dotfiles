@@ -11,11 +11,17 @@ winget install chezmoi
 chezmoi init --apply seapat
 ```
 
+## How Packages are managed
+
+### Powershell commands
+
+The powershell profile contains a function that precedes `winget` (not `winget.exe`). When `winget install`, `winget uninstall` or `winget update` is run, the `winget export` command inst invoked and `winget.json` in the users Home directory is updated. `Chezmoi` symlinks this file, hence it is directly edited in the chezmoi directory.
+`scoop` ( -> `.scoop.json`) and `chocolatey` () are treated in the same manner.
+
 ## TODO
 
 - [ ] Nixos WSL
 - [ ] Finish MPV setup
-- [ ] Spicetify
 - [ ] scoop
 - [ ] Windows Optional Features (dependencies, hyper-v, wsl)
 - [ ] Windows Group policies
