@@ -28,27 +28,34 @@ if (Get-Command starship -errorAction SilentlyContinue) {
   Invoke-Expression (&starship init powershell)
 }
 
-# TODO: put Start-job inside block of If chneck
 function winget {
-    Invoke-Command -ScriptBlock { winget.exe $args } -ArgumentList $args
+    Invoke-Command -ArgumentList $args -ScriptBlock { winget.exe $args }
 
     # not excluding export, so that the auto export is equivalent to the one that was generated manually
-    If (-Not ($args -match "install|add|uninstall|remove|rm|update|upgrade")) {Return}
-    Start-Job -ScriptBlock { winget.exe export -o $env:APPDATA\winget.json --include-versions --disable-interactivity } | Out-Null
+    If (-Not ($args -match "install|add|uninstall|remove|rm|update|upgrade")) {
+      Start-Job -ScriptBlock { winget.exe export -o $env:APPDATA\winget.json --include-versions --disable-interactivity } | Out-Null
+    }
 }
 
 function scoop {
-    Invoke-Command -ScriptBlock { scoop.cmd $args } -ArgumentList $args
+    Invoke-Command -ArgumentList $args -ScriptBlock { scoop.cmd $args }
 
     # not excluding export, so that the auto export is equivalent to the one that was generated manually
-    If (-Not ($args -match "install|uninstall|update")) {Return}
-    Start-Job -ScriptBlock { scoop.cmd export -c > $env:APPDATA\scoop.json } | Out-Null
+    If ($args -match "install|uninstall|update") {
+      Start-Job -ScriptBlock { scoop.cmd export -c > $env:APPDATA\scoop.json } | Out-Null
+    }
 }
 
 function choco {
-    Invoke-Command -ScriptBlock { choco.exe $args } -ArgumentList $args
-
     # not excluding export, so that the auto export is equivalent to the one that was generated manually
-    If (-Not ($args -match "install|uninstall|upgrade")) {Return}
-    Start-Job -ScriptBlock { choco.exe export -o $env:APPDATA\choco.xml --include-version-numbers } | Out-Null
+    If ($args -match "install|uninstall|upgrade") {
+
+      # Choco wants elevation, but there is no nice way to capture the output in parent window... elevate it yourself
+      echo "running install elevated as demanded by chocolatey"
+      Start-Process choco.exe -Verb RunAs -Wait -ArgumentList $args
+
+      Start-Job -ScriptBlock { choco.exe export -o $env:APPDATA\choco.xml --include-version-numbers } | Out-Null
+    } else {
+      Invoke-Command -ScriptBlock { choco.exe $args } -ArgumentList $args
+    }
 }
