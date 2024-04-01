@@ -59,3 +59,13 @@ properties:
         ValueType: String
         Ensure: present
         Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Enable Print Button for Screenshots
+      settings:
+        Key: 'HKCU:\Control Panel\Keyboard'
+        ValueName: 'PrintScreenKeyForSnippingEnabled '
+        ValueData: 0
+        ValueType: DWord
+        Ensure: present
+        Force: true
