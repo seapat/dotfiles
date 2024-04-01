@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: LocaleName
+        ValueData: 'en-150'
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: Locale
+        ValueData: '00000C00'
+        Ensure: present
+        Force: true
+
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sShortDate 
+        ValueData: 'dd/MM/yyyy'
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sLongDate
+        ValueData: 'dddd, d MMMM yyyy'
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sShortTime 
+        ValueData: 'HH:mm'
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sTimeFormat 
+        ValueData: 'HH:mm:ss'
+        Ensure: present
+        Force: true
+
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: iFirstDayOfWeek 
+        ValueData: '0'
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: iDigits 
+        ValueData: '2'
+        Ensure: present
+        Force: true
+
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sYearMonth
+        ValueData: 'MMMM yyyy'
+        Ensure: present
+        Force: true
+
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sDate
+        ValueData: '/'
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sDecimal
+        ValueData: '.'
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sThousand
+        ValueData: ','
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      settings:
+        Key: 'HKEY_CURRENT_USER\Control Panel\International'
+        ValueName: sTime
+        ValueData: ':'
+        Ensure: present
+        Force: true

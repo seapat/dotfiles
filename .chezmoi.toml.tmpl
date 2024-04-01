@@ -28,6 +28,7 @@
 {{-   $cpuThreads = (output "powershell.exe" "-NoProfile" "-NonInteractive" "-Command" "(Get-CimInstance -ClassName 'Win32_Processor').NumberOfLogicalProcessors") | trim | atoi }}
 {{- end }}
 
+# sourceDir = "$HOME/.chezmoi"
 encryption = "age"
 mode = "file" # symlink mode does not work for encrypted or private files, can be buggy
 progress = true

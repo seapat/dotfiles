@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+# YOU NEED TO CHANGE THE USER TO DESKTOP-<ID>/USERNAME IN TASK SCHEDULER !!!
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    - resource: ComputerManagementDsc/ScheduledTask
+      settings:
+        Ensure: 'Present'
+        Enable: false
+        TaskName: 'SwitchToLightMode'
+        TaskPath: '\MyTasks'
+        Description: 'Switch to Light mode on timer'
+        ActionExecutable: '%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe'
+        ActionArguments: 'New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 1 -Type Dword -Force'
+        #  DOES NOT WORK CURRENTLY New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 1 -Type Dword -Force;
+        ScheduleType: Daily
+        RestartInterval: '00:01:00'
+        RestartCount: 3
+        StartTime: '07:00:00'
+        StartWhenAvailable: true
+
+    - resource: ComputerManagementDsc/ScheduledTask
+      settings:
+        Ensure: 'Present'
+        Enable: false
+        TaskName: 'SwitchToDarkMode'
+        TaskPath: '\MyTasks'
+        Description: 'Switch to Dark mode on timer'
+        ActionExecutable: '%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe'
+        ActionArguments: 'New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0 -Type Dword -Force'
+        #  DOES NOT WORK CURRENTLY New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force;
+        ScheduleType: Daily
+        RestartInterval: '00:01:00'
+        RestartCount: 3
+        StartTime: '18:00:00'
+        StartWhenAvailable: true

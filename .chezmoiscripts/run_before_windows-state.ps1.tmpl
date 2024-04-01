@@ -1,6 +1,8 @@
 {{- if eq .chezmoi.os "windows" }}
 # we want to ensure the state every time we run chezmoi apply.
 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 # Self-elevate the script if required
 if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
   if ([int](Get-CimInstance -Class Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber) -ge 6000) {
@@ -11,11 +13,17 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 # Winget setup
-$basePath = $env:USERPROFILE\.winget_configure
+$basePath = "$($env:USERPROFILE)\.winget_configure"
 Get-ChildItem -Path $basePath -Recurse -Filter *.dsc.yml |
 Foreach-Object {
-    winget configuration -f $_.FullName --disable-interactivity --accept-configuration-agreements
-    # winget configuration -f $env:USERPROFILE\.win-setup\winget_dsc\winget_settings.yaml --disable-interactivity
+    winget configure -f $_.FullName --disable-interactivity --accept-configuration-agreements
+    # winget configure -f $env:USERPROFILE\.win-setup\winget_dsc\winget_settings.yaml --disable-interactivity
 }
+
+# move Tray Icons from collapse-arrow to taskbar
+$basePath = 'HKCU:\Control Panel\NotifyIconSettings\'
+Get-ChildItem -Path $basePath | `
+    ForEach-Object { Get-ItemProperty "$basePath$($_.PSChildName)" } | `
+    Set-ItemProperty -Name 'IsPromoted' -Value 1
 
 {{ end }}

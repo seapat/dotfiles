@@ -9,11 +9,6 @@ properties:
       settings:
         id: "DEVCOM.JetBrainsMonoNerdFont"
         source: winget
-    - resource: Chocolatey/ChocolateyPackage
-      directives:
-      settings:
-        Ensure: 'Present'
-        Name: ukinternationalkeyboard
 # UTILS
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
@@ -37,43 +32,48 @@ properties:
       directives:
         allowPrerelease: true
       settings:
+        id: Microsoft.PowerToys
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id:  Microsoft.Sysinternals.ProcessExplorer
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: TechPowerUp.NVCleanstall
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "Armin2208.WindowsAutoNightMode"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
         id: voidtools.Everything
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         allowPrerelease: true
       settings:
-        id: Microsoft.PowerToys
-        source: winget 
+        id: Olivia.VIA
+        source: winget
+### WM
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         allowPrerelease: true
       settings:
-        id: File-New-Project.EarTrumpet
-        source: winget 
-  - resource: Microsoft.WinGet.DSC/WinGetPackage
-    directives:
-      allowPrerelease: true
-    settings:
-      id:  Microsoft.Sysinternals.ProcessExplorer
-      source: winget
-  - resource: Chocolatey/ChocolateyPackage
-    directives:
-    settings:
-      Name: systeminformer
-      Ensure: Present
-      Version: nightlybuilds
-
-### WM
-  - resource: Microsoft.WinGet.DSC/WinGetPackage
-    directives:
-      allowPrerelease: true
-    settings:
-      id: LGUG2Z.whkd
-      source: winget  
-  - resource: Microsoft.WinGet.DSC/WinGetPackage
-    directives:
-      allowPrerelease: true
-    settings:
-      id: LGUG2Z.komorebi
-      source: winget
+        id: LGUG2Z.whkd
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: LGUG2Z.komorebi
+        source: winget

@@ -1,0 +1,11 @@
+Enabled: false
+Component:
+  Scripts:
+  - Name: cmd example
+    Command: cmd
+    WorkingDirectory: C:\Users\seapat\AppData\Roaming\AutoDarkMode
+    ArgsLight: [/c, echo I am a light command]
+    ArgsDark: [/c, echo I am a dark command]
+    AllowedSources: [Any]
+    TimeoutMillis: 
+

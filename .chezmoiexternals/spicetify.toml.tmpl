@@ -1,4 +1,5 @@
 # https://github.com/Evangelospro/dotfiles/blob/485e479fd1196599d2c2b36c6fea355487f075b2/dot_local/bin/executable_update-spicetify#L4
+
 ["{{- template "os.tmpl" . -}}/spicetify/Themes/Dracula"]
     type = "archive"
     url = "https://github.com/dracula/spicetify/archive/master.zip"
@@ -13,3 +14,18 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/adblock.js"]
+    # https://github.com/CharlieS1103/spicetify-extensions/tree/main/adblock
+    type = "file"
+    url = "https://raw.githubusercontent.com/CharlieS1103/spicetify-extensions/main/adblock/adblock.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Themes/"]
+    type = "archive"
+    url = "https://github.com/spicetify/spicetify-themes/archive/master.zip"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+    include = ["*/**"]
+    exclude = ["*/.github", "*/_Extra", "*.md", "*/*.md", "*/text", "LICENSE", "manifest.json", ".gitignore"]

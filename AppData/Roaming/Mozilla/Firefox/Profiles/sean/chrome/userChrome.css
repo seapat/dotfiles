@@ -1,0 +1,11 @@
+#sidebar-header {
+    padding: 1px 5px !important;
+}
+
+#TabsToolbar {
+    display: none;
+}
+
+.titlebar-buttonbox-container, .titlebar-spacer, #firefox-view-button {
+    display: none;
+}

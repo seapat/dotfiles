@@ -7,9 +7,8 @@ The main intention of this repo is to configure windows in a declarative manager
 Note: not tested yet
 
 ```powershell
-$GITHUB_USERNAME = seapat
-iex "&{$(irm 'https://get.chezmoi.io/ps1')} init --apply $GITHUB_USERNAME" 
-rm chezmoi
+winget install chezmoi
+chezmoi init --apply seapat
 ```
 
 ## TODO
@@ -18,3 +17,7 @@ rm chezmoi
 - [ ] Finish MPV setup
 - [ ] Spicetify
 - [ ] scoop
+- [ ] Windows Optional Features (dependencies, hyper-v, wsl)
+- [ ] Windows Group policies
+    - [ ] Brave / Chromium extensions
+- [ ] us altgr-intl keyboard layout

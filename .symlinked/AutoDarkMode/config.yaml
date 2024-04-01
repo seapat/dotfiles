@@ -1,0 +1,118 @@
+AutoThemeSwitchingEnabled: true
+Governor: Default
+Autostart:
+  Validate: true
+WindowsThemeMode:
+  Enabled: false
+  DarkThemePath: 
+  LightThemePath: 
+  MonitorActiveTheme: false
+  ApplyFlags: []
+AppsSwitch:
+  Enabled: true
+  Component:
+    Mode: Switch
+SystemSwitch:
+  Enabled: true
+  Component:
+    Mode: Switch
+    TaskbarSwitchDelay: 1200
+    TaskbarColorOnAdaptive: false
+    TaskbarColorWhenNonAdaptive: Light
+    DWMPrevalenceSwitch: false
+    DWMPrevalenceEnableTheme: Light
+TouchKeyboardSwitch:
+  Enabled: false
+  Component: {}
+ColorizationSwitch:
+  Enabled: false
+  Component:
+    LightHex: ''
+    DarkHex: ''
+    LightAutoColorization: false
+    DarkAutoColorization: false
+ColorFilterSwitch:
+  Enabled: false
+  Component: {}
+OfficeSwitch:
+  Enabled: false
+  Component:
+    Mode: Switch
+    LightTheme: 0
+    DarkTheme: 4
+CursorSwitch:
+  Enabled: false
+  Component:
+    CursorsLight: 
+    CursorsDark: 
+Sunrise: 2024-03-31T07:00:00.0000000
+Sunset: 2024-03-31T20:00:00.0000000
+Location:
+  PollingCooldownTimeSpan: 1.00:00:00
+  Enabled: true
+  UseGeolocatorService: false
+  SunsetOffsetMin: -30
+  SunriseOffsetMin: -30
+  CustomLat: 48
+  CustomLon: 9.0999999999999996
+Tunable:
+  BatterySliderDefaultValue: 25
+  DisableEnergySaverOnThemeSwitch: false
+  UseLogonTask: false
+  Debug: false
+  Trace: false
+  DebugTimerMessage: false
+  ShowTrayIcon: true
+  AlwaysFullDwmRefresh: true
+  UICulture: en
+GPUMonitoring:
+  Enabled: true
+  Threshold: 30
+  Samples: 1
+ProcessBlockList:
+  ProcessNames: []
+  Enabled: false
+Events:
+  DarkThemeOnBattery: false
+  Win10AllowLockscreenSwitch: false
+Notifications:
+  OnAutoThemeSwitching: true
+  OnSkipNextSwitch: true
+AutoSwitchNotify:
+  Enabled: true
+  GracePeriodMinutes: 3
+Hotkeys:
+  Enabled: true
+  ForceLight: 
+  ForceDark: 
+  NoForce: 
+  ToggleTheme: Ctrl + Alt + T
+  TogglePostpone: 
+  ToggleAutoThemeSwitch: 
+IdleChecker:
+  Enabled: false
+  Threshold: 5
+WallpaperSwitch:
+  Enabled: false
+  Component:
+    TypeLight: Individual
+    TypeDark: Individual
+    Position: Fill
+    GlobalWallpaper:
+      Light: 
+      Dark: 
+    SolidColors:
+      Light: '#FFFFFF'
+      Dark: '#000000'
+    Monitors: []
+Updater:
+  AutoInstall: false
+  Enabled: false
+  Silent: false
+  DaysBetweenUpdateCheck: 7
+  CheckOnStart: false
+  VersionQueryUrl: 
+  DownloadBaseUrl: 
+  ZipCustomUrl: 
+  HashCustomUrl: 
+

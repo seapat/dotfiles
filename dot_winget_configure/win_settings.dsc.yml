@@ -8,128 +8,103 @@
 properties:
   configurationVersion: 0.2.0
   resources:
-  - resource: CommonTasks/ComputerSettings
-    settings:
-      ComputerSettings:
-        Name: desktop
-        Description: This is my windows computer.
-        # TimeZone: Fiji Standard Time
-        AllowRemoteDesktop: true
-        RemoteDesktopUserAuthentication: Secure
-  - resource: ComputerManagementDsc/PSResourceRepository
-    directives:
-      allowPrerelease: true
-    settings:
-      Name: 'PSGallery'
-      Ensure: 'Present'
-      Default: '$true'    
-  - resource: ComputerManagementDsc/RemoteDesktopAdmin
-    directives:
-      allowPrerelease: true
-    settings:
-      IsSingleInstance: 'yes'
-      Ensure: 'Present'
-      UserAuthentication: 'Secure'
+  ## The resource 'ComputerSettings' implemented as 'Composite' is not supported by Invoke-DscResource. ##
+    # - resource: CommonTasks/ComputerSettings
+    #   settings:
+    #     ComputerSettings:
+    #       Name: desktop
+    #       Description: This is my windows computer.
+    #       # TimeZone: Fiji Standard Time
+    #       AllowRemoteDesktop: true
+    #       RemoteDesktopUserAuthentication: Secure
+    - resource: ComputerManagementDsc/RemoteDesktopAdmin
+      directives:
+        allowPrerelease: true
+      settings:
+        IsSingleInstance: "yes"
+        Ensure: "Present"
+        UserAuthentication: "Secure"
 
-  - resource: ComputerManagementDsc/WindowsEventLog
-    directives:
-      allowPrerelease: true
-    settings:
-      LogName: 'Application'
-      IsEnabled: '$false'
-      LogMode: 'Circular'
-      MaximumSizeInBytes: '4096MB'
-  - resource: ComputerManagementDsc/WindowsEventLog
-    directives:
-      allowPrerelease: true
-    settings:
-      LogName: 'System'
-      IsEnabled: '$false'
-      # LogMode: 'Circular'
-      # MaximumSizeInBytes: '4096MB'
+    - resource: ComputerManagementDsc/Computer
+      directives:
+        allowPrerelease: true
+      settings:
+        Name: Desktop-123
+        Description: "This is my windows computer."
+        Options: JoinWithNewName
+    - resource: ComputerManagementDsc/VirtualMemory
+      directives:
+        allowPrerelease: true
+      settings:
+        Drive: "C"
+        Type: "SystemManagedSize" #'CustomSize'
+        # InitialSize: '2048'
+        # MaximumSize: '2048'
 
-  - resource: ComputerManagementDsc/Computer
-    directives:
-      allowPrerelease: true
-    settings:
-      IsSingleInstance: "Yes"
-      Name: "desktop"
-      Description: "This is my windows computer."
-  - resource: ComputerManagementDsc/VirtualMemory
-    directives:
-      allowPrerelease: true
-    settings:
-      Drive: 'C'
-      Type: 'SystemManagedSize' #'CustomSize'
-      # InitialSize: '2048'
-      # MaximumSize: '2048'
-      Description: "This is my windows computer."
+    - resource: ComputerManagementDsc/IEEnhancedSecurityConfiguration
+      directives:
+        allowPrerelease: true
+      settings:
+        Role: "Administrators"
+        Enabled: false
+        SuppressRestart: true
+    - resource: ComputerManagementDsc/IEEnhancedSecurityConfiguration
+      directives:
+        allowPrerelease: true
+      settings:
+        Role: "Users"
+        Enabled: false
+        SuppressRestart: true
 
-  - resource: ComputerManagementDsc/IEEnhancedSecurityConfiguration
-    directives:
-      allowPrerelease: true
-    settings:
-      Role: "Administrators"
-      Enabled: false
-      SuppressRestart: true
-  - resource: ComputerManagementDsc/IEEnhancedSecurityConfiguration
-    directives:
-      allowPrerelease: true
-    settings:
-      Role: "Users"
-      Enabled: false
-      SuppressRestart: true
+    # - resource: ComputerManagementDsc/PendingReboot
+    #   directives:
+    #     allowPrerelease: true
+    #   settings:
+    - resource: ComputerManagementDsc/PowerPlan
+      directives:
+        allowPrerelease: true
+      settings:
+        IsSingleInstance: "Yes"
+        Name: "High performance"
 
-  # - resource: ComputerManagementDsc/PendingReboot
-  #   directives:
-  #     allowPrerelease: true
-  #   settings:
-  - resource: ComputerManagementDsc/PowerPlan
-    directives:
-      allowPrerelease: true
-    settings:
-      IsSingleInstance: "Yes"
-      Name: "High performance"
+    # FIXME: This needs sudo
+    - resource: ComputerManagementDsc/PowerShellExecutionPolicy
+      directives:
+        allowPrerelease: true
+      settings:
+        ExecutionPolicyScope: "CurrentUser"
+        ExecutionPolicy: "RemoteSigned"
+    - resource: ComputerManagementDsc/PowerShellExecutionPolicy
+      directives:
+        allowPrerelease: true
+      settings:
+        ExecutionPolicyScope: "LocalMachine"
+        ExecutionPolicy: "RemoteSigned"
 
-  - resource: ComputerManagementDsc/PowerShellExecutionPolicy
-    directives:
-      allowPrerelease: true
-    settings:
-      ExecutionPolicyScope: "CurrentUser"
-      ExecutionPolicy: "RemoteSigned"
-  - resource: ComputerManagementDsc/PowerShellExecutionPolicy
-    directives:
-      allowPrerelease: true
-    settings:
-      ExecutionPolicyScope: "LocalMachine"
-      ExecutionPolicy: "RemoteSigned"
-
-  - resource: ComputerManagementDsc/SystemLocale
-    directives:
-      allowPrerelease: true
-    settings:
-      IsSingleInstance: "Yes"
-      SystemLocale: 'en-GB'
-  # - resource: ComputerManagementDsc/TimeZone
-  #   id: TimeZone
-  #   directives:
-  #     allowPrerelease: true
-  #   settings:
-  #     IsSingleInstance: "Yes"
-  #     TimeZone: '' # TODO
-
-  - resource: ComputerManagementDsc/UserAccountControl
-    directives:
-      allowPrerelease: true
-      description: Set UserAccountControl
-    settings:
-      IsSingleInstance: "Yes"
-      NotificationLevel: 'AlwaysNotifyAndAskForCredentials' # Cant be active with below
-      # ConsentPromptBehaviorAdmin: 1
-      # EnableLUA: 1
-      # PromptOnSecureDesktop: 0 # disable dimming
-      # ConsentPromptBehaviorUser: 1
-### WINDOWS DEVELOPER MODE - https://www.powershellgallery.com/packages/Microsoft.Windows.Developer/0.2.1-alpha
+    - resource: ComputerManagementDsc/SystemLocale
+      directives:
+        allowPrerelease: true
+      settings:
+        IsSingleInstance: "Yes"
+        SystemLocale: "en-GB"
+    - resource: ComputerManagementDsc/TimeZone
+      id: TimeZone
+      directives:
+        allowPrerelease: true
+      settings:
+        IsSingleInstance: "Yes"
+        TimeZone: 'W. Europe Standard Time'
+    - resource: ComputerManagementDsc/UserAccountControl
+      directives:
+        allowPrerelease: true
+      settings:
+        IsSingleInstance: "Yes"
+        NotificationLevel: "AlwaysNotifyAndAskForCredentials" # Cant be active with below
+        # ConsentPromptBehaviorAdmin: 1
+        # EnableLUA: 1
+        # PromptOnSecureDesktop: 0 # disable dimming
+        # ConsentPromptBehaviorUser: 1
+      # WINDOWS DEVELOPER MODE - https://www.powershellgallery.com/packages/Microsoft.Windows.Developer/0.2.1-alpha
     - resource: Microsoft.Windows.Developer/DeveloperMode
       directives:
         allowPrerelease: true
@@ -146,65 +121,52 @@ properties:
         allowPrerelease: true
       settings:
         AdminConsentPromptBehavior: RequireConsentForNonWindowsBinaries
-    - resource: Microsoft.Windows.Developer/ShowTaskViewButton
+      ### WINDOWS UPDATE
+    - resource: xWindowsUpdate/xWindowsUpdateAgent
       directives:
         allowPrerelease: true
       settings:
-        Ensure: Present
-
-    - resource: Microsoft.Windows.Developer/EnableDarkMode
+        IsSingleInstance: "Yes"
+        UpdateNow: false # Required to apply changes
+        Category:
+          - "Optional"
+          - "Important"
+          - "Security"
+        Notifications: "ScheduledInstallation"
+        Source: "MicrosoftUpdate"
+    ### WINGET CONFIG
+    - resource: Microsoft.WinGet.DSC/WinGetPackageManager
       directives:
         allowPrerelease: true
       settings:
-        Ensure: Present
-        RestartExplorer: true # Required to apply changes
-  ### WINDOWS UPDATE
-  - resource: xWindowsUpdate/xWindowsUpdateAgent
-    directives:
-      allowPrerelease: true
-    settings:
-      IsSingleInstance: 'Yes'
-      UpdateNow: false # Required to apply changes
-      Category: 
-        - 'Optional'
-        - 'Important'
-        - 'Security'
-      Notifications: 'ScheduledInstallation'
-      Source: 'MicrosoftUpdate'
-### WINGET CONFIG
-  - resource: Microsoft.WinGet.DSC/WinGetPackageManager
-    directives:
-      allowPrerelease: true
-    settings:
-      UseLatest: true
-
+        UseLatest: true
 
   # https://github.com/microsoft/winget-cli/issues/3348
-    # - resource: PSDscResources/WindowsOptionalFeature
-    #   directives:
-    #   settings :
-    #     Name : Microsoft-Hyper-V
-    #     Ensure: Present
-    #     NoWindowsUpdateCheck: true
-    #     LogPath: "c:\hyper-v.log.txt"
-    #  - resource: PSDscResources/WindowsOptionalFeature
-    #    directives:
-    #    settings :
-    #      Name : Microsoft-Hyper-V
-    #      Ensure: Present
-    #  - resource: PSDscResources/WindowsOptionalFeature
-    #    directives:
-    #      # https://pureinfotech.com/hyperv-virtual-machine-platform-windows-hypervisor-platform/
-    #    settings:
-    #      Name : VirtualMachinePlatform
-    #      Ensure: Present
-    #  - resource: PSDscResources/WindowsOptionalFeature
-    #    directives:
-    #    settings:
-    #      Name : Microsoft-Windows-Subsystem-Linux
-    #      Ensure: Present
-    #  - resource: PSDscResources/WindowsOptionalFeature
-    #    directives:
-    #    settings:
-    #      Name : Containers
-    #      Ensure: Present
+  # - resource: PSDscResources/WindowsOptionalFeature
+  #   directives:
+  #   settings :
+  #     Name : Microsoft-Hyper-V
+  #     Ensure: Present
+  #     NoWindowsUpdateCheck: true
+  #     LogPath: "c:\hyper-v.log.txt"
+  #  - resource: PSDscResources/WindowsOptionalFeature
+  #    directives:
+  #    settings :
+  #      Name : Microsoft-Hyper-V
+  #      Ensure: Present
+  #  - resource: PSDscResources/WindowsOptionalFeature
+  #    directives:
+  #      # https://pureinfotech.com/hyperv-virtual-machine-platform-windows-hypervisor-platform/
+  #    settings:
+  #      Name : VirtualMachinePlatform
+  #      Ensure: Present
+  #  - resource: PSDscResources/WindowsOptionalFeature
+  #    directives:
+  #    settings:
+  #      Name : Microsoft-Windows-Subsystem-Linux
+  #      Ensure: Present
+  #  - resource: PSDscResources/WindowsOptionalFeature
+  #    directives:
+  #    settings:
+  #      Name : Containers
+  #      Ensure: Present

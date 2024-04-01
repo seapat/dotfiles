@@ -1,0 +1,32 @@
+{
+    "$schema": "https://aka.ms/winget-settings.schema.json",
+
+    // For documentation on these settings, see: https://aka.ms/winget-settings
+    "source": {
+        // only update sources every  60 min and only on command execution
+       "autoUpdateIntervalInMinutes": 60
+    },
+    "visual": {
+        "progressBar": "rainbow" // retro
+    },
+    "installBehavior": {
+        "disableInstallNotes": false,
+        // "portablePackageUserRoot": "~/Winget/Packages/Portable",
+        // "portablePackageMachineRoot": "C:/Program Files/Packages/Portable"
+        "preferences": {
+            "scope": "user",
+            "locale": [ "en-US", "en-US", "de-DE" ]
+        }
+    },
+    "uninstallBehavior": {
+        "purgePortablePackage": true // we manage files with chezmoi
+    },
+    "interactivity": {
+        "disable": true
+    },
+    "experimentalFeatures": {
+        "directMSI": true,
+        "resume": true,
+        "sideBySide": true
+    }
+}

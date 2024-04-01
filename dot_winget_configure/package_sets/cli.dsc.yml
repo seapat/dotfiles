@@ -13,13 +13,7 @@ properties:
       directives:
         allowPrerelease: true
       settings:
-        id: "twpayne.chezmoi"
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        allowPrerelease: true
-      settings:
-        id: "Chocolatey.Chocolatey"
+        id: twpayne.chezmoi
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
@@ -45,7 +39,7 @@ properties:
       settings:
         id: sharkdp.bat
         source: winget
-      - resource: Microsoft.WinGet.DSC/WinGetPackage
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         allowPrerelease: true
       settings:

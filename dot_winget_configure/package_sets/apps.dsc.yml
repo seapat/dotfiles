@@ -27,12 +27,7 @@ properties:
       settings:
         id: Vencord.Vesktop
         source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      directives:
-        allowPrerelease: true
-      settings:
-        id: "Spicetify.Spicetify"
-        source: winget
+
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         allowPrerelease: true
@@ -66,11 +61,10 @@ properties:
         id: Zoom.Zoom
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: winget_WhatsApp.WhatsApp
       directives:
         allowPrerelease: true
       settings:
-        id: WhatsApp.WhatsApp
+        id: AmanHarwara.Altus
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: obsStudio
@@ -97,15 +91,32 @@ properties:
       settings:
         id: Brave.Brave
         source: winget
+## Firefox
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         allowPrerelease: true
       settings:
         id: Mozilla.Firefox
         source: winget
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   directives:
-    #     allowPrerelease: true
-    #   settings:
-    #     id: Nvidia.Broadcast
-    #     source: winget
+    - resource: DSCR_Shortcut/cShortcut
+      settings:
+        Path             : 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\firefox-profiles.lnk'
+        Target           : 'C:\Program Files\Mozilla Firefox\firefox.exe'
+        Arguments        : '-p'
+        WindowStyle      : 'normal'
+        # WorkingDirectory : 'C:\work'
+        Description      : 'Shortcut for Firefox Profiles Manager'
+        Icon             : 'shell32.dll,277'
+## Spotify
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "Spicetify.Spicetify"
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        allowPrerelease: true
+      settings:
+        id: "Spotify.Spotify"
+        source: winget

@@ -2,7 +2,25 @@
 properties:
   configurationVersion: 0.2.0
   resources:
-    - resource: PSDscResources/Registry
+    # - resource: xPSDesiredStateConfiguration/xRegistry 
+    #   directives:
+    #     description: Taskbar colored by accent color
+    #   settings:
+    #     Key: HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize
+    #     ValueName: ColorPrevalence
+    #     ValueType: DWord
+    #     ValueData: 1
+    #     Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Turn off transparency
+      settings:
+        Key: HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize
+        ValueName: EnableTransparency
+        ValueType: DWord
+        ValueData: 0
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
       directives:
         description: Hide TaskView button on TaskBar
       settings:
@@ -11,7 +29,7 @@ properties:
         ValueType: DWord
         ValueData: 1
         Force: true
-    - resource: PSDscResources/Registry
+    - resource: xPSDesiredStateConfiguration/xRegistry 
       directives:
         description: Turn off Search box on Taskbar
       settings:
@@ -20,28 +38,21 @@ properties:
         ValueType: DWord
         ValueData: 0
         Force: true
-    # - resource: Microsoft.Windows.Developer/ShowTaskViewButton
-    #   directives:
-    #     allowPrerelease: true
-    #   settings:
-    #     Ensure: Absent
-    # - resource: Microsoft.Windows.Developer/TaskBarAlignment
-    #   directives:
-    #       allowPrerelease: true
-    #     settings:
-    #       Alignment: Middle # 'Left'
-    #   - resource: Microsoft.Windows.Developer/HideTaskBarLabels
-    #     directives:
-    #       allowPrerelease: true
-    #     settings:
-    #       HideLabels: Always # 'WhenFull', 'Never'
-    #       RestartExplorer: true # Required to apply changes
     - resource: Microsoft.Windows.Developer/Taskbar
       directives:
           allowPrerelease: true
-        settings:
-          Alignment: Middle # 'Left'
-          HideLabelsMode: Always # WhenFull Never
-          SearchBoxMode: ShowIconOnly # Hide SearchBox ShowIconAndLabel
-          TaskViewButton: Show # Hide
-          WidgetsButton: Show # Hide
+      settings:
+        Alignment: Left # 'Middle'
+        HideLabelsMode: Always # WhenFull Never
+        SearchBoxMode: ShowIconOnly # Hide SearchBox ShowIconAndLabel
+        TaskViewButton: Show # Hide
+        WidgetsButton: Hide # Show
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Turn off bing web search
+      settings:
+        Key: HKCU:\Software\Microsoft\Windows\CurrentVersion\Search
+        ValueName: BingSearchEnabled
+        ValueType: DWord
+        ValueData: 0
+        Force: true

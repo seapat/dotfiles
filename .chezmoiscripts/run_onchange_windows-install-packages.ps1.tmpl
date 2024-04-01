@@ -1,20 +1,45 @@
 {{ if eq .chezmoi.os "windows" -}}
-    {{ if ( or (.repositories.windows.scoop) (len .packages.windows.scoop gt 0)) -}}
 
-        if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){
+### WINDOWS ###
+### Scoop ###
 
-            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-            Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-        }
-        
-        {{  range $key, $value := .repositories.windows.scoop -}}
+{{ if ( or (.scoop.repositories) (gt (len .scoop.packages) 0)) -}}
+
+    # Install scoop if the command is not available
+    if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){
+
+        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+        Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+    }
+    
+    # iterate over scoop packages in .chezmoidata/packages
+    {{ range $key, $value := .scoop.repositories -}}
         scoop bucket add {{ $key | quote}} {{ $value | quote}}
     {{ end -}}
 
-    scoop install {{ range .packages.windows.scoop -}} {{ . | quote }} {{ end -}} {{ end -}}
-
-    {{ if (len .packages.windows.winget gt 0) -}}
-       winget install -e --disable-interactivity {{ range .packages.windows.winget -}} {{ . | quote }} {{ end -}} {{ end -}} 
-    {{ end -}}
-
+    scoop install {{ range .scoop.packages -}} {{ . | quote }} {{ end -}} # {{ end -}}
 {{ end -}}
+
+### Winget ###
+
+{{ if (gt (len .winget.packages) 0) -}}
+{{  	range .winget.packages -}}
+            winget install -e --disable-interactivity {{ . | quote }}
+{{      end -}} 
+{{ end -}}
+
+### DARWIN ###
+### Brew ###
+
+# {{ if eq .chezmoi.os "darwin" -}}
+# #!/bin/bash
+
+# brew bundle --no-lock --file=/dev/stdin <<EOF
+# {{ range darwin.brews.packages. -}}
+# brew {{ . | quote }}
+# {{ end -}}
+# {{ range darwin.casks.packages. -}}
+# cask {{ . | quote }}
+# {{ end -}}
+# EOF
+# {{ end -}}
