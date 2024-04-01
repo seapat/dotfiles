@@ -1,3 +1,3 @@
-{{ range gitHubKeys "seapat" -}}
+{{ range gitHubKeys .username -}}
 {{   .Key }}
 {{ end -}}

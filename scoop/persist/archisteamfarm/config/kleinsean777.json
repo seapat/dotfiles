@@ -1,0 +1,11 @@
+{
+  "AcceptGifts": true,
+  "Enabled": true,
+  "FarmingOrders": [
+    15,
+    10
+  ],
+  "OnlineStatus": 0,
+  "PasswordFormat": 1,
+  "SteamLogin": "kleinsean777 "
+}
