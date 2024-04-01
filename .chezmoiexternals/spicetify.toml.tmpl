@@ -8,9 +8,25 @@
     stripComponents = 2
     refreshPeriod = "168h"
 
+["{{- template "os.tmpl" . -}}/spicetify/Themes/"]
+    type = "archive"
+    url = "https://github.com/spicetify/spicetify-themes/archive/master.zip"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+    include = ["*/**"]
+    exclude = ["*/.github", "*/_Extra", "*.md", "*/*.md", "*/text", "LICENSE", "manifest.json", ".gitignore"]
+
 ["{{- template "os.tmpl" . -}}/spicetify/CustomApps/marketplace"]
     type = "archive"
     url = '{{ gitHubLatestRelease "spicetify/spicetify-marketplace" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/CustomApps/stats"]
+    type = "archive"
+    url = '{{ gitHubLatestRelease "harbassan/spicetify-apps" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
@@ -21,11 +37,24 @@
     url = "https://raw.githubusercontent.com/CharlieS1103/spicetify-extensions/main/adblock/adblock.js"
     refreshPeriod = "168h"
 
-["{{- template "os.tmpl" . -}}/spicetify/Themes/"]
-    type = "archive"
-    url = "https://github.com/spicetify/spicetify-themes/archive/master.zip"
-    exact = true
-    stripComponents = 1
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/featureshuffle.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/CharlieS1103/spicetify-extensions/main/featureshuffle/featureshuffle.js"
     refreshPeriod = "168h"
-    include = ["*/**"]
-    exclude = ["*/.github", "*/_Extra", "*.md", "*/*.md", "*/text", "LICENSE", "manifest.json", ".gitignore"]
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/volumePercentage.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/daksh2k/Spicetify-stuff/master/Extensions/volumePercentage.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/playNext.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/daksh2k/Spicetify-stuff/master/Extensions/playNext.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/savePlaylists.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/daksh2k/Spicetify-stuff/master/Extensions/savePlaylists.js"
+    refreshPeriod = "168h"
+
+
