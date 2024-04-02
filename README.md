@@ -15,15 +15,20 @@ chezmoi init --apply seapat
 
 ### Powershell commands
 
-The powershell profile contains a function that precedes `winget` (not `winget.exe`). When `winget install`, `winget uninstall` or `winget update` is run, the `winget export` command inst invoked and `winget.json` in the users Home directory is updated. `Chezmoi` symlinks this file, hence it is directly edited in the chezmoi directory.
-`scoop` ( -> `.scoop.json`) and `chocolatey` () are treated in the same manner.
+The powershell profile contains a function that precedes `winget` (not `winget.exe`). When relevant commands (`winget install`, `winget uninstall`, `winget update`, ...) are run, the `winget export` command is invoked and `winget.json` in `%AppData%` get's updated. `Chezmoi` symlinks this file, hence it is directly edited in the chezmoi directory.
+`scoop` ( -> `scoop.json`) and `chocolatey` (`choco.xml`) are treated in the same manner. 
+
+> [!NOTE] 
+> We elevate the install process for `choco` via a separate window. Unfortunately, the window auto-closes when done. Refer to the logs if you miss some output.
+<!-- > Since choco prefers to install software as admin, install process is run in a separate window (exporting happens as normal user). This is necessary because the powershell function is not run when using `gsudo`. The consquence is that a separate window opens and automatically closes once the software is installed, making it difficult to read the output. (There is a log file if something goes wrong) -->
 
 ## TODO
 
 - [ ] Nixos WSL
+- [ ] Spicetify command setup, together with respective package updates (winget)
 - [ ] Finish MPV setup
-- [ ] scoop
 - [ ] Windows Optional Features (dependencies, hyper-v, wsl)
 - [ ] Windows Group policies
     - [ ] Brave / Chromium extensions
 - [ ] us altgr-intl keyboard layout
+- [ ] set XDG spec variables to windows equivalents ([ref1](https://github.com/adrg/xdg/blob/master/README.md), [ref2](https://stackoverflow.com/questions/43853548/xdg-basedir-directories-for-windows))

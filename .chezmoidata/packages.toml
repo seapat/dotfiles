@@ -7,28 +7,28 @@ versions = "https://github.com/ScoopInstaller/Versions"
 
 [scoop]
 packages = [
-    "aria2",
-    "7zip",
-    "archisteamfarm",
+    # "aria2",
+    # "7zip",
+    # "archisteamfarm",
 
-    # Ps modules
-    "scoop-completion",
-    "dockercompletion",
-    "z",
-    "zlocation",
-    "psfzf",
-    "winget-ps",
-    "powertab",
-    "posh-git",
-    "lazy-posh-git",
-    "pscolor",
-    "powershell-beautifier",
-    "terminal-icons",
+    # # Ps modules
+    # "scoop-completion",
+    # "dockercompletion",
+    # "z",
+    # "zlocation",
+    # "psfzf",
+    # "winget-ps",
+    # "powertab",
+    # "posh-git",
+    # "lazy-posh-git",
+    # "pscolor",
+    # "powershell-beautifier",
+    # "terminal-icons",
 
-    # CLI
-    "clink",
-    "clink-completions",
-    "clink-flex-prompt"
+    # # CLI
+    # "clink",
+    # "clink-completions",
+    # "clink-flex-prompt"
 
 ]
 

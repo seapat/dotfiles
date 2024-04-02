@@ -8,3 +8,6 @@ Expand-Archive $Destination -DestinationPath "$DownloadDir" -Force
 # Start-Process "$DownloadDir/$Package/altinter_amd64.msi" -Verb Runas  #-ArgumentList '/quiet' 
 # Start-Process "$DownloadDir/$Package/setup.exe" -ArgumentList '/a' -Wait -Verb Runas 
 Start-Process -Verb Runas "$DownloadDir/$Package/setup.exe" #-ArgumentList '/a' 
+
+Remove-Item -Path $Destination
+Remove-Item -Path "$DownloadDir/$Package" -Recurse

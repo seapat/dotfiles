@@ -11,7 +11,7 @@ if (Get-Command starship -errorAction SilentlyContinue) {
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
 Import-Module PSFzf -ArgumentList 'Ctrl+t', 'Ctrl+r'
-Import-Module Terminal-Icons # buggy in windows terminal, works in wezterm
+# Import-Module Terminal-Icons # buggy in windows terminal, works in wezterm
 
 Import-Module posh-git
 $GitPromptSettings.EnablePromptStatus = $false
