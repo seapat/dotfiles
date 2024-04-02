@@ -35,10 +35,10 @@
 # #!/bin/bash
 
 # brew bundle --no-lock --file=/dev/stdin <<EOF
-# {{ range darwin.brews.packages. -}}
+# {{ range .darwin.brews.packages -}}
 # brew {{ . | quote }}
 # {{ end -}}
-# {{ range darwin.casks.packages. -}}
+# {{ range .darwin.casks.packages -}}
 # cask {{ . | quote }}
 # {{ end -}}
 # EOF
