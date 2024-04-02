@@ -1,0 +1,58 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+continuation_prompt = "▶▶ "
+# format = "$all"
+# Use custom format
+format = '''
+[┌───────────────────>](bold green)
+[│](bold green)$all
+[└─>](bold green) '''
+add_newline = false
+
+right_format = "$memory$time"
+
+[character]
+error_symbol = "[▶](red)"
+success_symbol = "[▶](purple)"
+
+[memory_usage]
+disabled = false
+threshold = 50
+format = " [${ram}( | ${swap})]($style) "
+
+[shell]
+disabled = false
+unknown_indicator = "??"
+powershell_indicator = '>_'
+# powershell_indicator = 'pwsh'
+
+[cmd_duration]
+min_time = 500
+format = '[$duration](bold yellow)'
+show_notifications=true
+min_time_to_notify=120_000
+
+[directory]
+truncation_length = 8
+truncation_symbol = '…/'
+home_symbol	= '~' # $HOME
+
+{{ if (and (env "WSL_DISTRO_NAME") (lookPath "starship.exe")) -}}
+[git_status]
+windows_starship = "{{ lookPath "starship.exe" }}"
+{{ end -}}
+
+[hostname]
+disabled = false
+ssh_only = false
+format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
+
+[localip]
+disabled = false
+ssh_only = false
+format = '@[$localipv4](bold red) '
+
+[sudo]
+allow_windows = true
+disabled = false
