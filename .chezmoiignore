@@ -8,7 +8,7 @@ Roaming/
 .winget_configure/
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
-.config/bottom/readonly_bottom.toml
+.config/bottom/bottom.toml
 .config/BraveSoftware/
 .config/mpv/
 .config/Code/
