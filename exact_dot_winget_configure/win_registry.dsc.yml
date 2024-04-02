@@ -6,7 +6,7 @@ properties:
       directives:
         description: Remove Wallpaper
       settings:
-        Key: "HKEY_CURRENT_USER\\Control Panel\\Desktop"
+        Key: HKCU:\Control Panel\Desktop
         ValueName: "WallPaper"
         ValueData: ""
         Ensure: present
@@ -15,9 +15,19 @@ properties:
       directives:
         description: Set Background Colour
       settings:
-        Key: "HKEY_CURRENT_USER\\Control Panel\\Colors"
+        Key: HKCU:\Control Panel\Colors
         ValueName: "Background"
         ValueData: "0 128 128" # windows98 turquoise name:Teal HEX:#008080
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Set Accent Colour
+      settings:
+        Key: HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent
+        ValueName: AccentColor
+        ValueData: "0x008080" # windows98 turquoise name:Teal HEX:#008080
+        ValueType: DWord
         Ensure: present
         Force: true
 
@@ -64,7 +74,17 @@ properties:
         description: Enable Print Button for Screenshots
       settings:
         Key: 'HKCU:\Control Panel\Keyboard'
-        ValueName: 'PrintScreenKeyForSnippingEnabled '
+        ValueName: 'PrintScreenKeyForSnippingEnabled'
+        ValueData: 1
+        ValueType: DWord
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Disable ms-gaming overlay popup
+      settings:
+        Key: 'HKCU:\System\GameConfigStore'
+        ValueName: 'GameDVR_Enabled'
         ValueData: 0
         ValueType: DWord
         Ensure: present
