@@ -1,0 +1,17 @@
+{{- if eq .chezmoi.os "windows" }}
+
+# TODO: add winget install command from file like this
+# winget install WhatsApp --source msstore  --accept-source-agreements --accept-package-agreements
+
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+
+# scoop.json hash: {{ include ".symlinked/scoop.json" | sha256sum }}
+scoop import {{.chezmoi.sourceDir}}/.symlinked/scoop.json
+
+# Hack to include files in comments and detect changes
+{{ include ".symlinked/scoop.json"| comment "# " }}
+
+
+{{ end -}}
