@@ -1,1 +1,0 @@
-{{ include ".chezmoitemplates/powershell/profile.ps1" }}
