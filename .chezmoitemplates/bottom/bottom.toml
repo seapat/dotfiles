@@ -16,7 +16,7 @@ unnormalized_cpu = false
 
 [processes]
 # Pick which columns you want to use in any order.
-columns = ["cpu%", "mem%", "pid", "name", "read", "write", "tread", "twrite", "state", "user", "time", "gmem%", "gpu%"]
+columns = ["cpu%", "mem%", "pid", "name", "read", "write", "tread", "twrite", "state", "user", "time"]
 
 [mount_filter]
 is_list_ignored = true
