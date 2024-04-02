@@ -7,14 +7,15 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
   if ([int](Get-CimInstance -Class Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber) -ge 6000) {
     $CommandLine = "-NoExit -File `"" + $MyInvocation.MyCommand.Path + "`" " + $MyInvocation.UnboundArguments
-    Start-Process -Wait -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine
+    # Start-Process -Wait -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine
+    Start-Process         -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine # -Wait
     Exit
   }
 }
 
 # Winget setup
 $basePath = "$($env:USERPROFILE)\.winget_configure"
-Get-ChildItem -Path $basePath -Recurse -Filter *.dsc.yml |
+Get-ChildItem -Path $basePath -Filter *.dsc.yml | #-Recurse 
 Foreach-Object {
     winget configure -f $_.FullName --disable-interactivity --accept-configuration-agreements
     # winget configure -f $env:USERPROFILE\.win-setup\winget_dsc\winget_settings.yaml --disable-interactivity
