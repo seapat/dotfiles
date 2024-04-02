@@ -2,7 +2,7 @@
   "[typst]": {
     "editor.defaultFormatter": "nvarner.typst-lsp"
   },
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "Jetbrains Mono",
   "editor.fontLigatures": "'cv02', 'ss02', 'ss05', 'ss03', 'cv19', 'cv24'",
   "editor.fontSize": 15,
   "editor.fontWeight": "400",
@@ -62,10 +62,19 @@
   "window.systemColorTheme": true,
   "window.titleBarStyle": "custom",
   "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "",
   "workbench.editor.empty.hint": "hidden",
   "workbench.iconTheme": "vscode-great-icons",
   "workbench.preferredDarkColorTheme": "Default Dark Modern",
   "workbench.preferredLightColorTheme": "Default Light Modern",
-  "workbench.tree.enableStickyScroll": true
+  "workbench.tree.enableStickyScroll": true,
+  "git-autoconfig.configList": [
+    {},
+    {
+      "user.email": "63231107+seapat@users.noreply.github.com",
+      "user.name": "Sean Klein"
+    }
+  ],
+  "yaml.schemas": {
+    "file:///c%3A/Users/seapat/.vscode/extensions/docsmsft.docs-yaml-1.0.1/dist/toc.schema.json": "/toc\\.yml/i"
+  }
 }
