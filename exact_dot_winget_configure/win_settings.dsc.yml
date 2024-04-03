@@ -95,15 +95,19 @@ properties:
         IsSingleInstance: "Yes"
         TimeZone: 'W. Europe Standard Time'
     - resource: ComputerManagementDsc/UserAccountControl
+      # https://github.com/dsccommunity/ComputerManagementDsc/wiki/UserAccountControl
+      # FIXME: should ask for password, if not: https://superuser.com/a/1085698
       directives:
         allowPrerelease: true
       settings:
         IsSingleInstance: "Yes"
-        NotificationLevel: "AlwaysNotifyAndAskForCredentials" # Cant be active with below
-        # ConsentPromptBehaviorAdmin: 1
-        # EnableLUA: 1
-        # PromptOnSecureDesktop: 0 # disable dimming
-        # ConsentPromptBehaviorUser: 1
+        # NotificationLevel: "AlwaysNotifyAndAskForCredentials" # Cant be active with below
+        ConsentPromptBehaviorUser: 1
+        ConsentPromptBehaviorAdmin: 1
+        EnableLUA: 1
+        PromptOnSecureDesktop: 1 # 0 disables dimming
+        EnableVirtualization: 1
+        EnableInstallerDetection: 1
       # WINDOWS DEVELOPER MODE - https://www.powershellgallery.com/packages/Microsoft.Windows.Developer/0.2.1-alpha
     - resource: Microsoft.Windows.Developer/DeveloperMode
       directives:

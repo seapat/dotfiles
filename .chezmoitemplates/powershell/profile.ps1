@@ -35,6 +35,11 @@ Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
         }
 }
 
+# pixi: python dev environments
+if (Get-Command pixi -errorAction SilentlyContinue) {
+  (& pixi completion --shell powershell) | Out-String | Invoke-Expression
+}
+
 ### FUNCTIONS
 
 function winget {
@@ -51,13 +56,20 @@ function scoop {
 
     # not excluding export, so that the auto export is equivalent to the one that was generated manually
     If ($args -match "install|uninstall|update") {
-      Start-Job -ScriptBlock { scoop.cmd export -c > $env:APPDATA\scoop.json } | Out-Null
+      Start-Job -ScriptBlock { 
+        scoop.cmd export -c > $env:APPDATA\scoop.json 
+        $json = $env:APPDATA\scoop.json
+        $obj = ConvertFrom-Json $json
+        $obj | Sort-Object {$_.name} | ConvertTo-Json
+        } | Out-Null
+
+
     }
 }
 
 function choco {
     # not excluding export, so that the auto export is equivalent to the one that was generated manually
-    If ($args -match "install|uninstall|upgrade") {
+    If ($args -match "install|uninstall|upgrade") -and (-Not ($args -contains "help") ){
 
       # Choco wants elevation, but there is no nice way to capture the output in parent window...
       echo "running install elevated as demanded by chocolatey"

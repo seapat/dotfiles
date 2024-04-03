@@ -4,8 +4,33 @@ properties:
   resources:
     - resource: xPSDesiredStateConfiguration/xUser
       settings:
+        id: "[User]LocalUser"
         Ensure: Present
         UserName: seapat
         FullName: Sean Klein
         PasswordNeverExpires: true
         PasswordChangeNotAllowed: false
+    - resource: xPSDesiredStateConfiguration/xGroup
+      settings:
+        Ensure: Present
+        GroupName: "Users"
+        DependsOn: "[User]LocalUser"
+        # MembersToInclude: "localadmin"
+        Members: 
+          - "seapat"
+    - resource: xPSDesiredStateConfiguration/xUser
+      id: "[User]LocalAdmin"
+      settings:
+        Ensure: Present
+        UserName: localadmin
+        FullName: Administrator account
+        PasswordNeverExpires: true
+        PasswordChangeNotAllowed: false
+    - resource: xPSDesiredStateConfiguration/xGroup
+      settings:
+        Ensure: Present
+        GroupName: "Administrators"
+        DependsOn: "[User]LocalAdmin"
+        MembersToInclude: "localadmin"
+        # Members: 
+        #   - "localadmin"

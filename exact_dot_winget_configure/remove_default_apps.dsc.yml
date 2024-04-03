@@ -122,6 +122,7 @@ properties:
         id: Microsoft.Xbox.TCUI_8wekyb3d8bbwe
         source: store
 
+    # GameBar #######################################################
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:
         description: Remove Xbox Game Bar Plugin
@@ -129,6 +130,27 @@ properties:
         Ensure: Absent
         id: Microsoft.XboxGameOverlay_8wekyb3d8bbwe
         source: store
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Disable ms-gaming overlay popup
+      settings:
+        Key: 'HKCU:\System\GameConfigStore'
+        ValueName: 'GameDVR_Enabled'
+        ValueData: 0
+        ValueType: DWord
+        Ensure: present
+        Force: true
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Disable ms-gaming overlay popup
+      settings:
+        Key: 'HKCU:\Software\Microsoft\Windows\CurrentVersion\GameDVR'
+        ValueName: 'AppCaptureEnabled'
+        ValueData: 0
+        ValueType: DWord
+        Ensure: present
+        Force: true
+      #################################################################
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       directives:

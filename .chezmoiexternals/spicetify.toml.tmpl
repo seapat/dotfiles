@@ -1,5 +1,6 @@
 # https://github.com/Evangelospro/dotfiles/blob/485e479fd1196599d2c2b36c6fea355487f075b2/dot_local/bin/executable_update-spicetify#L4
 
+### THEMES
 ["{{- template "os.tmpl" . -}}/spicetify/Themes/Dracula"]
     type = "archive"
     url = "https://github.com/dracula/spicetify/archive/master.zip"
@@ -17,6 +18,7 @@
     include = ["*/**"]
     exclude = ["*/.github", "*/_Extra", "*.md", "*/*.md", "*/text", "LICENSE", "manifest.json", ".gitignore"]
 
+### APPS
 ["{{- template "os.tmpl" . -}}/spicetify/CustomApps/marketplace"]
     type = "archive"
     url = '{{ gitHubLatestRelease "spicetify/spicetify-marketplace" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
@@ -26,11 +28,19 @@
 
 ["{{- template "os.tmpl" . -}}/spicetify/CustomApps/stats"]
     type = "archive"
-    url = '{{ gitHubLatestRelease "harbassan/spicetify-apps" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
+    url = 'https://github.com/harbassan/spicetify-apps/releases/latest/download/spicetify-stats.release.zip'
     exact = true
-    stripComponents = 1
+    stripComponents = 0
     refreshPeriod = "168h"
 
+["{{- template "os.tmpl" . -}}/spicetify/CustomApps/spicetify-combined-playlists"]
+    type = "archive"
+    url = 'https://github.com/jeroentvb/spicetify-combined-playlists/archive/refs/heads/dist.zip'
+    exact = true
+    stripComponents = 2
+    refreshPeriod = "168h"
+
+### Extensions
 ["{{- template "os.tmpl" . -}}/spicetify/Extensions/adblock.js"]
     # https://github.com/CharlieS1103/spicetify-extensions/tree/main/adblock
     type = "file"
@@ -57,4 +67,47 @@
     url = "https://raw.githubusercontent.com/daksh2k/Spicetify-stuff/master/Extensions/savePlaylists.js"
     refreshPeriod = "168h"
 
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/genre.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/jeroentvb/spicetify-genre/master/genre.js"
+    refreshPeriod = "168h"
 
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/upcomingSong.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/fl3xm3ist3r/spicetifyExtensions/master/upcomingSong/upcomingSong.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/playlist-icons.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/jeroentvb/spicetify-playlist-icons/dist/playlist-icons.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/power-bar.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/jeroentvb/spicetify-power-bar/dist/power-bar.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/playlistIntersection.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/huhridge/huh-spicetify-extensions/main/playlistIntersection/playlistIntersection.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/fullAlbumDate.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/huhridge/huh-spicetify-extensions/main/fullAlbumDate/fullAlbumDate.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/remove-unplayable-songs.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/Resxt/Spicetify-Extensions/main/remove-unplayable-songs/dist/remove-unplayable-songs.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/cacheCleaner.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/kyrie25/Spicetify-Cache-Cleaner/main/cacheCleaner.js"
+    refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/spicetify/Extensions/noTrackingLinks.js"]
+    type = "file"
+    url = "https://github.com/SIMULATAN/Spicetify-Extensions/blob/main/Extensions/noTrackingLinks.js"
+    refreshPeriod = "168h"

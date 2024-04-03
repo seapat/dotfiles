@@ -1,3 +1,6 @@
+# TODO: Run this only a single time on fresh pc
+
+
 $Package = "altinter"
 $DownloadDir = "$Env:UserProfile/Downloads"
 $Destination = "$DownloadDir/$Package.zip"
@@ -7,7 +10,7 @@ Invoke-WebRequest -Uri $URL -Outfile $Destination
 Expand-Archive $Destination -DestinationPath "$DownloadDir" -Force
 # Start-Process "$DownloadDir/$Package/altinter_amd64.msi" -Verb Runas  #-ArgumentList '/quiet' 
 # Start-Process "$DownloadDir/$Package/setup.exe" -ArgumentList '/a' -Wait -Verb Runas 
-Start-Process -Verb Runas "$DownloadDir/$Package/setup.exe" #-ArgumentList '/a' 
+Start-Process -Verb Runas "$DownloadDir/$Package/setup.exe" -Wait #-ArgumentList '/a' 
 
 Remove-Item -Path $Destination
 Remove-Item -Path "$DownloadDir/$Package" -Recurse

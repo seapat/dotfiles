@@ -51,3 +51,12 @@ progress = true
     identity = "~/.ssh/id_ed25519"
     symmetric = true
     passphrase = false
+[interpreters.ps1]
+    # https://www.chezmoi.io/reference/target-types/#scripts-on-windows
+    command = "pwsh"
+    args = ["-NoLogo"]
+[interpreters.ps5]
+    # This may be usefull for installing pwsh
+    # the number was initially intended to represent the powershell version    
+    command = "powershell"
+    args = ["-NoLogo"]
