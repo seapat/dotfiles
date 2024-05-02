@@ -1,5 +1,5 @@
 # TODO: Run this only a single time on fresh pc
-
+{{- if eq .chezmoi.os "windows" }}
 
 $Package = "altinter"
 $DownloadDir = "$Env:UserProfile/Downloads"
@@ -14,3 +14,5 @@ Start-Process -Verb Runas "$DownloadDir/$Package/setup.exe" -Wait #-ArgumentList
 
 Remove-Item -Path $Destination
 Remove-Item -Path "$DownloadDir/$Package" -Recurse
+
+{{ end }}
