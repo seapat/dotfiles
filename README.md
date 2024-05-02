@@ -16,11 +16,8 @@ chezmoi init --apply seapat
 ### Powershell commands
 
 The powershell profile contains a function that precedes `winget` (not `winget.exe`). When relevant commands (`winget install`, `winget uninstall`, `winget update`, ...) are run, the `winget export` command is invoked and `winget.json` in `%AppData%` get's updated. `Chezmoi` symlinks this file, hence it is directly edited in the chezmoi directory.
-`scoop` ( -> `scoop.json`) and `chocolatey` (`choco.xml`) are treated in the same manner. 
+`scoop` ( -> `scoop.json`) is treated in the same manner. 
 
-> [!NOTE] 
-> We elevate the install process for `choco` via a separate window. Unfortunately, the window auto-closes when done. Refer to the logs if you miss some output.
-<!-- > Since choco prefers to install software as admin, install process is run in a separate window (exporting happens as normal user). This is necessary because the powershell function is not run when using `gsudo`. The consquence is that a separate window opens and automatically closes once the software is installed, making it difficult to read the output. (There is a log file if something goes wrong) -->
 
 ## TODO
 
