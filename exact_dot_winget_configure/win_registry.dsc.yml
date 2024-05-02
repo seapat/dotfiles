@@ -79,3 +79,14 @@ properties:
         ValueType: DWord
         Ensure: present
         Force: true
+
+    - resource: xPSDesiredStateConfiguration/xRegistry 
+      directives:
+        description: Enable Hibernation
+      settings:
+        Key: HKLM:\SYSTEM\CurrentControlSet\Control\Power
+        ValueName: HibernateEnabledDefault
+        ValueData: 1
+        ValueType: DWord
+        Ensure: present
+        Force: true
