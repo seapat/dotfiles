@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<packages>
-  <package id="choco-cleaner" version="1.1.1" />
-  <package id="chocolatey" version="2.2.2" />
-  <package id="chocolatey-compatibility.extension" version="1.0.0" />
-  <package id="chocolatey-core.extension" version="1.4.0" />
-  <package id="ukinternationalkeyboard" version="2.0.0" />
-  <package id="winbtrfs" version="1.9.0" />
-</packages>

@@ -8,8 +8,6 @@ if (Get-Command starship -errorAction SilentlyContinue) {
 }
 
 ### MODULES
-Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
-
 Import-Module PSFzf -ArgumentList 'Ctrl+t', 'Ctrl+r'
 # Import-Module Terminal-Icons # buggy in windows terminal, works in wezterm
 
@@ -57,34 +55,13 @@ function scoop {
     # not excluding export, so that the auto export is equivalent to the one that was generated manually
     If ($args -match "install|uninstall|update") {
       Start-Job -ScriptBlock { 
-        scoop.cmd export -c > $env:APPDATA\scoop.json 
+        scoop.cmd export -c > $env:APPDATA\scoop.json
         $json = $env:APPDATA\scoop.json
         $obj = ConvertFrom-Json $json
         $obj | Sort-Object {$_.name} | ConvertTo-Json
         } | Out-Null
 
 
-    }
-}
-
-function choco {
-    # not excluding export, so that the auto export is equivalent to the one that was generated manually
-    If ($args -match "install|uninstall|upgrade") -and (-Not ($args -contains "help") ){
-
-      # Choco wants elevation, but there is no nice way to capture the output in parent window...
-      echo "running install elevated as demanded by chocolatey"
-      if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
-        if ([int](Get-CimInstance -Class Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber) -ge 6000) {
-          $CommandLine = "-NoExit -File `"" + $MyInvocation.MyCommand.Path + "`" " + $MyInvocation.UnboundArguments
-          Start-Process -Wait -FilePath PowerShell.exe -Verb Runas -ArgumentList $CommandLine # 
-          Exit
-        }
-      }
-      # Start-Process choco.exe -Verb RunAs -Wait -ArgumentList $args
-
-      Start-Job -ScriptBlock { choco.exe export -o $env:APPDATA\choco.xml --include-version-numbers } | Out-Null
-    } else {
-      Invoke-Command -ScriptBlock { choco.exe $args } -ArgumentList $args
     }
 }
 

@@ -2,6 +2,5 @@
 
 Start-Process -Wait -FilePath "spicetify" -ArgumentList "restore backup apply"
 # Start-Process -FilePath "spicetify restore backup apply"
-Start-Process -Wait -FilePath "choco.exe" -ArgumentList "export -o $env:APPDATA\choco.xml --include-version-numbers"
 Start-Process -Wait -FilePath "scoop.cmd" -ArgumentList "export -c > $env:APPDATA\scoop.json"
 Start-Process -Wait -FilePath "winget.exe" -ArgumentList "export -o $env:APPDATA\winget.json --include-versions --disable-interactivity"
