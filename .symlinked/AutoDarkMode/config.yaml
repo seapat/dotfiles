@@ -1,5 +1,5 @@
 AutoThemeSwitchingEnabled: true
-Governor: Default
+Governor: NightLight
 Autostart:
   Validate: true
 WindowsThemeMode:
@@ -27,8 +27,8 @@ TouchKeyboardSwitch:
 ColorizationSwitch:
   Enabled: false
   Component:
-    LightHex: ''
-    DarkHex: ''
+    LightHex: '#FF008A9A'
+    DarkHex: '#FF008A9A'
     LightAutoColorization: false
     DarkAutoColorization: false
 ColorFilterSwitch:
@@ -49,16 +49,16 @@ Sunrise: 2024-03-31T07:00:00.0000000
 Sunset: 2024-03-31T20:00:00.0000000
 Location:
   PollingCooldownTimeSpan: 1.00:00:00
-  Enabled: true
+  Enabled: false
   UseGeolocatorService: false
-  SunsetOffsetMin: -30
-  SunriseOffsetMin: -30
+  SunsetOffsetMin: 0
+  SunriseOffsetMin: 0
   CustomLat: 48
   CustomLon: 9.0999999999999996
 Tunable:
   BatterySliderDefaultValue: 25
   DisableEnergySaverOnThemeSwitch: false
-  UseLogonTask: false
+  UseLogonTask: true
   Debug: false
   Trace: false
   DebugTimerMessage: false
@@ -66,7 +66,7 @@ Tunable:
   AlwaysFullDwmRefresh: true
   UICulture: en
 GPUMonitoring:
-  Enabled: true
+  Enabled: false
   Threshold: 30
   Samples: 1
 ProcessBlockList:
@@ -82,11 +82,11 @@ AutoSwitchNotify:
   Enabled: true
   GracePeriodMinutes: 3
 Hotkeys:
-  Enabled: true
+  Enabled: false
   ForceLight: 
   ForceDark: 
   NoForce: 
-  ToggleTheme: Ctrl + Alt + T
+  ToggleTheme: 
   TogglePostpone: 
   ToggleAutoThemeSwitch: 
 IdleChecker:
@@ -104,7 +104,13 @@ WallpaperSwitch:
     SolidColors:
       Light: '#FFFFFF'
       Dark: '#000000'
-    Monitors: []
+    Monitors:
+    - Id: '\\?\DISPLAY#AOC2402#5&1dc69d0&0&UID4356#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}'
+      LightThemeWallpaper: ''
+      DarkThemeWallpaper: ''
+    - Id: '\\?\DISPLAY#AOC2402#5&1dc69d0&0&UID4358#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}'
+      LightThemeWallpaper: ''
+      DarkThemeWallpaper: ''
 Updater:
   AutoInstall: false
   Enabled: false

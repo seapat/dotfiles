@@ -1,10 +1,10 @@
 {
-  "IsFirstTimeExperienceEnabled": false,
-  "IsUkraineSupportMessageEnabled": false,
   "MinimumTemperature": 500,
   "MaximumTemperature": 20000,
   "MinimumBrightness": 0.1,
   "MaximumBrightness": 1,
+  "IsFirstTimeExperienceEnabled": false,
+  "IsUkraineSupportMessageEnabled": false,
   "NightConfiguration": {
     "Temperature": 2500,
     "Brightness": 1
@@ -13,7 +13,7 @@
     "Temperature": 5500,
     "Brightness": 1
   },
-  "ConfigurationTransitionDuration": "02:00:35.1464382",
+  "ConfigurationTransitionDuration": "02:00:35",
   "ConfigurationTransitionOffset": 0,
   "IsManualSunriseSunsetEnabled": false,
   "ManualSunriseTime": "07:20:00",

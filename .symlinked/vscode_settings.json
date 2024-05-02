@@ -76,5 +76,14 @@
   ],
   "yaml.schemas": {
     "file:///c%3A/Users/seapat/.vscode/extensions/docsmsft.docs-yaml-1.0.1/dist/toc.schema.json": "/toc\\.yml/i"
-  }
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "jupyter.askForKernelRestart": false,
+  "notebook.lineNumbers": "on",
+  "workbench.editorAssociations": {
+    "*.png": "imagePreview.previewEditor"
+  },
+  "workbench.colorTheme": "Default Light Modern"
 }
