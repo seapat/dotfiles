@@ -14,6 +14,8 @@ Import-Module PSFzf -ArgumentList 'Ctrl+t', 'Ctrl+r'
 Import-Module posh-git
 $GitPromptSettings.EnablePromptStatus = $false
 
+
+
 ### COMPLETIONS
 
 # Shows navigable menu of all options when hitting Tab
@@ -49,6 +51,7 @@ function winget {
     }
 }
 
+
 function scoop {
     Invoke-Command -ArgumentList $args -ScriptBlock { scoop.cmd $args }
 
@@ -69,6 +72,11 @@ function scoop {
 
 Set-Alias open Invoke-Item
 
+
+### INVOKES
+
+# fast `scoop-search` replaces slow `scoop search` (needs to be installed)
+Invoke-Expression (&scoop-search --hook)
 
 # zoxide, replaces psmodules z or zlocation, provides `z` and `zi` commands
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
