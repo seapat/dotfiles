@@ -1,0 +1,1 @@
+This directory contains scripts and config for settup up a new system

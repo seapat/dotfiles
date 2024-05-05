@@ -1,0 +1,348 @@
+{
+    "config": {
+        "aria2-warning-enabled": false,
+        "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+        "scoop_branch": "master"
+    },
+    "apps": [
+        {
+            "Updated": "2024-04-01T17:25:02.9700326+02:00",
+            "Info": "",
+            "Name": "7zip",
+            "Source": "main",
+            "Version": "23.01"
+        },
+        {
+            "Updated": "2024-04-01T17:25:04.7107712+02:00",
+            "Info": "",
+            "Name": "7zip-zstd",
+            "Source": "versions",
+            "Version": "v22.01-v1.5.5-R3"
+        },
+        {
+            "Updated": "2024-04-01T09:34:21.3470935+02:00",
+            "Info": "Install failed",
+            "Name": "archisteamfarm",
+            "Source": null,
+            "Version": null
+        },
+        {
+            "Updated": "2024-04-02T22:56:08.259388+02:00",
+            "Info": "",
+            "Name": "aria2",
+            "Source": "main",
+            "Version": "1.37.0-1"
+        },
+        {
+            "Updated": "2024-04-02T14:54:46.7832541+02:00",
+            "Info": "",
+            "Name": "bottom",
+            "Source": "main",
+            "Version": "0.9.6"
+        },
+        {
+            "Updated": "2024-04-01T09:34:24.7300955+02:00",
+            "Info": "",
+            "Name": "cacert",
+            "Source": "main",
+            "Version": "2024-03-11"
+        },
+        {
+            "Updated": "2024-04-22T12:13:37.2349825+02:00",
+            "Info": "",
+            "Name": "clink",
+            "Source": "main",
+            "Version": "1.6.12"
+        },
+        {
+            "Updated": "2024-04-02T22:56:11.809683+02:00",
+            "Info": "",
+            "Name": "clink-completions",
+            "Source": "main",
+            "Version": "0.5.2"
+        },
+        {
+            "Updated": "2024-04-02T22:56:13.0311849+02:00",
+            "Info": "",
+            "Name": "clink-flex-prompt",
+            "Source": "main",
+            "Version": "0.17"
+        },
+        {
+            "Updated": "2024-04-01T17:25:06.0444565+02:00",
+            "Info": "",
+            "Name": "dark",
+            "Source": "main",
+            "Version": "3.14"
+        },
+        {
+            "Updated": "2024-05-05T04:54:58.7378179+02:00",
+            "Info": "",
+            "Name": "discord",
+            "Source": "extras",
+            "Version": "1.0.9035-18"
+        },
+        {
+            "Updated": "2024-04-15T08:49:32.3553187+02:00",
+            "Info": "",
+            "Name": "dockercompletion",
+            "Source": "extras",
+            "Version": "1.2600.0.240409"
+        },
+        {
+            "Updated": "2024-05-03T18:26:18.131696+02:00",
+            "Info": "Install failed",
+            "Name": "dolphin",
+            "Source": null,
+            "Version": null
+        },
+        {
+            "Updated": "2024-04-18T17:48:33.1672688+02:00",
+            "Info": "",
+            "Name": "Font-Awesome",
+            "Source": "nerd-fonts",
+            "Version": "6.5.2"
+        },
+        {
+            "Updated": "2024-05-03T18:25:55.3775219+02:00",
+            "Info": "",
+            "Name": "fzf",
+            "Source": "main",
+            "Version": "0.51.0"
+        },
+        {
+            "Updated": "2024-04-14T22:06:01.6483826+02:00",
+            "Info": "",
+            "Name": "ghostscript",
+            "Source": "main",
+            "Version": "10.03.0"
+        },
+        {
+            "Updated": "2024-04-15T08:51:40.424556+02:00",
+            "Info": "",
+            "Name": "IBMPlexMono-NF",
+            "Source": "nerd-fonts",
+            "Version": "3.2.1"
+        },
+        {
+            "Updated": "2024-04-15T08:53:12.0011652+02:00",
+            "Info": "",
+            "Name": "IBMPlexMono-NF-Mono",
+            "Source": "nerd-fonts",
+            "Version": "3.2.1"
+        },
+        {
+            "Updated": "2024-04-15T08:54:31.9009506+02:00",
+            "Info": "",
+            "Name": "IBMPlexMono-NF-Propo",
+            "Source": "nerd-fonts",
+            "Version": "3.2.1"
+        },
+        {
+            "Updated": "2024-04-02T17:54:49.8858935+02:00",
+            "Info": "",
+            "Name": "IBMPlexSans",
+            "Source": "nerd-fonts",
+            "Version": "6.4.0"
+        },
+        {
+            "Updated": "2024-04-02T17:55:10.5079586+02:00",
+            "Info": "",
+            "Name": "IBMPlexSerif",
+            "Source": "nerd-fonts",
+            "Version": "6.4.0"
+        },
+        {
+            "Updated": "2024-04-22T12:14:01.1794304+02:00",
+            "Info": "",
+            "Name": "imagemagick",
+            "Source": "main",
+            "Version": "7.1.1-31"
+        },
+        {
+            "Updated": "2024-04-01T17:25:07.1474054+02:00",
+            "Info": "",
+            "Name": "innounp",
+            "Source": "main",
+            "Version": "0.50"
+        },
+        {
+            "Updated": "2024-04-15T08:57:01.9128555+02:00",
+            "Info": "",
+            "Name": "JetBrainsMono-NF",
+            "Source": "nerd-fonts",
+            "Version": "3.2.1"
+        },
+        {
+            "Updated": "2024-04-15T08:59:33.061116+02:00",
+            "Info": "",
+            "Name": "JetBrainsMono-NF-Mono",
+            "Source": "nerd-fonts",
+            "Version": "3.2.1"
+        },
+        {
+            "Updated": "2024-04-15T09:01:16.5331274+02:00",
+            "Info": "",
+            "Name": "JetBrainsMono-NF-Propo",
+            "Source": "nerd-fonts",
+            "Version": "3.2.1"
+        },
+        {
+            "Updated": "2024-04-02T22:56:14.7950439+02:00",
+            "Info": "",
+            "Name": "lazy-posh-git",
+            "Source": "extras",
+            "Version": "0.2.0"
+        },
+        {
+            "Updated": "2024-04-22T12:15:39.7319997+02:00",
+            "Info": "",
+            "Name": "mambaforge",
+            "Source": "extras",
+            "Version": "24.3.0-0"
+        },
+        {
+            "Updated": "2024-04-03T00:06:21.870698+02:00",
+            "Info": "",
+            "Name": "pipx",
+            "Source": "main",
+            "Version": "1.5.0"
+        },
+        {
+            "Updated": "2024-04-02T15:20:25.8842003+02:00",
+            "Info": "",
+            "Name": "posh-git",
+            "Source": "extras",
+            "Version": "1.1.0"
+        },
+        {
+            "Updated": "2024-04-02T22:56:15.5088192+02:00",
+            "Info": "",
+            "Name": "powershell-beautifier",
+            "Source": "main",
+            "Version": "1.2.5"
+        },
+        {
+            "Updated": "2024-04-02T22:56:15.891192+02:00",
+            "Info": "",
+            "Name": "pscolor",
+            "Source": "extras",
+            "Version": "1.0.0.0"
+        },
+        {
+            "Updated": "2024-04-02T15:20:27.7564307+02:00",
+            "Info": "",
+            "Name": "psfzf",
+            "Source": "extras",
+            "Version": "2.5.22"
+        },
+        {
+            "Updated": "2024-04-05T17:59:48.3007031+02:00",
+            "Info": "",
+            "Name": "ripcord",
+            "Source": "extras",
+            "Version": "0.4.29"
+        },
+        {
+            "Updated": "2024-04-02T15:20:28.3965304+02:00",
+            "Info": "",
+            "Name": "scoop-completion",
+            "Source": "extras",
+            "Version": "0.3.0"
+        },
+        {
+            "Updated": "2024-04-01T15:28:40.0143153+02:00",
+            "Info": "",
+            "Name": "scoop-search",
+            "Source": "main",
+            "Version": "1.4.1"
+        },
+        {
+            "Updated": "2024-04-02T15:20:28.5938585+02:00",
+            "Info": "",
+            "Name": "terminal-icons",
+            "Source": "extras",
+            "Version": "0.11.0"
+        },
+        {
+            "Updated": "2024-04-03T00:14:34.7280317+02:00",
+            "Info": "",
+            "Name": "vcredist2022",
+            "Source": "extras",
+            "Version": "14.38.33135.0"
+        },
+        {
+            "Updated": "2024-05-05T13:58:20.8085669+02:00",
+            "Info": "",
+            "Name": "ventoy",
+            "Source": "extras",
+            "Version": "1.0.97"
+        },
+        {
+            "Updated": "2024-04-01T09:34:26.3736194+02:00",
+            "Info": "",
+            "Name": "wget",
+            "Source": "main",
+            "Version": "1.21.4"
+        },
+        {
+            "Updated": "2024-04-02T15:21:44.8788491+02:00",
+            "Info": "Install failed",
+            "Name": "winget",
+            "Source": null,
+            "Version": null
+        },
+        {
+            "Updated": "2024-04-29T11:45:51.115233+02:00",
+            "Info": "",
+            "Name": "winget-ps",
+            "Source": "main",
+            "Version": "1.8.1133"
+        },
+        {
+            "Updated": "2024-04-02T15:20:33.4123353+02:00",
+            "Info": "Install failed",
+            "Name": "zlocation",
+            "Source": "extras",
+            "Version": "1.4.3"
+        }
+    ],
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main.git",
+            "Updated": "2024-05-05T10:26:31+02:00",
+            "Manifests": 1321
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2024-05-05T10:29:05+02:00",
+            "Manifests": 2016
+        },
+        {
+            "Name": "versions",
+            "Source": "https://github.com/ScoopInstaller/Versions",
+            "Updated": "2024-05-05T10:30:08+02:00",
+            "Manifests": 453
+        },
+        {
+            "Name": "nerd-fonts",
+            "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
+            "Updated": "2024-05-04T18:21:59+02:00",
+            "Manifests": 336
+        },
+        {
+            "Name": "nonportable",
+            "Source": "https://github.com/ScoopInstaller/Nonportable",
+            "Updated": null,
+            "Manifests": 127
+        },
+        {
+            "Name": "games",
+            "Source": "https://github.com/Calinou/scoop-games",
+            "Updated": "2024-05-05T10:25:19+02:00",
+            "Manifests": 300
+        }
+    ]
+}

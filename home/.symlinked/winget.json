@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-05-02T08:59:20.668-00:00",
+	"CreationDate" : "2024-05-05T19:05:22.141-00:00",
 	"Sources" : 
 	[
 		{
@@ -92,7 +92,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal",
-					"Version" : "1.19.10821.0"
+					"Version" : "1.19.11213.0"
 				},
 				{
 					"PackageIdentifier" : "CondaForge.Miniforge3",
@@ -132,7 +132,7 @@
 				},
 				{
 					"PackageIdentifier" : "Spotify.Spotify",
-					"Version" : "1.2.36.955.gd8cc9372"
+					"Version" : "1.2.36.959.g04bf500c"
 				},
 				{
 					"PackageIdentifier" : "Valve.Steam",
@@ -211,6 +211,10 @@
 					"Version" : "0.11.3"
 				},
 				{
+					"PackageIdentifier" : "Chocolatey.Chocolatey",
+					"Version" : "2.2.2.0"
+				},
+				{
 					"PackageIdentifier" : "LGUG2Z.whkd",
 					"Version" : "0.2.1"
 				},
@@ -225,6 +229,10 @@
 				{
 					"PackageIdentifier" : "GitHub.GitLFS",
 					"Version" : "3.5.1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsADK",
+					"Version" : "10.1.22621.1"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86",
@@ -256,7 +264,7 @@
 				},
 				{
 					"PackageIdentifier" : "Telegram.TelegramDesktop",
-					"Version" : "4.16.8"
+					"Version" : "5.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6",
@@ -281,6 +289,10 @@
 				{
 					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice",
 					"Version" : "24.2.2.2"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.ADKPEAddon",
+					"Version" : "10.1.25398.1"
 				},
 				{
 					"PackageIdentifier" : "ca.duan.tre-command",
@@ -335,6 +347,10 @@
 					"Version" : "20240203-110809-5046fc22"
 				},
 				{
+					"PackageIdentifier" : "alexx2000.DoubleCommander",
+					"Version" : "1.1.13"
+				},
+				{
 					"PackageIdentifier" : "prefix-dev.pixi",
 					"Version" : "0.20.0"
 				},
@@ -359,10 +375,6 @@
 					"Version" : "7.4.2.0"
 				},
 				{
-					"PackageIdentifier" : "Open-Shell.Open-Shell-Menu",
-					"Version" : "4.4.191"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.DotNet.Runtime.6",
 					"Version" : "6.0.29"
 				},
@@ -384,7 +396,7 @@
 			[
 				{
 					"PackageIdentifier" : "9NKSQGP7F2NH",
-					"Version" : "2.2414.10.0"
+					"Version" : "2.2417.4.0"
 				}
 			],
 			"SourceDetails" : 
