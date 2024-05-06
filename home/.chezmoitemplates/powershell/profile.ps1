@@ -47,7 +47,7 @@ function winget {
 
     # not excluding export, so that the auto export is equivalent to the one that was generated manually
     If ($args -match "install|add|uninstall|remove|rm|update|upgrade") {
-      Start-Job -ScriptBlock { winget.exe export -o $env:APPDATA\winget.json --include-versions --disable-interactivity } | Out-Null
+      Start-Job -ScriptBlock { winget.exe export -o $env:APPDATA\winget.json --include-versions --disable-interactivity --accept-source-agreements } | Out-Null
     }
 }
 
@@ -59,12 +59,10 @@ function scoop {
     If ($args -match "install|uninstall|update") {
       Start-Job -ScriptBlock { 
         scoop.cmd export -c > $env:APPDATA\scoop.json
-        $json = $env:APPDATA\scoop.json
-        $obj = ConvertFrom-Json $json
-        $obj | Sort-Object {$_.name} | ConvertTo-Json
+        # $json = $env:APPDATA\scoop.json
+        # $obj = ConvertFrom-Json $json
+        # $obj | Sort-Object {$_.name} | ConvertTo-Json
         } | Out-Null
-
-
     }
 }
 

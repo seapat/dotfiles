@@ -12,13 +12,13 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
   }
 }
 
-# Winget setup
-$basePath = "$($env:USERPROFILE)\.winget_configure"
-Get-ChildItem -Path $basePath -Filter *.dsc.yml | #-Recurse 
-Foreach-Object {
-    winget configure -f $_.FullName --disable-interactivity --accept-configuration-agreements
-    # winget configure -f $env:USERPROFILE\.win-setup\winget_dsc\winget_settings.yaml --disable-interactivity
-}
+# # Winget setup
+# $basePath = "$($env:USERPROFILE)\.winget_configure"
+# Get-ChildItem -Path $basePath -Filter *.dsc.yml | #-Recurse 
+# Foreach-Object {
+#     winget configure -f $_.FullName --disable-interactivity --accept-configuration-agreements
+#     # winget configure -f $env:USERPROFILE\.win-setup\winget_dsc\winget_settings.yaml --disable-interactivity
+# }
 
 # move Tray Icons from collapse-arrow to taskbar
 $basePath = 'HKCU:\Control Panel\NotifyIconSettings\'

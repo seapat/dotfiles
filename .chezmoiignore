@@ -1,11 +1,12 @@
 README.md
 .symlinked/**/*
+.winget_configure/
 
 # Ignore dirs / files specific to other operating systems
 {{ if ne .chezmoi.os "windows" }}
 Appdata/
 Roaming/
-.winget_configure/
+
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/bottom/bottom.toml

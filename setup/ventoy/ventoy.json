@@ -1,0 +1,13 @@
+{
+    "control":[
+        { "VTOY_TREE_VIEW_MENU_STYLE": "1" }
+    ],
+    "auto_install":[
+        {
+            "parent": "/Windows",
+            "template":[
+                "/Windows/autounattend.xml"
+            ]
+        }
+    ]
+}

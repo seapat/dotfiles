@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-05-05T19:05:22.141-00:00",
+	"CreationDate" : "2024-05-06T14:10:55.164-00:00",
 	"Sources" : 
 	[
 		{
@@ -67,6 +67,10 @@
 					"Version" : "1.7.3"
 				},
 				{
+					"PackageIdentifier" : "MarcinOtorowski.MSIXHero",
+					"Version" : "3.0.0.0"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.Teams",
 					"Version" : "24074.2323.2827.4973"
 				},
@@ -113,10 +117,6 @@
 				{
 					"PackageIdentifier" : "Playnite.Playnite",
 					"Version" : "10.32"
-				},
-				{
-					"PackageIdentifier" : "RiotGames.LeagueOfLegends.EUW",
-					"Version" : "Unknown"
 				},
 				{
 					"PackageIdentifier" : "Rye.Rye",
@@ -287,10 +287,6 @@
 					"Version" : "9.0.30729.6161"
 				},
 				{
-					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice",
-					"Version" : "24.2.2.2"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.ADKPEAddon",
 					"Version" : "10.1.25398.1"
 				},
@@ -305,10 +301,6 @@
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86",
 					"Version" : "14.40.33617.1"
-				},
-				{
-					"PackageIdentifier" : "Tyrrrz.LightBulb",
-					"Version" : "2.4.12"
 				},
 				{
 					"PackageIdentifier" : "PDFArranger.PDFArranger",
@@ -327,16 +319,8 @@
 					"Version" : "9.0.30729.6161"
 				},
 				{
-					"PackageIdentifier" : "Cyanfish.NAPS2",
-					"Version" : "7.4.2"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86",
 					"Version" : "12.0.40664.0"
-				},
-				{
-					"PackageIdentifier" : "voidtools.Everything",
-					"Version" : "1.4.1.1024"
 				},
 				{
 					"PackageIdentifier" : "EpicGames.EpicGamesLauncher",
@@ -367,10 +351,6 @@
 					"Version" : "10.0.40219"
 				},
 				{
-					"PackageIdentifier" : "KristenMcWilliam.Nyrna",
-					"Version" : "2.20.0"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.PowerShell",
 					"Version" : "7.4.2.0"
 				},
@@ -395,8 +375,12 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "9NKSQGP7F2NH",
-					"Version" : "2.2417.4.0"
+					"PackageIdentifier" : "9NBLGGH4TX22",
+					"Version" : "2024.206.0.0"
+				},
+				{
+					"PackageIdentifier" : "9N26S50LN705",
+					"Version" : "0.1.20151.0"
 				}
 			],
 			"SourceDetails" : 
@@ -408,5 +392,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.8.924-preview"
+	"WinGetVersion" : "1.7.11132"
 }

@@ -6,324 +6,352 @@
     },
     "apps": [
         {
-            "Updated": "2024-04-01T17:25:02.9700326+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "7zip",
-            "Source": "main",
-            "Version": "23.01"
+            "Version": "23.01",
+            "Info": "",
+            "Updated": "2024-04-01T17:25:02.9700326+02:00"
         },
         {
-            "Updated": "2024-04-01T17:25:04.7107712+02:00",
-            "Info": "",
-            "Name": "7zip-zstd",
             "Source": "versions",
-            "Version": "v22.01-v1.5.5-R3"
+            "Name": "7zip-zstd",
+            "Version": "v22.01-v1.5.5-R3",
+            "Info": "",
+            "Updated": "2024-04-01T17:25:04.7107712+02:00"
         },
         {
-            "Updated": "2024-04-01T09:34:21.3470935+02:00",
-            "Info": "Install failed",
+            "Source": "extras",
             "Name": "archisteamfarm",
-            "Source": null,
-            "Version": null
+            "Version": "6.0.2.6",
+            "Info": "",
+            "Updated": "2024-05-05T20:51:05.1331431+02:00"
         },
         {
-            "Updated": "2024-04-02T22:56:08.259388+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "aria2",
-            "Source": "main",
-            "Version": "1.37.0-1"
+            "Version": "1.37.0-1",
+            "Info": "",
+            "Updated": "2024-04-02T22:56:08.259388+02:00"
         },
         {
-            "Updated": "2024-04-02T14:54:46.7832541+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "bottom",
-            "Source": "main",
-            "Version": "0.9.6"
+            "Version": "0.9.6",
+            "Info": "",
+            "Updated": "2024-04-02T14:54:46.7832541+02:00"
         },
         {
-            "Updated": "2024-04-01T09:34:24.7300955+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "cacert",
-            "Source": "main",
-            "Version": "2024-03-11"
+            "Version": "2024-03-11",
+            "Info": "",
+            "Updated": "2024-04-01T09:34:24.7300955+02:00"
         },
         {
-            "Updated": "2024-04-22T12:13:37.2349825+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "clink",
-            "Source": "main",
-            "Version": "1.6.12"
+            "Version": "1.6.12",
+            "Info": "",
+            "Updated": "2024-04-22T12:13:37.2349825+02:00"
         },
         {
-            "Updated": "2024-04-02T22:56:11.809683+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "clink-completions",
-            "Source": "main",
-            "Version": "0.5.2"
+            "Version": "0.5.2",
+            "Info": "",
+            "Updated": "2024-04-02T22:56:11.809683+02:00"
         },
         {
-            "Updated": "2024-04-02T22:56:13.0311849+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "clink-flex-prompt",
-            "Source": "main",
-            "Version": "0.17"
+            "Version": "0.17",
+            "Info": "",
+            "Updated": "2024-04-02T22:56:13.0311849+02:00"
         },
         {
-            "Updated": "2024-04-01T17:25:06.0444565+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "dark",
-            "Source": "main",
-            "Version": "3.14"
+            "Version": "3.14",
+            "Info": "",
+            "Updated": "2024-04-01T17:25:06.0444565+02:00"
         },
         {
-            "Updated": "2024-05-05T04:54:58.7378179+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "discord",
-            "Source": "extras",
-            "Version": "1.0.9035-18"
+            "Version": "1.0.9035-18",
+            "Info": "",
+            "Updated": "2024-05-05T04:54:58.7378179+02:00"
         },
         {
-            "Updated": "2024-04-15T08:49:32.3553187+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "dockercompletion",
-            "Source": "extras",
-            "Version": "1.2600.0.240409"
+            "Version": "1.2600.0.240409",
+            "Info": "",
+            "Updated": "2024-04-15T08:49:32.3553187+02:00"
         },
         {
-            "Updated": "2024-05-03T18:26:18.131696+02:00",
-            "Info": "Install failed",
+            "Source": null,
             "Name": "dolphin",
-            "Source": null,
-            "Version": null
+            "Version": null,
+            "Info": "Install failed",
+            "Updated": "2024-05-03T18:26:18.131696+02:00"
         },
         {
-            "Updated": "2024-04-18T17:48:33.1672688+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "Font-Awesome",
-            "Source": "nerd-fonts",
-            "Version": "6.5.2"
+            "Version": "6.5.2",
+            "Info": "",
+            "Updated": "2024-04-18T17:48:33.1672688+02:00"
         },
         {
-            "Updated": "2024-05-03T18:25:55.3775219+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "fzf",
-            "Source": "main",
-            "Version": "0.51.0"
+            "Version": "0.51.0",
+            "Info": "",
+            "Updated": "2024-05-03T18:25:55.3775219+02:00"
         },
         {
-            "Updated": "2024-04-14T22:06:01.6483826+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "ghostscript",
-            "Source": "main",
-            "Version": "10.03.0"
+            "Version": "10.03.0",
+            "Info": "",
+            "Updated": "2024-04-14T22:06:01.6483826+02:00"
         },
         {
-            "Updated": "2024-04-15T08:51:40.424556+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "IBMPlexMono-NF",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1"
+            "Version": "3.2.1",
+            "Info": "",
+            "Updated": "2024-04-15T08:51:40.424556+02:00"
         },
         {
-            "Updated": "2024-04-15T08:53:12.0011652+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "IBMPlexMono-NF-Mono",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1"
+            "Version": "3.2.1",
+            "Info": "",
+            "Updated": "2024-04-15T08:53:12.0011652+02:00"
         },
         {
-            "Updated": "2024-04-15T08:54:31.9009506+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "IBMPlexMono-NF-Propo",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1"
+            "Version": "3.2.1",
+            "Info": "",
+            "Updated": "2024-04-15T08:54:31.9009506+02:00"
         },
         {
-            "Updated": "2024-04-02T17:54:49.8858935+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "IBMPlexSans",
-            "Source": "nerd-fonts",
-            "Version": "6.4.0"
+            "Version": "6.4.0",
+            "Info": "",
+            "Updated": "2024-04-02T17:54:49.8858935+02:00"
         },
         {
-            "Updated": "2024-04-02T17:55:10.5079586+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "IBMPlexSerif",
-            "Source": "nerd-fonts",
-            "Version": "6.4.0"
+            "Version": "6.4.0",
+            "Info": "",
+            "Updated": "2024-04-02T17:55:10.5079586+02:00"
         },
         {
-            "Updated": "2024-04-22T12:14:01.1794304+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "imagemagick",
-            "Source": "main",
-            "Version": "7.1.1-31"
+            "Version": "7.1.1-31",
+            "Info": "",
+            "Updated": "2024-04-22T12:14:01.1794304+02:00"
         },
         {
-            "Updated": "2024-04-01T17:25:07.1474054+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "innounp",
-            "Source": "main",
-            "Version": "0.50"
+            "Version": "0.50",
+            "Info": "",
+            "Updated": "2024-04-01T17:25:07.1474054+02:00"
         },
         {
-            "Updated": "2024-04-15T08:57:01.9128555+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "JetBrainsMono-NF",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1"
+            "Version": "3.2.1",
+            "Info": "",
+            "Updated": "2024-04-15T08:57:01.9128555+02:00"
         },
         {
-            "Updated": "2024-04-15T08:59:33.061116+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "JetBrainsMono-NF-Mono",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1"
+            "Version": "3.2.1",
+            "Info": "",
+            "Updated": "2024-04-15T08:59:33.061116+02:00"
         },
         {
-            "Updated": "2024-04-15T09:01:16.5331274+02:00",
-            "Info": "",
+            "Source": "nerd-fonts",
             "Name": "JetBrainsMono-NF-Propo",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1"
+            "Version": "3.2.1",
+            "Info": "",
+            "Updated": "2024-04-15T09:01:16.5331274+02:00"
         },
         {
-            "Updated": "2024-04-02T22:56:14.7950439+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "lazy-posh-git",
-            "Source": "extras",
-            "Version": "0.2.0"
+            "Version": "0.2.0",
+            "Info": "",
+            "Updated": "2024-04-02T22:56:14.7950439+02:00"
         },
         {
-            "Updated": "2024-04-22T12:15:39.7319997+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "mambaforge",
-            "Source": "extras",
-            "Version": "24.3.0-0"
+            "Version": "24.3.0-0",
+            "Info": "",
+            "Updated": "2024-04-22T12:15:39.7319997+02:00"
         },
         {
-            "Updated": "2024-04-03T00:06:21.870698+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "pipx",
-            "Source": "main",
-            "Version": "1.5.0"
+            "Version": "1.5.0",
+            "Info": "",
+            "Updated": "2024-04-03T00:06:21.870698+02:00"
         },
         {
-            "Updated": "2024-04-02T15:20:25.8842003+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "posh-git",
-            "Source": "extras",
-            "Version": "1.1.0"
+            "Version": "1.1.0",
+            "Info": "",
+            "Updated": "2024-04-02T15:20:25.8842003+02:00"
         },
         {
-            "Updated": "2024-04-02T22:56:15.5088192+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "powershell-beautifier",
-            "Source": "main",
-            "Version": "1.2.5"
+            "Version": "1.2.5",
+            "Info": "",
+            "Updated": "2024-04-02T22:56:15.5088192+02:00"
         },
         {
-            "Updated": "2024-04-02T22:56:15.891192+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "pscolor",
-            "Source": "extras",
-            "Version": "1.0.0.0"
+            "Version": "1.0.0.0",
+            "Info": "",
+            "Updated": "2024-04-02T22:56:15.891192+02:00"
         },
         {
-            "Updated": "2024-04-02T15:20:27.7564307+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "psfzf",
-            "Source": "extras",
-            "Version": "2.5.22"
+            "Version": "2.5.22",
+            "Info": "",
+            "Updated": "2024-04-02T15:20:27.7564307+02:00"
         },
         {
-            "Updated": "2024-04-05T17:59:48.3007031+02:00",
+            "Source": "extras",
+            "Name": "regexp",
+            "Version": "0.92",
             "Info": "",
+            "Updated": "2024-05-06T11:16:38.0832627+02:00"
+        },
+        {
+            "Source": "extras",
+            "Name": "registry-explorer",
+            "Version": "2.0.0.0",
+            "Info": "",
+            "Updated": "2024-05-06T11:24:58.8762144+02:00"
+        },
+        {
+            "Source": "extras",
             "Name": "ripcord",
-            "Source": "extras",
-            "Version": "0.4.29"
+            "Version": "0.4.29",
+            "Info": "",
+            "Updated": "2024-04-05T17:59:48.3007031+02:00"
         },
         {
-            "Updated": "2024-04-02T15:20:28.3965304+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "scoop-completion",
-            "Source": "extras",
-            "Version": "0.3.0"
+            "Version": "0.3.0",
+            "Info": "",
+            "Updated": "2024-04-02T15:20:28.3965304+02:00"
         },
         {
-            "Updated": "2024-04-01T15:28:40.0143153+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "scoop-search",
-            "Source": "main",
-            "Version": "1.4.1"
+            "Version": "1.4.1",
+            "Info": "",
+            "Updated": "2024-04-01T15:28:40.0143153+02:00"
         },
         {
-            "Updated": "2024-04-02T15:20:28.5938585+02:00",
+            "Source": "extras",
+            "Name": "sysinternals",
+            "Version": "2024.2.13",
             "Info": "",
+            "Updated": "2024-05-06T10:55:21.854219+02:00"
+        },
+        {
+            "Source": "extras",
             "Name": "terminal-icons",
-            "Source": "extras",
-            "Version": "0.11.0"
+            "Version": "0.11.0",
+            "Info": "",
+            "Updated": "2024-04-02T15:20:28.5938585+02:00"
         },
         {
-            "Updated": "2024-04-03T00:14:34.7280317+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "vcredist2022",
-            "Source": "extras",
-            "Version": "14.38.33135.0"
+            "Version": "14.38.33135.0",
+            "Info": "",
+            "Updated": "2024-04-03T00:14:34.7280317+02:00"
         },
         {
-            "Updated": "2024-05-05T13:58:20.8085669+02:00",
-            "Info": "",
+            "Source": "extras",
             "Name": "ventoy",
-            "Source": "extras",
-            "Version": "1.0.97"
+            "Version": "1.0.97",
+            "Info": "",
+            "Updated": "2024-05-05T13:58:20.8085669+02:00"
         },
         {
-            "Updated": "2024-04-01T09:34:26.3736194+02:00",
-            "Info": "",
+            "Source": "main",
             "Name": "wget",
-            "Source": "main",
-            "Version": "1.21.4"
-        },
-        {
-            "Updated": "2024-04-02T15:21:44.8788491+02:00",
-            "Info": "Install failed",
-            "Name": "winget",
-            "Source": null,
-            "Version": null
-        },
-        {
-            "Updated": "2024-04-29T11:45:51.115233+02:00",
+            "Version": "1.21.4",
             "Info": "",
-            "Name": "winget-ps",
-            "Source": "main",
-            "Version": "1.8.1133"
+            "Updated": "2024-04-01T09:34:26.3736194+02:00"
         },
         {
-            "Updated": "2024-04-02T15:20:33.4123353+02:00",
-            "Info": "Install failed",
-            "Name": "zlocation",
+            "Source": "main",
+            "Name": "winget",
+            "Version": "1.7.11132",
+            "Info": "",
+            "Updated": "2024-05-05T20:36:43.5184827+02:00"
+        },
+        {
+            "Source": "main",
+            "Name": "winget-ps",
+            "Version": "1.8.1133",
+            "Info": "",
+            "Updated": "2024-04-29T11:45:51.115233+02:00"
+        },
+        {
             "Source": "extras",
-            "Version": "1.4.3"
+            "Name": "zlocation",
+            "Version": "1.4.3",
+            "Info": "Install failed",
+            "Updated": "2024-04-02T15:20:33.4123353+02:00"
+        },
+        {
+            "Source": "nonportable",
+            "Name": "winbtrfs-np",
+            "Version": "1.9",
+            "Info": "Global install",
+            "Updated": "2024-05-05T22:40:10.7709962+02:00"
         }
     ],
     "buckets": [
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2024-05-05T10:26:31+02:00",
+            "Updated": "2024-05-06T10:28:47+02:00",
             "Manifests": 1321
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2024-05-05T10:29:05+02:00",
-            "Manifests": 2016
+            "Updated": "2024-05-06T10:30:05+02:00",
+            "Manifests": 2018
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2024-05-05T10:30:08+02:00",
+            "Updated": "2024-05-06T10:32:20+02:00",
             "Manifests": 453
         },
         {
@@ -341,7 +369,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2024-05-05T10:25:19+02:00",
+            "Updated": "2024-05-06T06:26:33+02:00",
             "Manifests": 300
         }
     ]
