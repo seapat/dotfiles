@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-05-06T14:10:55.164-00:00",
+	"CreationDate" : "2024-05-06T19:14:29.305-00:00",
 	"Sources" : 
 	[
 		{
@@ -44,7 +44,7 @@
 				},
 				{
 					"PackageIdentifier" : "Brave.Brave",
-					"Version" : "124.1.65.122"
+					"Version" : "124.1.65.126"
 				},
 				{
 					"PackageIdentifier" : "BurntSushi.ripgrep.MSVC",
@@ -52,7 +52,7 @@
 				},
 				{
 					"PackageIdentifier" : "CrystalDewWorld.CrystalDiskInfo",
-					"Version" : "9.2.3"
+					"Version" : "9.3.0"
 				},
 				{
 					"PackageIdentifier" : "GNU.Wget2",
@@ -60,7 +60,7 @@
 				},
 				{
 					"PackageIdentifier" : "Git.Git",
-					"Version" : "2.44.0"
+					"Version" : "2.45.0"
 				},
 				{
 					"PackageIdentifier" : "HandBrake.HandBrake",
@@ -107,8 +107,16 @@
 					"Version" : "125.0.2"
 				},
 				{
+					"PackageIdentifier" : "Mozilla.Firefox",
+					"Version" : "125.0.3"
+				},
+				{
 					"PackageIdentifier" : "Mozilla.Thunderbird",
 					"Version" : "115.10.1"
+				},
+				{
+					"PackageIdentifier" : "Mozilla.Thunderbird",
+					"Version" : "115.10.2"
 				},
 				{
 					"PackageIdentifier" : "OBSProject.OBSStudio",
@@ -120,7 +128,7 @@
 				},
 				{
 					"PackageIdentifier" : "Rye.Rye",
-					"Version" : "0.28.0"
+					"Version" : "0.33.0"
 				},
 				{
 					"PackageIdentifier" : "Albion.Online",
@@ -156,7 +164,7 @@
 				},
 				{
 					"PackageIdentifier" : "Zoom.Zoom.EXE",
-					"Version" : "6.0.3 (37634)"
+					"Version" : "6.0.4 (38135)"
 				},
 				{
 					"PackageIdentifier" : "ajeetdsouza.zoxide",
@@ -184,7 +192,7 @@
 				},
 				{
 					"PackageIdentifier" : "junegunn.fzf",
-					"Version" : "0.50.0"
+					"Version" : "0.51.0"
 				},
 				{
 					"PackageIdentifier" : "sharkdp.bat",
@@ -200,7 +208,7 @@
 				},
 				{
 					"PackageIdentifier" : "twpayne.chezmoi",
-					"Version" : "2.47.4"
+					"Version" : "2.48.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64",
@@ -264,7 +272,7 @@
 				},
 				{
 					"PackageIdentifier" : "Telegram.TelegramDesktop",
-					"Version" : "5.0"
+					"Version" : "5.0.1"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6",
