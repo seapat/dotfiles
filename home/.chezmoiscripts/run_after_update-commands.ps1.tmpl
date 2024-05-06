@@ -1,6 +1,0 @@
-# for cli tools that should be run after chezmoi changes the state 
-
-Start-Process -Wait -FilePath "spicetify" -ArgumentList "restore backup apply"
-# Start-Process -FilePath "spicetify restore backup apply"
-Start-Process -Wait -FilePath "scoop.cmd" -ArgumentList "export -c > $env:APPDATA\scoop.json"
-Start-Process -Wait -FilePath "winget.exe" -ArgumentList "export -o $env:APPDATA\winget.json --include-versions --disable-interactivity"

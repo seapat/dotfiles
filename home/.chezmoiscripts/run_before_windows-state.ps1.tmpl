@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.os "windows" }}
+{{- if (and false (eq .chezmoi.os "windows"))}}
 # we want to ensure the state every time we run chezmoi apply.
 
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
