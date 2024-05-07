@@ -265,13 +265,6 @@
             "Info": "Install failed"
         },
         {
-            "Name": "registry-explorer",
-            "Updated": "2024-05-06T11:24:58.8762144+02:00",
-            "Source": "extras",
-            "Version": "2.0.0.0",
-            "Info": ""
-        },
-        {
             "Name": "registry-finder",
             "Updated": "2024-05-06T11:32:03.5170793+02:00",
             "Source": "extras",
