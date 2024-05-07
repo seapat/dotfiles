@@ -84,5 +84,7 @@
   "notebook.lineNumbers": "on",
   "workbench.editorAssociations": {
     "*.png": "imagePreview.previewEditor"
-  }
+  },
+  "workbench.colorTheme": "Default Light Modern",
+  "workbench.editor.preferHistoryBasedLanguageDetection": true
 }
