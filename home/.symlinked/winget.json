@@ -47,28 +47,12 @@
 					"Version" : "124.1.65.126"
 				},
 				{
-					"PackageIdentifier" : "BurntSushi.ripgrep.MSVC",
-					"Version" : "14.1.0"
-				},
-				{
 					"PackageIdentifier" : "CrystalDewWorld.CrystalDiskInfo",
 					"Version" : "9.3.0"
 				},
 				{
-					"PackageIdentifier" : "GNU.Wget2",
-					"Version" : "2.1.0"
-				},
-				{
-					"PackageIdentifier" : "Git.Git",
-					"Version" : "2.45.0"
-				},
-				{
 					"PackageIdentifier" : "HandBrake.HandBrake",
 					"Version" : "1.7.3"
-				},
-				{
-					"PackageIdentifier" : "MarcinOtorowski.MSIXHero",
-					"Version" : "3.0.0.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Teams",
@@ -77,10 +61,6 @@
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller",
 					"Version" : "1.23.924.0"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Sysinternals.ProcessExplorer",
-					"Version" : "17.05"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7",
@@ -104,19 +84,7 @@
 				},
 				{
 					"PackageIdentifier" : "Mozilla.Firefox",
-					"Version" : "125.0.2"
-				},
-				{
-					"PackageIdentifier" : "Mozilla.Firefox",
 					"Version" : "125.0.3"
-				},
-				{
-					"PackageIdentifier" : "Mozilla.Thunderbird",
-					"Version" : "115.10.1"
-				},
-				{
-					"PackageIdentifier" : "Mozilla.Thunderbird",
-					"Version" : "115.10.2"
 				},
 				{
 					"PackageIdentifier" : "OBSProject.OBSStudio",
@@ -139,14 +107,6 @@
 					"Version" : "Unknown"
 				},
 				{
-					"PackageIdentifier" : "SecretsOPerationS.SOPS",
-					"Version" : "3.8.1"
-				},
-				{
-					"PackageIdentifier" : "Spicetify.Spicetify",
-					"Version" : "2.36.8"
-				},
-				{
 					"PackageIdentifier" : "Spotify.Spotify",
 					"Version" : "1.2.36.959.g04bf500c"
 				},
@@ -157,10 +117,6 @@
 				{
 					"PackageIdentifier" : "SumatraPDF.SumatraPDF",
 					"Version" : "3.5.2"
-				},
-				{
-					"PackageIdentifier" : "Typst.Typst",
-					"Version" : "0.11.0"
 				},
 				{
 					"PackageIdentifier" : "Ubisoft.Connect",
@@ -175,48 +131,12 @@
 					"Version" : "6.0.4 (38135)"
 				},
 				{
-					"PackageIdentifier" : "ajeetdsouza.zoxide",
-					"Version" : "0.9.4"
-				},
-				{
-					"PackageIdentifier" : "aria2.aria2",
-					"Version" : "1.37.0"
-				},
-				{
-					"PackageIdentifier" : "ArmCord.ArmCord",
-					"Version" : "3.2.6"
-				},
-				{
 					"PackageIdentifier" : "LegacyInteractive.Launcher",
 					"Version" : "1.13.0"
 				},
 				{
-					"PackageIdentifier" : "direnv.direnv",
-					"Version" : "2.34.0"
-				},
-				{
 					"PackageIdentifier" : "ItchIo.Itch",
 					"Version" : "25.6.2"
-				},
-				{
-					"PackageIdentifier" : "junegunn.fzf",
-					"Version" : "0.51.0"
-				},
-				{
-					"PackageIdentifier" : "sharkdp.bat",
-					"Version" : "0.24.0"
-				},
-				{
-					"PackageIdentifier" : "sharkdp.fd",
-					"Version" : "9.0.0"
-				},
-				{
-					"PackageIdentifier" : "topgrade-rs.topgrade",
-					"Version" : "14.0.1"
-				},
-				{
-					"PackageIdentifier" : "twpayne.chezmoi",
-					"Version" : "2.48.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64",
@@ -225,14 +145,6 @@
 				{
 					"PackageIdentifier" : "NhekoReborn.Nheko",
 					"Version" : "0.11.3"
-				},
-				{
-					"PackageIdentifier" : "Chocolatey.Chocolatey",
-					"Version" : "2.2.2.0"
-				},
-				{
-					"PackageIdentifier" : "LGUG2Z.whkd",
-					"Version" : "0.2.1"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64",
@@ -245,10 +157,6 @@
 				{
 					"PackageIdentifier" : "GitHub.GitLFS",
 					"Version" : "3.5.1"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WindowsADK",
-					"Version" : "10.1.22621.1"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86",
@@ -271,14 +179,6 @@
 					"Version" : "> 10.4.1.1"
 				},
 				{
-					"PackageIdentifier" : "GitHub.cli",
-					"Version" : "2.48.0"
-				},
-				{
-					"PackageIdentifier" : "gerardog.gsudo",
-					"Version" : "2.4.4"
-				},
-				{
 					"PackageIdentifier" : "Telegram.TelegramDesktop",
 					"Version" : "5.0.1"
 				},
@@ -291,24 +191,12 @@
 					"Version" : "14.40.33617.1"
 				},
 				{
-					"PackageIdentifier" : "LGUG2Z.komorebi",
-					"Version" : "0.1.24"
-				},
-				{
-					"PackageIdentifier" : "easymodo.qimgv",
-					"Version" : "1.0.2"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64",
 					"Version" : "9.0.30729.6161"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.ADKPEAddon",
 					"Version" : "10.1.25398.1"
-				},
-				{
-					"PackageIdentifier" : "ca.duan.tre-command",
-					"Version" : "0.4.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode",
@@ -351,10 +239,6 @@
 					"Version" : "1.1.13"
 				},
 				{
-					"PackageIdentifier" : "prefix-dev.pixi",
-					"Version" : "0.20.0"
-				},
-				{
 					"PackageIdentifier" : "WinFsp.WinFsp",
 					"Version" : "2.0.23075"
 				},
@@ -369,10 +253,6 @@
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86",
 					"Version" : "10.0.40219"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.PowerShell",
-					"Version" : "7.4.2.0"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.DotNet.Runtime.6",
