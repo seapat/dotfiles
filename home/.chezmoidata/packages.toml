@@ -34,7 +34,6 @@ packages = [
 
 [winget]
 packages = [
-    "GNU.Wget2",
     # The DSC resource cannot (?) install the below
     "MyGames.GameCenter --ignore-security-hash",
 ]
