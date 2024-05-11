@@ -21,9 +21,9 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # }
 
 # move Tray Icons from collapse-arrow to taskbar
-$basePath = 'HKCU:\Control Panel\NotifyIconSettings\'
-Get-ChildItem -Path $basePath | `
-    ForEach-Object { Get-ItemProperty "$basePath$($_.PSChildName)" } | `
-    Set-ItemProperty -Name 'IsPromoted' -Value 1
+# $basePath = 'HKCU:\Control Panel\NotifyIconSettings\'
+# Get-ChildItem -Path $basePath | `
+#     ForEach-Object { Get-ItemProperty "$basePath$($_.PSChildName)" } | `
+#     Set-ItemProperty -Name 'IsPromoted' -Value 1
 
 {{ end }}

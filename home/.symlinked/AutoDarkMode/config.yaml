@@ -74,7 +74,7 @@ ProcessBlockList:
   Enabled: false
 Events:
   DarkThemeOnBattery: false
-  Win10AllowLockscreenSwitch: false
+  Win10AllowLockscreenSwitch: true
 Notifications:
   OnAutoThemeSwitching: true
   OnSkipNextSwitch: true

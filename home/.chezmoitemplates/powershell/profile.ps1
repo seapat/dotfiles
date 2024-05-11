@@ -1,21 +1,3 @@
-### PROMPT ETC
-
-# starship
-# $ENV:STARSHIP_CONFIG = "$HOME\config\starship\config.toml"
-if (Get-Command starship -errorAction SilentlyContinue) {
-  Invoke-Expression (&starship init powershell)
-  $ENV:STARSHIP_CACHE = "$HOME\AppData\Local\Temp"
-}
-
-### MODULES
-Import-Module PSFzf -ArgumentList 'Ctrl+t', 'Ctrl+r'
-# Import-Module Terminal-Icons # buggy in windows terminal, works in wezterm
-
-Import-Module posh-git
-$GitPromptSettings.EnablePromptStatus = $false
-
-
-
 ### COMPLETIONS
 
 # Shows navigable menu of all options when hitting Tab
@@ -74,8 +56,27 @@ Set-Alias open Invoke-Item
 ### INVOKES
 
 # fast `scoop-search` replaces slow `scoop search` (needs to be installed)
-Invoke-Expression (&scoop-search --hook)
+# Invoke-Expression (&scoop-search --hook)
+
+# extension of scoop commands, also better than scoop seasrch
+Invoke-Expression (&sfsu hook)
 
 # zoxide, replaces psmodules z or zlocation, provides `z` and `zi` commands
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 # TODO https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#third-party-integrations
+
+### PROMPT ETC
+
+# starship
+# $ENV:STARSHIP_CONFIG = "$HOME\config\starship\config.toml"
+if (Get-Command starship -errorAction SilentlyContinue) {
+  Invoke-Expression (&starship init powershell)
+  $ENV:STARSHIP_CACHE = "$HOME\AppData\Local\Temp"
+}
+
+### MODULES
+# Import-Module PSFzf -ArgumentList 'Ctrl+t', 'Ctrl+r'
+# Import-Module Terminal-Icons # buggy in windows terminal, works in wezterm
+
+Import-Module posh-git
+$GitPromptSettings.EnablePromptStatus = $false

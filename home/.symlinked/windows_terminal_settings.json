@@ -49,7 +49,7 @@
             "colorScheme": "Campbell",
             "font": 
             {
-                "face": "BlexMono Nerd Font Mono"
+                "face": "IBM Plex Mono"
             }
         },
         "list": 
@@ -80,12 +80,6 @@
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
-            },
-            {
-                "guid": "{c397f356-5e7b-55bc-956b-8cb4b9762c26}",
-                "hidden": false,
-                "name": "NixOS",
-                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
