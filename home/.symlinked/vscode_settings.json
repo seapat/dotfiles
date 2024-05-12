@@ -86,5 +86,8 @@
     "*.png": "imagePreview.previewEditor"
   },
   "workbench.colorTheme": "Default Light Modern",
-  "workbench.editor.preferHistoryBasedLanguageDetection": true
+  "workbench.editor.preferHistoryBasedLanguageDetection": true,
+  "remote.SSH.remotePlatform": {
+    "132.226.198.229": "linux"
+  }
 }

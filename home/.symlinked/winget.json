@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-05-11T09:47:23.618-00:00",
+	"CreationDate" : "2024-05-12T23:13:13.241-00:00",
 	"Sources" : 
 	[
 		{
@@ -8,7 +8,7 @@
 			[
 				{
 					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime",
-					"Version" : "124.0.2478.80"
+					"Version" : "124.0.2478.97"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller",
