@@ -1,6 +1,7 @@
 local color_scheme_switch = require 'color_scheme_switch'
 
-return { 
+return {
+    window_decorations = "RESIZE",
 
     -- config.default_prog = { 'nushell', '-l' }
 
