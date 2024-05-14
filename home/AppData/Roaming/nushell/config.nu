@@ -1,4 +1,4 @@
- # Nushell Config File
+# Nushell Config File
 #
 # version = "0.93.0"
 
@@ -864,3 +864,6 @@ $env.config = {
         }
     ]
 }
+
+# start starship
+use ~/.cache/starship/init.nu

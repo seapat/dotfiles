@@ -1,6 +1,5 @@
 # Nushell Environment Config File
 #
-#
 # version = "0.93.0"
 
 def create_left_prompt [] {
@@ -86,6 +85,10 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
+# Starship (prompt)
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 # An alternate way to add entries to $env.PATH is to use the custom command `path add`
@@ -99,3 +102,4 @@ $env.NU_PLUGIN_DIRS = [
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
+

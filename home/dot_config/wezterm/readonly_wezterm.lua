@@ -2,6 +2,7 @@ local color_scheme_switch = require 'color_scheme_switch'
 
 return {
     window_decorations = "RESIZE",
+    animation_fps = 1,
 
     -- config.default_prog = { 'nushell', '-l' }
 
