@@ -33,7 +33,7 @@
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{06786f8c-26a6-4f92-92cd-2ba7ec893be9}",
     "disableAnimations": true,
     "focusFollowMouse": true,
     "newTabMenu": 
@@ -80,6 +80,13 @@
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "commandline": "nu.exe",
+                "guid": "{06786f8c-26a6-4f92-92cd-2ba7ec893be9}",
+                "hidden": false,
+                "icon": "\ud83d\udc18",
+                "name": "Nushell"
             }
         ]
     },

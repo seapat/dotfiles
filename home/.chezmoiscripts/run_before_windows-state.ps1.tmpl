@@ -3,7 +3,7 @@
 
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-[Environment]::SetEnvironmentVariable("EDITOR", "code.exe", "User")
+[Environment]::SetEnvironmentVariable("EDITOR", "code", "User")
 
 # Self-elevate the script if required
 if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {

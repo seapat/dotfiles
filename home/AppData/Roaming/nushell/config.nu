@@ -22,7 +22,7 @@ let dark_theme = {
     date: purple
     range: white
     float: white
-    string: white
+    string: {|| if $in =~ '^#[a-fA-F\d]+' { $in } else { 'white' } }
     nothing: white
     binary: white
     cell-path: white
@@ -87,7 +87,7 @@ let light_theme = {
     date: purple
     range: dark_gray
     float: dark_gray
-    string: dark_gray
+    string: {|| if $in =~ '^#[a-fA-F\d]+' { $in } else { 'dark_gray' } }
     nothing: dark_gray
     binary: dark_gray
     cell-path: dark_gray
@@ -135,11 +135,6 @@ let light_theme = {
     shape_variable: purple
     shape_vardecl: purple
 }
-
-# External completer example
-# let carapace_completer = {|spans|
-#     carapace $spans.0 nushell ...$spans | from json
-# }
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
@@ -258,7 +253,12 @@ $env.config = {
     }
 
     hooks: {
-        pre_prompt: [{ null }] # run before the prompt is shown
+        pre_prompt: [{ ||
+        if (which direnv | is-empty) {
+          return
+        }
+        direnv export json | from json | default {} | load-env
+        }] # run before the prompt is shown
         pre_execution: [{ null }] # run before the repl input is run
         env_change: {
             PWD: [{|before, after| null }] # run if the PWD environment is different since the last repl input
@@ -351,6 +351,27 @@ $env.config = {
                 text: green
                 selected_text: green_reverse
                 description_text: yellow
+            }
+        }
+        {
+            # Shows Variables created in current session
+            name: vars_menu
+            only_buffer_difference: true
+            marker: "# "
+            type: {
+                layout: list
+                page_size: 10
+            }
+            style: {
+                text: green
+                selected_text: green_reverse
+                description_text: yellow
+            }
+            source: { |buffer, position|
+                $nu.scope.vars
+                | where name =~ $buffer
+                | sort-by name
+                | each { |it| {value: $it.name description: $it.type} }
             }
         }
     ]
@@ -865,5 +886,42 @@ $env.config = {
     ]
 }
 
-# start starship
-use ~/.cache/starship/init.nu
+# FIXME: fix startup-time
+# source ($nu.default-config-dir | path join 'show_banner.nu')
+
+# Import Nu-Integrations
+use ~/.cache/nushell/starship.nu # import module
+source ~/.cache/nushell/carapace.nu # insert nu code
+source ~/.cache/nushell/sfsu.nu
+source ~/.cache/nushell/zoxide.nu
+
+match $nu.os-info.name {
+    "windows" => {
+        use std
+        # pueue --> Job management
+        pueued -d o+e>| (std null-device) # --> start daemon, use systemd if on linux
+    },
+    "linux" => {
+        # TODO: file an issue -> This throws an error (missing file) even though we are on windows.
+        # if ('~/.local/share/atuin/init.nu' | path exists) { source ~/.local/share/atuin/init.nu }
+        # try { source ~/.local/share/atuin/init.nu }
+    }
+}
+
+use task.nu # --> load nushell module from nu_scripts repo https://github.com/nushell/nu_scripts/blob/main/modules/background_task/task.nu
+
+# FIXME: sfsu hooks do not work if we enable this, maybe write our own?
+# use completions/scoop-completions.nu *
+use completions/ani-cli-completions.nu *
+use completions/gh-completions.nu *
+use completions/winget-completions.nu *
+use completions/vscode-completions.nu *
+use completions/typst-completions.nu *
+use completions/tldr-completions.nu *
+use completions/nix-completions.nu *
+
+# put content on system clipboard with `clip`
+use clip.nu clip
+
+
+source zoxide-menu.nu

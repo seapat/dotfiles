@@ -1,0 +1,11 @@
+[credential "helperselector"]
+	selected = <no helper>
+[credential "https://github.com"]
+	helper = 
+	helper = !'C:\\Users\\seapat\\scoop\\apps\\gh\\current\\bin\\gh.exe' auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !'C:\\Users\\seapat\\scoop\\apps\\gh\\current\\bin\\gh.exe' auth git-credential
+[user]
+	email = seapat@users.noreply.github.com
+	name = Sean
