@@ -60,7 +60,6 @@ pager = "less -R"
 [diff]
     {{ if lookPath "delta" -}}
     command = "delta"
-    # args = ["{{ .Destination }}", "{{ .Target }}"]
     pager = "delta --side-by-side"
     {{ end }}
     exclude = ["scripts"]
