@@ -57,18 +57,9 @@ pager = "less -R"
     identity = "{{- $configdir -}}/sops/age/keys.txt"
     recipient = "age1vlg8zjhne82pkh0e9kr4kpartak9uk8u7ylqf0qaggkqhjx4dgrqh9xnuq"
     passphrase = false
-[diff]
-    {{ if lookPath "delta" -}}
-    command = "delta"
-    pager = "delta --side-by-side"
-    {{ end }}
-    exclude = ["scripts"]
 [edit]
     command = "code"
     args = ["--wait"]
-[merge]
-    command = "delta"
-    # args = ["-d", ""{{" .Destination "}}"", ""{{" .Source "}}"", ""{{" .Target "}}""]
 
 [interpreters.ps1]
     # https://www.chezmoi.io/reference/target-types/#scripts-on-windows
