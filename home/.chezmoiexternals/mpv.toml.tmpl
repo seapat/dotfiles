@@ -1,44 +1,53 @@
 
 {{- $config_path := "scoop/persist/mpv/portable_config" -}}
 
-["{{- $config_path -}}/mpv/shaders"]
+["{{- $config_path -}}/shaders"]
 type = "archive"
 url = "https://github.com/bloc97/Anime4K/releases/download/v4.0.1/Anime4K_v4.0.zip"
 refreshPeriod = "168h"
 checksum.sha256 = "139cd282086457c5adc79caf7b75b8b825091d71c9b54958c18745fea62d7ed7"
 
-["{{- $config_path -}}/mpv/scripts/thumbfast.lua"]
+["{{- $config_path -}}/scripts/thumbfast.lua"]
 type = "file"
 url = "https://raw.githubusercontent.com/po5/thumbfast/master/thumbfast.lua"
 refreshPeriod = "168h"
 
-["{{- $config_path -}}/mpv/scripts/status-line.lua"]
+["{{- $config_path -}}/scripts/status-line.lua"]
 type = "file"
 url = "https://raw.githubusercontent.com/mpv-player/mpv/master/TOOLS/lua/status-line.lua"
 refreshPeriod = "168h"
 
 # TODO i likely did some modifications to a previous version of this script
-["{{- $config_path -}}/mpv/scripts/dynamic-crop.lua"]
+["{{- $config_path -}}/scripts/dynamic-crop.lua"]
 type = "file"
 url = "https://raw.githubusercontent.com/Ashyni/mpv-scripts/master/dynamic-crop.lua"
 refreshPeriod = "168h"
 
-["{{- $config_path -}}/mpv/scripts/copyTime.lua"]
+["{{- $config_path -}}/scripts/copyTime.lua"]
 type = "file"
 url = "https://raw.githubusercontent.com/Arieleg/mpv-copyTime/master/copyTime.lua"
 refreshPeriod = "168h"
 
-["{{- $config_path -}}/mpv"]
+["{{- $config_path -}}"]
 type = "archive"
 url = "https://github.com/tomasklaen/uosc/releases/download/5.2.0/uosc.zip"
 refreshPeriod = "168h"
 # checksum.sha256 = "d7109a351d9d5c671523a5e2479bce9c79fbf08e18a0aa09e553557770bdaf5d"
 
-["{{- $config_path -}}/mpv/scripts/mpv-discordRPC"]
+["{{- $config_path -}}/scripts/mpv-discordRPC"]
 type = "archive"
 url = "https://github.com/cniw/mpv-discordRPC/archive/refs/heads/master.zip"
 refreshPeriod = "168h"
 stripComponents = 2
 include = ["mpv-discordRPC-master/mpv-discordRPC/**"]
 
-#  {{- template "os.tmpl" . -}}
+
+# FIXME: check what combination of include exact and stripComponents is needed
+["{{- $config_path -}}/scripts/"]
+type = "archive"
+url = '{{ gitHubLatestRelease "tsl0922/mpv-menu-plugin" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
+stripComponents = 1 # strips the "menu" folder inside the zip
+refreshPeriod = "168h"
+# include = ["*/*.dll", "*/*.lua"]
+
+#  {{- template "os.tmpl" . -}}/mpv

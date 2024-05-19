@@ -886,6 +886,13 @@ $env.config = {
     ]
 }
 
+# TODO: separate file (use source )
+# or maybe use and define separate sets? -> if os == windows {export ...} else if os == linux { ... }
+alias ll = lsd -l
+alias cat = bat
+alias top = btm
+alias htop = btm
+
 # FIXME: fix startup-time
 # source ($nu.default-config-dir | path join 'show_banner.nu')
 
@@ -921,7 +928,7 @@ use completions/tldr-completions.nu *
 use completions/nix-completions.nu *
 
 # put content on system clipboard with `clip`
-use clip.nu clip
+source clip.nu
 
 
 source zoxide-menu.nu

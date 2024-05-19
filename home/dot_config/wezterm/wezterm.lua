@@ -4,7 +4,13 @@ return {
     window_decorations = "RESIZE",
     animation_fps = 1,
 
-    -- config.default_prog = { 'nushell', '-l' }
+    -- scroll bar
+    enable_scroll_bar = true,
+    min_scroll_bar_height = "1cell",
+
+    -- startup
+    default_prog = { 'nu', '-i'},
+    default_cwd = "~",
 
     -- enable_wayland = false,
     -- color_schemes = {

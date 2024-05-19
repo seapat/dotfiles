@@ -11,9 +11,9 @@ end
 
 function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Builtin Solarized Dark'
+    return 'Bamboo'
   else
-    return 'Builtin Solarized Light'
+    return 'Bamboo Light'
   end
 end
 

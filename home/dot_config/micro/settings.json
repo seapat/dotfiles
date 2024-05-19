@@ -1,0 +1,12 @@
+{
+    "colorcolumn": 80,
+    "diffgutter": true,
+    "hlsearch": true,
+    "hltaberrors": true,
+    "hltrailingws": true,
+    "matchbracestyle": "highlight",
+    "rmtrailingws": true,
+    "scrollbar": true,
+    "tabmovement": true,
+    "tabstospaces": true
+}

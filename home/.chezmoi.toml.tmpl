@@ -39,10 +39,8 @@
 encryption = "age"
 mode = "file" # symlink mode does not work for encrypted or private files, can be buggy
 progress = true
+pager = "less -R"
 
-[add]
-    secrets = "error" # "warning"
-    templateSymlinks = false # ??
 [data]
     username = "seapat"
     email = {{ $email | quote }}
@@ -52,12 +50,27 @@ progress = true
 [git]
     autoCommit = false
     autoPush = true
-[diff]
-    exclude = ["scripts"]
+[add]
+    secrets = "error" # "warning"
+    templateSymlinks = false # ??
 [age]
     identity = "{{- $configdir -}}/sops/age/keys.txt"
     recipient = "age1vlg8zjhne82pkh0e9kr4kpartak9uk8u7ylqf0qaggkqhjx4dgrqh9xnuq"
     passphrase = false
+[diff]
+    {{ if lookPath "delta" -}}
+    command = "delta"
+    # args = ["{{ .Destination }}", "{{ .Target }}"]
+    pager = "delta --side-by-side"
+    {{ end }}
+    exclude = ["scripts"]
+[edit]
+    command = "code"
+    args = ["--wait"]
+[merge]
+    command = "delta"
+    # args = ["-d", ""{{" .Destination "}}"", ""{{" .Source "}}"", ""{{" .Target "}}""]
+
 [interpreters.ps1]
     # https://www.chezmoi.io/reference/target-types/#scripts-on-windows
     command = "pwsh"

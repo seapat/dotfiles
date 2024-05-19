@@ -60,7 +60,6 @@
   "window.commandCenter": true,
   "window.menuBarVisibility": "classic",
   "window.systemColorTheme": true,
-  "window.titleBarStyle": "custom",
   "workbench.activityBar.location": "top",
   "workbench.editor.empty.hint": "hidden",
   "workbench.iconTheme": "vscode-great-icons",
@@ -90,5 +89,6 @@
   "remote.SSH.remotePlatform": {
     "132.226.198.229": "linux"
   },
-  "breadcrumbs.icons": false
+  "breadcrumbs.icons": false,
+  "window.customTitleBarVisibility": "windowed"
 }

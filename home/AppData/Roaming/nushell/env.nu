@@ -29,6 +29,8 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
+
+
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 # An alternate way to add entries to $env.PATH is to use the custom command `path add`
@@ -45,8 +47,11 @@ $env.NU_PLUGIN_DIRS = [
 
 
 # TODO: replace Paths with something that is not hardcoded (perhaps setup xdg dirs on windows)
-let cache_path = "~/.cache/nushell"
+let cache_path = $"/Users/($env.USERNAME)/.cache/nushell"
 mkdir ($cache_path)
+
+print "finished loading libs"
+
 
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 carapace _carapace nushell | save --force $"($cache_path)/carapace.nu"
