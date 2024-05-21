@@ -1,13 +1,23 @@
 
 local wezterm = require 'wezterm';
-local launch_menu = {};
+local launch_menu = {
+  
+};
 
 -- Windoof
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   table.insert(launch_menu, {
-    label = 'PowerShell',
+    label = 'PowerShell 5',
     args = { 'powershell.exe', '-NoLogo' },
   })
+  table.insert(launch_menu, {
+    label = 'PowerShell 7',
+    args = { 'pwsh.exe'},
+  })
+  table.insert(launch_menu, {
+    label = 'Nushell',
+    args = { 'nu', '-i' },
+  }) 
 
 -- lincool
 elseif wezterm.target_triple == 'x86_64-unknown-linux-gnu' or wezterm.target_triple == 'x86_64-apple-darwin' then

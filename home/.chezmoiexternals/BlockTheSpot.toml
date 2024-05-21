@@ -1,6 +1,6 @@
-["{{- template "os.tmpl" . -}}/Spotify"]
+["scoop/apps/spotify/current"]
     type = "archive"
     url = '{{ gitHubLatestRelease "mrpond/BlockTheSpot" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
-    exact = true
-    stripComponents = 1
+    # exact = true
+    # stripComponents = 1
     refreshPeriod = "168h"

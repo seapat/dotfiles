@@ -43,11 +43,11 @@ include = ["mpv-discordRPC-master/mpv-discordRPC/**"]
 
 
 # FIXME: check what combination of include exact and stripComponents is needed
-["{{- $config_path -}}/scripts/"]
-type = "archive"
-url = '{{ gitHubLatestRelease "tsl0922/mpv-menu-plugin" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
-stripComponents = 1 # strips the "menu" folder inside the zip
-refreshPeriod = "168h"
-# include = ["*/*.dll", "*/*.lua"]
+# ["{{- $config_path -}}/scripts/"]
+# type = "archive"
+# url = '{{ gitHubLatestRelease "tsl0922/mpv-menu-plugin" | toJson | fromJson | jq ".assets[0].browser_download_url" | first}}'
+# stripComponents = 1 # strips the "menu" folder inside the zip
+# refreshPeriod = "168h"
+# # include = ["*/*.dll", "*/*.lua"]
 
 #  {{- template "os.tmpl" . -}}/mpv
