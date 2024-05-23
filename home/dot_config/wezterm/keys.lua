@@ -26,25 +26,26 @@ wezterm.on("toggle-opacity", function(window)
 	window:set_config_overrides(overrides)
 end)
 
-wezterm.on("toggle-darkmode", function(window)
-	local overrides = window:get_config_overrides() or {}
-	if overrides.color_scheme == "Gnome Light" then
-		overrides.color_scheme = "Charmful Dark"
-	else
-		overrides.color_scheme = "Gnome Light"
-	end
-	window:set_config_overrides(overrides)
-end)
+-- wezterm.on("toggle-darkmode", function(window)
+-- 	local overrides = window:get_config_overrides() or {}
+-- 	if overrides.color_scheme == "Gnome Light" then
+-- 		overrides.color_scheme = "Charmful Dark"
+-- 	else
+-- 		overrides.color_scheme = "Gnome Light"
+-- 	end
+-- 	window:set_config_overrides(overrides)
+-- end)
 
 return {
 	{ key = 'l', mods = "CTRL", action = wa.ShowLauncher },
 	{ key = "p", mods = "CTRL", action = wa.EmitEvent("padding-off") },
 	{ key = "o", mods = "CTRL", action = wa.EmitEvent("toggle-opacity") },
-	{ key = "i", mods = "CTRL", action = wa.EmitEvent("toggle-darkmode") },
+	-- { key = "i", mods = "CTRL", action = wa.EmitEvent("toggle-darkmode") },
 	{
 		key = 'l',
 		mods = 'CTRL|SHIFT',
-		action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|TABS|DOMAINS|WORKSPACES' },
+		action = wa.ShowLauncherArgs { flags = 'FUZZY|TABS|LAUNCH_MENU_ITEMS|DOMAINS|WORKSPACES|COMMANDS' },
 	},
+	{ key = 't', mods = 'CTRL', action = wa.ShowTabNavigator },
 	
 }

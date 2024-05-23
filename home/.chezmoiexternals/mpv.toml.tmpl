@@ -41,6 +41,11 @@ refreshPeriod = "168h"
 stripComponents = 2
 include = ["mpv-discordRPC-master/mpv-discordRPC/**"]
 
+["{{- $config_path -}}/scripts/inputevent.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/natural-harmonia-gropius/input-event/master/inputevent.lua"
+refreshPeriod = "168h"
+
 
 # FIXME: check what combination of include exact and stripComponents is needed
 # ["{{- $config_path -}}/scripts/"]

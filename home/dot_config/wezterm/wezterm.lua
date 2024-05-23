@@ -44,8 +44,13 @@ config.inactive_pane_hsb = {
 config.window_background_opacity = 1.0
 config.text_background_opacity = 1.0
 
+config.notification_handling = "SuppressFromFocusedTab" -- SuppressFromFocusedWindow 
+
 config.keys = require("keys")
 config.color_scheme = require("color_scheme_switch")
 config.launch_menu = require("launch_menu")
-      
+
+
+
+
 return config
