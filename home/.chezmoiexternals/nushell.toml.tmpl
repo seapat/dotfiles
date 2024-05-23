@@ -1,12 +1,4 @@
-["{{- template "os.tmpl" . -}}/nushell/lib/task.nu"]
-type = "file"
-url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/modules/background_task/task.nu"
-refreshPeriod = "168h"
-
-["{{- template "os.tmpl" . -}}/nushell/lib/completions/scoop-completions.nu"]
-type = "file"
-url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/scoop/scoop-completions.nu"
-refreshPeriod = "168h"
+####### completions
 
 ["{{- template "os.tmpl" . -}}/nushell/lib/completions/ani-cli-completions.nu"]
 type = "file"
@@ -18,19 +10,14 @@ type = "file"
 url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/gh/gh-completions.nu"
 refreshPeriod = "168h"
 
-["{{- template "os.tmpl" . -}}/nushell/lib/completions/winget-completions.nu"]
+["{{- template "os.tmpl" . -}}/nushell/lib/completions/nix-completions.nu"]
 type = "file"
-url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/winget/winget-completions.nu"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/nix/nix-completions.nu"
 refreshPeriod = "168h"
 
-["{{- template "os.tmpl" . -}}/nushell/lib/completions/vscode-completions.nu"]
+["{{- template "os.tmpl" . -}}/nushell/lib/completions/scoop-completions.nu"]
 type = "file"
-url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/vscode/vscode-completions.nu"
-refreshPeriod = "168h"
-
-["{{- template "os.tmpl" . -}}/nushell/lib/completions/typst-completions.nu"]
-type = "file"
-url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/typst/typst-completions.nu"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/scoop/scoop-completions.nu"
 refreshPeriod = "168h"
 
 ["{{- template "os.tmpl" . -}}/nushell/lib/completions/tldr-completions.nu"]
@@ -38,9 +25,27 @@ type = "file"
 url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/tealdeer/tldr-completions.nu"
 refreshPeriod = "168h"
 
-["{{- template "os.tmpl" . -}}/nushell/lib/completions/nix-completions.nu"]
+["{{- template "os.tmpl" . -}}/nushell/lib/completions/typst-completions.nu"]
 type = "file"
-url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/nix/nix-completions.nu"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/typst/typst-completions.nu"
+refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/nushell/lib/completions/vscode-completions.nu"]
+type = "file"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/vscode/vscode-completions.nu"
+refreshPeriod = "168h"
+
+["{{- template "os.tmpl" . -}}/nushell/lib/completions/winget-completions.nu"]
+type = "file"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/custom-completions/winget/winget-completions.nu"
+refreshPeriod = "168h"
+
+
+#########
+
+["{{- template "os.tmpl" . -}}/nushell/lib/task.nu"]
+type = "file"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/main/modules/background_task/task.nu"
 refreshPeriod = "168h"
 
 ["{{- template "os.tmpl" . -}}/nushell/lib/zoxide-menu.nu"]
