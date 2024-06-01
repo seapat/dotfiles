@@ -2,6 +2,8 @@ README.md
 .symlinked/**/*
 .winget_configure/
 
+./scoop.json
+
 # Ignore dirs / files specific to other operating systems
 {{ if ne .chezmoi.os "windows" }}
 Appdata/

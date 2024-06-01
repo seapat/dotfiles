@@ -1,0 +1,898 @@
+{
+  "config": {
+    "root_path": "C:\\Users\\seapat\\scoop",
+    "global_path": "C:\\ProgramData\\scoop",
+    "use_isolated_path": false,
+    "last_update": "2024-06-01T09:54:24.4736093+02:00"
+  },
+  "apps": [
+    {
+      "Name": "7zip",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:21.000000+02:00",
+      "Version": "24.06",
+      "Info": ""
+    },
+    {
+      "Name": "abaddon",
+      "Source": "brian6932_dank-scoop",
+      "Updated": "2024-05-23T21:27:38.000000+02:00",
+      "Version": "0.2.1",
+      "Info": ""
+    },
+    {
+      "Name": "adb",
+      "Source": "main",
+      "Updated": "2024-05-21T07:07:13.000000+02:00",
+      "Version": "35.0.0",
+      "Info": ""
+    },
+    {
+      "Name": "age",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:15:45.000000+02:00",
+      "Version": "1.1.1",
+      "Info": ""
+    },
+    {
+      "Name": "altsnap",
+      "Source": "extras",
+      "Updated": "2024-05-12T22:31:35.000000+02:00",
+      "Version": "1.63",
+      "Info": ""
+    },
+    {
+      "Name": "ani-cli",
+      "Source": "extras",
+      "Updated": "2024-05-28T15:26:59.000000+02:00",
+      "Version": "4.8",
+      "Info": ""
+    },
+    {
+      "Name": "archisteamfarm",
+      "Source": "extras",
+      "Updated": "2024-05-10T19:12:04.000000+02:00",
+      "Version": "6.0.2.6",
+      "Info": ""
+    },
+    {
+      "Name": "aria2",
+      "Source": "main",
+      "Updated": "2024-05-21T16:15:49.000000+02:00",
+      "Version": "1.37.0-1",
+      "Info": ""
+    },
+    {
+      "Name": "auto-dark-mode-np",
+      "Source": "nonportable",
+      "Updated": "2024-05-10T21:34:40.000000+02:00",
+      "Version": "10.4.1.1",
+      "Info": ""
+    },
+    {
+      "Name": "bat",
+      "Source": "main",
+      "Updated": "2024-05-21T16:15:52.000000+02:00",
+      "Version": "0.24.0",
+      "Info": ""
+    },
+    {
+      "Name": "betterbird",
+      "Source": "ltguillaume_schep",
+      "Updated": "2024-05-21T16:15:53.000000+02:00",
+      "Version": "115.11.0-bb28",
+      "Info": ""
+    },
+    {
+      "Name": "bleachbit",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:15:55.000000+02:00",
+      "Version": "4.6.0",
+      "Info": ""
+    },
+    {
+      "Name": "bottom",
+      "Source": "main",
+      "Updated": "2024-05-21T16:15:56.000000+02:00",
+      "Version": "0.9.6",
+      "Info": ""
+    },
+    {
+      "Name": "brave",
+      "Source": "extras",
+      "Updated": "2024-06-01T20:52:21.000000+02:00",
+      "Version": "1.66.115",
+      "Info": ""
+    },
+    {
+      "Name": "broot",
+      "Source": "main",
+      "Updated": "2024-05-21T16:15:59.000000+02:00",
+      "Version": "1.38.0",
+      "Info": ""
+    },
+    {
+      "Name": "cacert",
+      "Source": "main",
+      "Updated": "2024-05-21T16:16:00.000000+02:00",
+      "Version": "2024-03-11",
+      "Info": ""
+    },
+    {
+      "Name": "calibre",
+      "Source": "extras",
+      "Updated": "2024-06-01T20:52:23.000000+02:00",
+      "Version": "7.12.0",
+      "Info": ""
+    },
+    {
+      "Name": "carapace-bin",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:16:06.000000+02:00",
+      "Version": "1.0.2",
+      "Info": ""
+    },
+    {
+      "Name": "chezmoi",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:23.000000+02:00",
+      "Version": "2.48.2",
+      "Info": ""
+    },
+    {
+      "Name": "compactgui",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:16:10.000000+02:00",
+      "Version": "3.2.1",
+      "Info": ""
+    },
+    {
+      "Name": "czkawka",
+      "Source": "main",
+      "Updated": "2024-05-24T15:31:27.000000+02:00",
+      "Version": "7.0.0",
+      "Info": ""
+    },
+    {
+      "Name": "czkawka-gui",
+      "Source": "extras",
+      "Updated": "2024-05-17T23:54:17.000000+02:00",
+      "Version": "7.0.0",
+      "Info": ""
+    },
+    {
+      "Name": "delta",
+      "Source": "main",
+      "Updated": "2024-05-21T16:16:16.000000+02:00",
+      "Version": "0.17.0",
+      "Info": ""
+    },
+    {
+      "Name": "dorion",
+      "Source": "turbo",
+      "Updated": "2024-05-23T20:37:40.000000+02:00",
+      "Version": "4.3.0",
+      "Info": ""
+    },
+    {
+      "Name": "doublecmd",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:16:36.000000+02:00",
+      "Version": "1.1.14",
+      "Info": ""
+    },
+    {
+      "Name": "duf",
+      "Source": "main",
+      "Updated": "2024-05-21T16:16:37.000000+02:00",
+      "Version": "0.8.1",
+      "Info": ""
+    },
+    {
+      "Name": "dust",
+      "Source": "main",
+      "Updated": "2024-05-21T16:16:38.000000+02:00",
+      "Version": "1.0.0",
+      "Info": ""
+    },
+    {
+      "Name": "element",
+      "Source": "extras",
+      "Updated": "2024-06-01T20:52:32.000000+02:00",
+      "Version": "1.11.67",
+      "Info": ""
+    },
+    {
+      "Name": "everything",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:16:42.000000+02:00",
+      "Version": "1.4.1.1024",
+      "Info": ""
+    },
+    {
+      "Name": "exiftool",
+      "Source": "main",
+      "Updated": "2024-05-25T21:22:13.000000+02:00",
+      "Version": "12.85",
+      "Info": ""
+    },
+    {
+      "Name": "eza",
+      "Source": "main",
+      "Updated": "2024-05-21T16:16:46.000000+02:00",
+      "Version": "0.18.16",
+      "Info": ""
+    },
+    {
+      "Name": "fastfetch",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:32.000000+02:00",
+      "Version": "2.14.0",
+      "Info": ""
+    },
+    {
+      "Name": "fd",
+      "Source": "main",
+      "Updated": "2024-05-21T16:16:48.000000+02:00",
+      "Version": "10.1.0",
+      "Info": ""
+    },
+    {
+      "Name": "ffmpeg",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:32.000000+02:00",
+      "Version": "7.0.1",
+      "Info": ""
+    },
+    {
+      "Name": "firefox",
+      "Source": "extras",
+      "Updated": "2024-06-01T15:51:24.000000+02:00",
+      "Version": "126.0",
+      "Info": ""
+    },
+    {
+      "Name": "flut-renamer",
+      "Source": "DoveBoy_Apps",
+      "Updated": "2024-05-31T19:20:36.000000+02:00",
+      "Version": "1.5.1",
+      "Info": ""
+    },
+    {
+      "Name": "fzf",
+      "Source": "main",
+      "Updated": "2024-05-13T23:46:12.000000+02:00",
+      "Version": "0.52.1",
+      "Info": ""
+    },
+    {
+      "Name": "gh",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:32.000000+02:00",
+      "Version": "2.50.0",
+      "Info": ""
+    },
+    {
+      "Name": "ghostscript",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:32.000000+02:00",
+      "Version": "10.03.1",
+      "Info": ""
+    },
+    {
+      "Name": "gimp",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:16:57.000000+02:00",
+      "Version": "2.10.38",
+      "Info": ""
+    },
+    {
+      "Name": "git",
+      "Source": "main",
+      "Updated": "2024-05-19T16:56:00.000000+02:00",
+      "Version": "2.45.1",
+      "Info": ""
+    },
+    {
+      "Name": "googlechrome",
+      "Source": "extras",
+      "Updated": "2024-05-31T19:45:31.000000+02:00",
+      "Version": "125.0.6422.142",
+      "Info": ""
+    },
+    {
+      "Name": "gpg",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:00.000000+02:00",
+      "Version": "2.4.5",
+      "Info": ""
+    },
+    {
+      "Name": "gsudo",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:33.000000+02:00",
+      "Version": "2.5.1",
+      "Info": ""
+    },
+    {
+      "Name": "helix",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:04.000000+02:00",
+      "Version": "24.03",
+      "Info": ""
+    },
+    {
+      "Name": "heroic-games-launcher",
+      "Source": "games",
+      "Updated": "2024-05-10T09:47:41.000000+02:00",
+      "Version": "2.14.1",
+      "Info": ""
+    },
+    {
+      "Name": "iamb",
+      "Source": "Jadeiin_scoop",
+      "Updated": "2024-05-21T16:17:06.000000+02:00",
+      "Version": "0.0.9",
+      "Info": ""
+    },
+    {
+      "Name": "IBMPlexMono",
+      "Source": "nerd-fonts",
+      "Updated": "2024-05-21T16:15:36.000000+02:00",
+      "Version": "6.4.0",
+      "Info": ""
+    },
+    {
+      "Name": "IBMPlexMono-NF",
+      "Source": "nerd-fonts",
+      "Updated": "2024-05-21T16:15:37.000000+02:00",
+      "Version": "3.2.1",
+      "Info": ""
+    },
+    {
+      "Name": "IBMPlexMono-NF-Mono",
+      "Source": "nerd-fonts",
+      "Updated": "2024-05-15T11:41:24.000000+02:00",
+      "Version": "3.2.1",
+      "Info": ""
+    },
+    {
+      "Name": "IBMPlexMono-NF-Propo",
+      "Source": "nerd-fonts",
+      "Updated": "2024-05-15T11:41:35.000000+02:00",
+      "Version": "3.2.1",
+      "Info": ""
+    },
+    {
+      "Name": "IBMPlexSans",
+      "Source": "nerd-fonts",
+      "Updated": "2024-05-21T16:15:40.000000+02:00",
+      "Version": "6.4.0",
+      "Info": ""
+    },
+    {
+      "Name": "IBMPlexSerif",
+      "Source": "nerd-fonts",
+      "Updated": "2024-05-21T16:15:41.000000+02:00",
+      "Version": "6.4.0",
+      "Info": ""
+    },
+    {
+      "Name": "kopia",
+      "Source": "main",
+      "Updated": "2024-05-30T08:40:57.000000+02:00",
+      "Version": "0.17.0",
+      "Info": ""
+    },
+    {
+      "Name": "kopiaui",
+      "Source": "extras",
+      "Updated": "2024-05-30T08:41:22.000000+02:00",
+      "Version": "0.17.0",
+      "Info": ""
+    },
+    {
+      "Name": "lazydocker",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:33.000000+02:00",
+      "Version": "0.23.3",
+      "Info": ""
+    },
+    {
+      "Name": "lazygit",
+      "Source": "extras",
+      "Updated": "2024-06-01T20:52:33.000000+02:00",
+      "Version": "0.42.0",
+      "Info": ""
+    },
+    {
+      "Name": "less",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:12.000000+02:00",
+      "Version": "643",
+      "Info": ""
+    },
+    {
+      "Name": "lsd",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:21.000000+02:00",
+      "Version": "1.1.2",
+      "Info": ""
+    },
+    {
+      "Name": "mambaforge",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:17:31.000000+02:00",
+      "Version": "24.3.0-0",
+      "Info": ""
+    },
+    {
+      "Name": "meld",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:17:33.000000+02:00",
+      "Version": "3.22.2",
+      "Info": ""
+    },
+    {
+      "Name": "micro",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:35.000000+02:00",
+      "Version": "2.0.13",
+      "Info": ""
+    },
+    {
+      "Name": "mpv",
+      "Source": "extras",
+      "Updated": "2024-05-21T15:11:30.000000+02:00",
+      "Version": "0.38.0",
+      "Info": ""
+    },
+    {
+      "Name": "msys2",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:42.000000+02:00",
+      "Version": "2024-05-07",
+      "Info": ""
+    },
+    {
+      "Name": "naps2",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:17:43.000000+02:00",
+      "Version": "7.4.2",
+      "Info": ""
+    },
+    {
+      "Name": "NerdFontsSymbolsOnly",
+      "Source": "nerd-fonts",
+      "Updated": "2024-05-15T11:38:23.000000+02:00",
+      "Version": "3.2.1",
+      "Info": ""
+    },
+    {
+      "Name": "nheko-nightly",
+      "Source": "versions",
+      "Updated": "2024-06-01T20:52:33.000000+02:00",
+      "Version": "20240527-1c5f74",
+      "Info": ""
+    },
+    {
+      "Name": "notepadplusplus",
+      "Source": "extras",
+      "Updated": "2024-05-23T00:31:32.000000+02:00",
+      "Version": "8.6.7",
+      "Info": ""
+    },
+    {
+      "Name": "nu",
+      "Source": "main",
+      "Updated": "2024-05-19T23:51:21.000000+02:00",
+      "Version": "0.93.0",
+      "Info": ""
+    },
+    {
+      "Name": "optimizer",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:17:47.000000+02:00",
+      "Version": "16.5",
+      "Info": ""
+    },
+    {
+      "Name": "pandoc",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:49.000000+02:00",
+      "Version": "3.2",
+      "Info": ""
+    },
+    {
+      "Name": "pdfarranger",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:17:50.000000+02:00",
+      "Version": "1.10.0",
+      "Info": ""
+    },
+    {
+      "Name": "picard",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:17:52.000000+02:00",
+      "Version": "2.11",
+      "Info": ""
+    },
+    {
+      "Name": "pidgin",
+      "Source": "extras",
+      "Updated": "2024-05-30T11:49:02.000000+02:00",
+      "Version": "2.14.13",
+      "Info": ""
+    },
+    {
+      "Name": "pipx",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:53.000000+02:00",
+      "Version": "1.5.0",
+      "Info": ""
+    },
+    {
+      "Name": "powertoys",
+      "Source": "extras",
+      "Updated": "2024-05-31T18:58:01.000000+02:00",
+      "Version": "0.81.1",
+      "Info": ""
+    },
+    {
+      "Name": "psfzf",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:17:58.000000+02:00",
+      "Version": "2.6.1",
+      "Info": ""
+    },
+    {
+      "Name": "psutils",
+      "Source": "main",
+      "Updated": "2024-05-21T16:17:59.000000+02:00",
+      "Version": "0.2023.06.28",
+      "Info": ""
+    },
+    {
+      "Name": "pueue",
+      "Source": "main",
+      "Updated": "2024-05-15T14:18:00.000000+02:00",
+      "Version": "3.4.0",
+      "Info": ""
+    },
+    {
+      "Name": "pwsh",
+      "Source": "main",
+      "Updated": "2024-05-10T09:10:51.000000+02:00",
+      "Version": "7.4.2",
+      "Info": ""
+    },
+    {
+      "Name": "python",
+      "Source": "main",
+      "Updated": "2024-05-21T16:18:05.000000+02:00",
+      "Version": "3.12.3",
+      "Info": ""
+    },
+    {
+      "Name": "qalculate",
+      "Source": "extras",
+      "Updated": "2024-05-22T20:16:30.000000+02:00",
+      "Version": "5.1.1",
+      "Info": ""
+    },
+    {
+      "Name": "qutebrowser",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:18:08.000000+02:00",
+      "Version": "3.1.0",
+      "Info": ""
+    },
+    {
+      "Name": "qview",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:18:10.000000+02:00",
+      "Version": "6.1",
+      "Info": ""
+    },
+    {
+      "Name": "rclone",
+      "Source": "main",
+      "Updated": "2024-05-30T08:26:48.000000+02:00",
+      "Version": "1.66.0",
+      "Info": ""
+    },
+    {
+      "Name": "registry-finder",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:18:14.000000+02:00",
+      "Version": "2.59.0.0",
+      "Info": ""
+    },
+    {
+      "Name": "rga",
+      "Source": "main",
+      "Updated": "2024-05-21T16:18:16.000000+02:00",
+      "Version": "0.10.6",
+      "Info": ""
+    },
+    {
+      "Name": "ripgrep",
+      "Source": "main",
+      "Updated": "2024-05-21T16:18:18.000000+02:00",
+      "Version": "14.1.0",
+      "Info": ""
+    },
+    {
+      "Name": "sfsu",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:18:19.000000+02:00",
+      "Version": "1.13.4",
+      "Info": ""
+    },
+    {
+      "Name": "sharex",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:18:21.000000+02:00",
+      "Version": "16.1.0",
+      "Info": ""
+    },
+    {
+      "Name": "sops",
+      "Source": "main",
+      "Updated": "2024-05-21T16:18:22.000000+02:00",
+      "Version": "3.8.1",
+      "Info": ""
+    },
+    {
+      "Name": "spicetify-cli",
+      "Source": "main",
+      "Updated": "2024-05-21T16:18:24.000000+02:00",
+      "Version": "2.36.11",
+      "Info": ""
+    },
+    {
+      "Name": "spotify",
+      "Source": "Unknown",
+      "Updated": "2024-05-21T11:41:40.000000+02:00",
+      "Version": "",
+      "Info": "Install failed"
+    },
+    {
+      "Name": "spotx",
+      "Source": "Ast3risk-ops_spotx-bucket",
+      "Updated": "2024-05-21T16:18:26.000000+02:00",
+      "Version": "1.8-20240518-3c5cf6",
+      "Info": ""
+    },
+    {
+      "Name": "starship",
+      "Source": "main",
+      "Updated": "2024-05-21T16:18:28.000000+02:00",
+      "Version": "1.19.0",
+      "Info": ""
+    },
+    {
+      "Name": "steam",
+      "Source": "versions",
+      "Updated": "2024-05-21T16:18:44.000000+02:00",
+      "Version": "nightly",
+      "Info": ""
+    },
+    {
+      "Name": "streamlink",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:18:47.000000+02:00",
+      "Version": "6.7.4-1",
+      "Info": ""
+    },
+    {
+      "Name": "streamlink-twitch-gui",
+      "Source": "extras",
+      "Updated": "2024-06-01T20:52:34.000000+02:00",
+      "Version": "2.5.2",
+      "Info": ""
+    },
+    {
+      "Name": "sumatrapdf",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:18:51.000000+02:00",
+      "Version": "3.5.2",
+      "Info": ""
+    },
+    {
+      "Name": "systeminformer-nightly",
+      "Source": "versions",
+      "Updated": "2024-05-10T09:57:34.000000+02:00",
+      "Version": "3.0.7566",
+      "Info": ""
+    },
+    {
+      "Name": "tealdeer",
+      "Source": "main",
+      "Updated": "2024-05-21T16:18:59.000000+02:00",
+      "Version": "1.6.1",
+      "Info": ""
+    },
+    {
+      "Name": "tesseract",
+      "Source": "main",
+      "Updated": "2024-05-25T01:13:03.000000+02:00",
+      "Version": "5.3.4.20240503",
+      "Info": ""
+    },
+    {
+      "Name": "topgrade",
+      "Source": "main",
+      "Updated": "2024-05-21T16:19:02.000000+02:00",
+      "Version": "14.0.1",
+      "Info": ""
+    },
+    {
+      "Name": "trid",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:34.000000+02:00",
+      "Version": "2.24-24.05.30",
+      "Info": ""
+    },
+    {
+      "Name": "vscode",
+      "Source": "extras",
+      "Updated": "2024-05-10T03:24:21.000000+02:00",
+      "Version": "1.89.1",
+      "Info": ""
+    },
+    {
+      "Name": "waterfox",
+      "Source": "extras",
+      "Updated": "2024-06-01T20:52:34.000000+02:00",
+      "Version": "6.0.15",
+      "Info": ""
+    },
+    {
+      "Name": "wezterm",
+      "Source": "extras",
+      "Updated": "2024-05-21T00:32:29.000000+02:00",
+      "Version": "20240203-110809-5046fc22",
+      "Info": ""
+    },
+    {
+      "Name": "wget",
+      "Source": "main",
+      "Updated": "2024-05-21T16:19:17.000000+02:00",
+      "Version": "1.21.4",
+      "Info": ""
+    },
+    {
+      "Name": "wpd",
+      "Source": "extras",
+      "Updated": "2024-05-21T16:19:18.000000+02:00",
+      "Version": "1.5.2042",
+      "Info": ""
+    },
+    {
+      "Name": "yt-dlp",
+      "Source": "main",
+      "Updated": "2024-06-01T20:52:34.000000+02:00",
+      "Version": "2024.05.27",
+      "Info": ""
+    },
+    {
+      "Name": "zoxide",
+      "Source": "main",
+      "Updated": "2024-05-21T16:19:21.000000+02:00",
+      "Version": "0.9.4",
+      "Info": ""
+    }
+  ],
+  "buckets": [
+    {
+      "Name": "ACooper81_scoop-apps",
+      "Source": "https://github.com/ACooper81/scoop-apps",
+      "Updated": "2024-06-01T08:19:11+02:00",
+      "Manifests": 669
+    },
+    {
+      "Name": "Ast3risk-ops_spotx-bucket",
+      "Source": "https://github.com/Ast3risk-ops/spotx-bucket",
+      "Updated": "2024-05-18T22:25:31+02:00",
+      "Manifests": 2
+    },
+    {
+      "Name": "brian6932_dank-scoop",
+      "Source": "https://github.com/brian6932/dank-scoop",
+      "Updated": "2024-06-01T03:42:08+02:00",
+      "Manifests": 135
+    },
+    {
+      "Name": "dodorz_scoop",
+      "Source": "https://github.com/dodorz/scoop",
+      "Updated": "2024-05-23T17:15:04+02:00",
+      "Manifests": 643
+    },
+    {
+      "Name": "DoveBoy_Apps",
+      "Source": "https://github.com/DoveBoy/Apps",
+      "Updated": "2024-06-01T09:09:17+02:00",
+      "Manifests": 655
+    },
+    {
+      "Name": "ericzong_ericzone",
+      "Source": "https://github.com/ericzong/ericzone",
+      "Updated": "2024-04-09T05:34:01+02:00",
+      "Manifests": 22
+    },
+    {
+      "Name": "extras",
+      "Source": "https://github.com/ScoopInstaller/Extras",
+      "Updated": "2024-06-01T06:30:12+02:00",
+      "Manifests": 2027
+    },
+    {
+      "Name": "games",
+      "Source": "https://github.com/Calinou/scoop-games",
+      "Updated": "2024-06-01T06:26:28+02:00",
+      "Manifests": 300
+    },
+    {
+      "Name": "Jadeiin_scoop",
+      "Source": "https://github.com/Jadeiin/scoop",
+      "Updated": "2024-06-01T03:41:49+02:00",
+      "Manifests": 116
+    },
+    {
+      "Name": "ltguillaume_schep",
+      "Source": "https://github.com/ltguillaume/schep",
+      "Updated": "2024-05-31T18:33:25+02:00",
+      "Manifests": 11
+    },
+    {
+      "Name": "main",
+      "Source": "https://github.com/ScoopInstaller/Main",
+      "Updated": "2024-06-01T06:27:19+02:00",
+      "Manifests": 1327
+    },
+    {
+      "Name": "nerd-fonts",
+      "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
+      "Updated": "2024-05-26T17:20:11+02:00",
+      "Manifests": 336
+    },
+    {
+      "Name": "nonportable",
+      "Source": "https://github.com/ScoopInstaller/Nonportable",
+      "Updated": "2024-05-31T18:36:18+02:00",
+      "Manifests": 127
+    },
+    {
+      "Name": "rasa_scoops",
+      "Source": "https://github.com/rasa/scoops",
+      "Updated": "2024-05-29T03:26:34+02:00",
+      "Manifests": 80
+    },
+    {
+      "Name": "TheRandomLabs_Scoop-Spotify",
+      "Source": "https://github.com/TheRandomLabs/Scoop-Spotify",
+      "Updated": "2024-05-24T10:20:04+02:00",
+      "Manifests": 10
+    },
+    {
+      "Name": "turbo",
+      "Source": "https://github.com/Small-Ku/turbo-bucket.git",
+      "Updated": "2024-06-01T01:08:54+02:00",
+      "Manifests": 43
+    },
+    {
+      "Name": "versions",
+      "Source": "https://github.com/ScoopInstaller/Versions",
+      "Updated": "2024-06-01T06:36:02+02:00",
+      "Manifests": 463
+    },
+    {
+      "Name": "Youxikong_selfscoop",
+      "Source": "https://github.com/Youxikong/selfscoop",
+      "Updated": "2024-05-31T15:38:04+02:00",
+      "Manifests": 61
+    }
+  ]
+}
+

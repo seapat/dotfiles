@@ -1,1 +1,0 @@
-micro -plugin install filemanager jump

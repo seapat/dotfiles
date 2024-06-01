@@ -1,0 +1,14 @@
+{{- if eq .chezmoi.os "windows" -}}
+
+
+    # Install scoop if the command is not available
+    if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){
+
+        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+        Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+    }
+    
+    scoop install git 7zip aria2 gsudo
+
+    scoop import {{ .chezmoi.sourceDir -}}/scoop.json
+{{ end -}}
