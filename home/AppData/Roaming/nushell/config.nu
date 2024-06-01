@@ -921,7 +921,7 @@ use task.nu # --> load nushell module from nu_scripts repo https://github.com/nu
 # use completions/scoop-completions.nu *
 use completions/ani-cli-completions.nu *
 use completions/gh-completions.nu *
-use completions/winget-completions.nu *
+# use completions/winget-completions.nu * # bugged
 use completions/vscode-completions.nu *
 use completions/typst-completions.nu *
 use completions/tldr-completions.nu *
