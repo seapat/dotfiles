@@ -90,5 +90,11 @@
     "132.226.198.229": "linux"
   },
   "breadcrumbs.icons": false,
-  "window.customTitleBarVisibility": "windowed"
+  "window.customTitleBarVisibility": "windowed",
+  "explorer.sortOrder": "type",
+  "explorer.openEditors.sortOrder": "fullPath",
+  "scm.repositories.sortOrder": "name",
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.highlightModifiedTabs": true,
+  "window.density.editorTabHeight": "compact"
 }

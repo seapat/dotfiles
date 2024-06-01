@@ -74,12 +74,21 @@ if (Get-Command starship -errorAction SilentlyContinue) {
   $ENV:STARSHIP_CACHE = "$HOME\AppData\Local\Temp"
 }
 
+# copy paste from wezterm docs https://wezfurlong.org/wezterm/shell-integration.html#osc-7-on-windows-with-powershell-with-starship
+$prompt = ""
+function Invoke-Starship-PreCommand {
+    $current_location = $executionContext.SessionState.Path.CurrentLocation
+    if ($current_location.Provider.Name -eq "FileSystem") {
+        $ansi_escape = [char]27
+        $provider_path = $current_location.ProviderPath -replace "\\", "/"
+        $prompt = "$ansi_escape]7;file://${env:COMPUTERNAME}/${provider_path}$ansi_escape\"
+    }
+    $host.ui.Write($prompt)
+}
+
 ### MODULES
 # Import-Module PSFzf -ArgumentList 'Ctrl+t', 'Ctrl+r'
 # Import-Module Terminal-Icons # buggy in windows terminal, works in wezterm
-
-Import-Module posh-git
-$GitPromptSettings.EnablePromptStatus = $false
 
 # ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 $env:CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
