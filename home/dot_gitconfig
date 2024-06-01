@@ -15,15 +15,28 @@
 [interactive]
     diffFilter = delta --color-only
 
-[delta]
-    navigate = true    # use n and N to move between diff sections
-
-    # delta detects terminal colors automatically; set one of these to disable auto-detection
-    # dark = true
-    # light = true
-
 [merge]
     conflictstyle = diff3
 
 [diff]
     colorMoved = default
+
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
+    line-numbers = true
+    hyperlinks = true 
+    map-styles = bold purple => syntax magenta, bold cyan => syntax blue
+    features = my-dark-theme zebra-dark
+
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[delta "light-mode"]
+    light = true
+
+[delta "dark-mode"]
+    dark = true
