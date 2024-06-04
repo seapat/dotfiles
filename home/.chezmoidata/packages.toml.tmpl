@@ -1,0 +1,69 @@
+[scoop.repositories]
+extras = "https://github.com/ScoopInstaller/Extras"
+games = "https://github.com/Calinou/scoop-games"
+main = "https://github.com/ScoopInstaller/Main"
+nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
+versions = "https://github.com/ScoopInstaller/Versions"
+
+[scoop]
+buckets = ["extras"]
+bootstrap = ["7zip", "git", "aria2", "sudo"]
+packages = [
+    "chezmoi",
+    "everything",
+    "zoxide",
+    "rga",
+    "starship",
+    "nu",
+    "pwsh",
+    "mingw",
+    "wezterm",
+    "fd",
+    "fzf",
+    "lazygit",
+    "delta",
+    "bat",
+    "sfsu",
+    "scoop-search",
+    "mpv",
+    "yt-dlp",
+    "gsudo",
+    {{- if eq .chezmoi.hostname "work" }}
+    "games/epic-games-launcher",
+    "extras/slack",
+    "extras/ripcord"
+    {{ else if eq .chezmoi.hostname "personal" }}
+    {{- end }}
+    # "archisteamfarm",
+
+    # # Ps modules
+    # "scoop-completion",
+    # "dockercompletion",
+    # "z",
+    # "zlocation",
+    # "psfzf",
+    # "winget-ps",
+    # "powertab",
+    # "posh-git",
+    # "lazy-posh-git",
+    # "pscolor",
+    # "powershell-beautifier",
+    # "terminal-icons",
+
+    # # CLI
+    # "clink",
+    # "clink-completions",
+    # "clink-flex-prompt"
+
+]
+
+[winget]
+packages = [
+    {{- if eq .chezmoi.hostname "work" }}
+    "TeamDriveSystems.TeamDrive",
+    {{ else if eq .chezmoi.hostname "personal" }}
+    "MyGames.GameCenter --ignore-security-hash",
+    {{- end }}
+    # The DSC resource cannot (?) install the below
+]
+
