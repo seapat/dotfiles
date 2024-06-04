@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.os "windowsFALSE" -}}
+{{- if eq .chezmoi.os "windows" -}}
 
 ### WINDOWS ###
 ### Scoop ###
@@ -11,6 +11,7 @@
         Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
         Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
     }
+    scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} # {{ end -}}
     
     # iterate over scoop packages in .chezmoidata/packages
     {{ range $key, $value := .scoop.repositories -}}
