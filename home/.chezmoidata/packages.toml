@@ -6,7 +6,7 @@ nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
 versions = "https://github.com/ScoopInstaller/Versions"
 
 [scoop]
-buckets = {"extras"="", "games"="", }
+buckets = {"extras"="", "games"="" }
 bootstrap = ["7zip", "git", "aria2", "sudo"]
 base = [
     "chezmoi",
