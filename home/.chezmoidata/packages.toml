@@ -27,7 +27,8 @@ base = [
     "scoop-search",
     "mpv",
     "yt-dlp",
-    "gsudo",
+    "gsudo"
+]
 work = [
     "games/epic-games-launcher",
     "extras/slack",
@@ -35,10 +36,10 @@ work = [
     "main/glab"
 ]
 game = [
-
+    "steam"
 ]
 personal = [
-    # "archisteamfarm",
+    "archisteamfarm",
 ]
     # # Ps modules
     # "scoop-completion",
