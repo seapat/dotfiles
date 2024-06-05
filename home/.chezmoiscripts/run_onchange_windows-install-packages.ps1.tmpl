@@ -1,3 +1,5 @@
+# packages.toml hash: {{ include ".chezmoi/packages.toml" | sha256sum }}
+
 ### WINDOWS ###
 {{- if eq .chezmoi.os "windows" -}}
 
@@ -15,7 +17,7 @@
             Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
             Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
         }
-        
+
         scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} 
         
         # iterate over scoop packages in .chezmoidata/packages
