@@ -5,9 +5,9 @@
 
 {{ if ( or (.scoop.buckets) (gt 0 (len .scoop.work)) (gt 0 (len .scoop.home)) (gt 0 (len .scoop.gaming)) ) -}}
 
-    {{ if .wipeScoop -}}
-        scoop uninstall --all
-    {{ end -}}
+    # {{ if .Atomic -}}
+    #     scoop uninstall scoop -p
+    # {{ end -}}
 
     # Install scoop if the command is not available
     if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){

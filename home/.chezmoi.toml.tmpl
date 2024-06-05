@@ -6,7 +6,7 @@
 {{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" false -}}
 {{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" false -}}
 
-{{- $wipeScoop := promptBool "Wipe existing scoop packages?" false -}}
+{{- $atomicPackages := promptBool "Wipe existing scoop packages?" false -}}
 
 {{- $configdir := "" }}
 {{- if eq .chezmoi.os "windows" }}
@@ -59,7 +59,7 @@ pager = "less -R"
     isHome = {{ $isHome }}
     isGaming = {{ $isGaming }}
 
-    wipeScoop = {{ $wipeScoop | quote }}
+    isAtomic = {{ $atomicPackages | quote }}
 [git]
     autoCommit = false
     autoPush = true
