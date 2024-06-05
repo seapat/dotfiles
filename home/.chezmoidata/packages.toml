@@ -64,7 +64,7 @@ home = [
 work = [
     "TeamDriveSystems.TeamDrive",
 ]
-game = [
+gaming = [
     "MyGames.GameCenter --ignore-security-hash",
 ]
 home = []
