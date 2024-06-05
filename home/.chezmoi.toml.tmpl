@@ -48,9 +48,6 @@ pager = "less -R"
     cores = {{ $cpuCores }}
     threads = {{ $cpuThreads }}
 
-    {{- $choices := list "work" "personal" -}}
-    {{- $profile := promptChoiceOnce . "profile" "What profile do you want " $choices -}}
-    profile = {{ $profile | quote }}
     {{- $isWork := promptBoolOnce . "Install Work Packages?" false -}}
     {{- $isGaming := promptBoolOnce . "Install Game launchers and tools?" false -}}
     {{- $isPersonal := promptBoolOnce . "Setup personal tools?" false -}}
