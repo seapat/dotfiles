@@ -31,7 +31,7 @@
         
         # iterate over scoop packages in .chezmoidata/packages
         {{ range $key, $value := .scoop.buckets -}}
-            scoop bucket add {{ $key | quote}} {{ $value | quote}}
+            gsudo scoop bucket add {{ $key | quote}} {{ $value | quote}}
         {{ end -}}
 
         scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
