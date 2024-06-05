@@ -29,8 +29,8 @@
         scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
-    {{- if .isPersonal }}
-        scoop install {{ range .scoop.personal -}} {{ . | quote }} {{ end -}} 
+    {{- if .isHome }}
+        scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
     {{- if .isGaming }}

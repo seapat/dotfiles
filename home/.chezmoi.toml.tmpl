@@ -48,12 +48,12 @@ pager = "less -R"
     cores = {{ $cpuCores }}
     threads = {{ $cpuThreads }}
 
-    {{- $isWork := promptBoolOnce "Install Work Packages?" false -}}
-    {{- $isGaming := promptBoolOnce "Install Game launchers and tools?" false -}}
-    {{- $isPersonal := promptBoolOnce "Setup personal tools?" false -}}
+    {{- $isWork := promptBoolOnce . "isWork" "Install Work Packages?" false -}}
+    {{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools?" false -}}
+    {{- $isHome := promptBoolOnce . "isHome" "Setup personal tools?" false -}}
     isWork = {{ $isWork }}
     isGaming = {{ $isGaming }}
-    isPersonal = {{ $isPersonal }}
+    isHome = {{ $isHome }}
 [git]
     autoCommit = false
     autoPush = true

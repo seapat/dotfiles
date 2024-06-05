@@ -38,7 +38,7 @@ work = [
 gaming = [
     "steam"
 ]
-personal = [
+home = [
     "archisteamfarm",
 ]
     # # Ps modules
