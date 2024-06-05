@@ -1,5 +1,11 @@
 {{- $hostname := promptStringOnce . "hostname" "Host / Device name" "desktop" -}}
 
+{{- $email := promptStringOnce . "email" "Email address" "seapat@users.noreply.github.com" -}}
+
+{{- $isWork := promptBoolOnce . "isWork" "Install Work Packages" false -}}
+{{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" false -}}
+{{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" false -}}
+
 {{- $configdir := "" }}
 {{- if eq .chezmoi.os "windows" }}
 {{-     $configdir = "~/AppData/Roaming" -}}
@@ -42,24 +48,20 @@ pager = "less -R"
 
 [data]
     username = "seapat"
-    {{- $email := promptStringOnce . "email" "Email address" "seapat@users.noreply.github.com" -}}
     email = {{ $email | quote }}
     chassisType = {{ $chassisType | quote }}
     cores = {{ $cpuCores }}
     threads = {{ $cpuThreads }}
 
-    {{- $isWork := promptBoolOnce . "isWork" "Install Work Packages" false -}}
-    isWork = {{ $isWork }}
-    {{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" false -}}
-    isHome = {{ $isHome }}
-    {{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" false -}}
-    isGaming = {{ $isGaming }}
+    isWork = {{ $isWork | quote }}
+    isHome = {{ $isHome | quote }}
+    isGaming = {{ $isGaming | quote }}
 [git]
     autoCommit = false
     autoPush = true
 [add]
     secrets = "error" # "warning"
-    templateSymlinks = false # ??
+    templateSymlinks = false
 [age]
     identity = "{{- $configdir -}}/sops/age/keys.txt"
     recipient = "age1vlg8zjhne82pkh0e9kr4kpartak9uk8u7ylqf0qaggkqhjx4dgrqh9xnuq"
