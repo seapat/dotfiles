@@ -27,7 +27,10 @@ base = [
     "scoop-search",
     "mpv",
     "yt-dlp",
-    "gsudo"
+    "gsudo",
+    "waterfox",
+    "floorp",
+    "betterbird"
 ]
 work = [
     "games/epic-games-launcher",
