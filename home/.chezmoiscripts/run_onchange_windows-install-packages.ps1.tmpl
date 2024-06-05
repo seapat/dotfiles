@@ -25,15 +25,15 @@
 
     scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
 
-    {{- if (and (.data.isWork) (gt (len .scoop.work) 0)) }}
+    {{- if (and (.isWork) (gt (len .scoop.work) 0)) }}
         scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
-    {{- if (and (.data.isHome) (gt (len .scoop.home) 0))}}
+    {{- if (and (.isHome) (gt (len .scoop.home) 0))}}
         scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
-    {{- if  (and (.data.isGaming) (gt (len .scoop.gaming) 0)) }}
+    {{- if  (and (data.isGaming) (gt (len .scoop.gaming) 0)) }}
         scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
