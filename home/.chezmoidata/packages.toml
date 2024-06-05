@@ -6,7 +6,7 @@ nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
 versions = "https://github.com/ScoopInstaller/Versions"
 
 [scoop]
-buckets = ["extras"]
+buckets = {"extras"="", "games"="", }
 bootstrap = ["7zip", "git", "aria2", "sudo"]
 base = [
     "chezmoi",
@@ -36,10 +36,10 @@ work = [
     "main/glab"
 ]
 gaming = [
-    "steam"
+    "games/steam"
 ]
 home = [
-    "archisteamfarm",
+    "extras/archisteamfarm",
 ]
     # # Ps modules
     # "scoop-completion",

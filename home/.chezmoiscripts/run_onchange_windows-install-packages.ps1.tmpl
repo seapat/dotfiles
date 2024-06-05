@@ -24,7 +24,8 @@
     {{ end -}}
 
     scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
-
+    
+    # TODO: generate list of profiles in chezmoi.toml via prompts, then just loop over and install same-named sets from data
     {{- if (and (.isWork) (gt (len .scoop.work) 0)) }}
         scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
