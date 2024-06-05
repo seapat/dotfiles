@@ -37,7 +37,7 @@ base = [
 work = [
     "games/epic-games-launcher",
     "extras/slack",
-    "extras/ripcord",
+    # "extras/ripcord",
     "main/glab"
 ]
 gaming = [
