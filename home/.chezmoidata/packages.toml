@@ -7,7 +7,7 @@ versions = "https://github.com/ScoopInstaller/Versions"
 rodrigost23_scoop-bucket="https://github.com/rodrigost23/scoop-bucket"
 
 [scoop]
-bootstrap = ["7zip", "git", "aria2", "gsudo"]
+bootstrap = ["7zip", "git", "aria2", "gsudo", "wixtoolset", "innounp"]
 base = [
     "chezmoi",
     "everything",
