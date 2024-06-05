@@ -11,14 +11,22 @@
         Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
         Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
     }
-    scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} # {{ end -}}
+    scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} 
     
     # iterate over scoop packages in .chezmoidata/packages
     {{ range $key, $value := .scoop.repositories -}}
         scoop bucket add {{ $key | quote}} {{ $value | quote}}
     {{ end -}}
+    scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
 
-    scoop install {{ range .scoop.packages -}} {{ . | quote }} {{ end -}} # {{ end -}}
+    {{- if "work" .chezmoi.profiles }}
+    scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
+    {{ end -}}
+
+    {{- if "personal" .chezmoi.profiles }}
+    scoop install {{ range .scoop.personal -}} {{ . | quote }} {{ end -}} 
+    {{ end -}}
+
 {{ end -}}
 
 ### Winget ###

@@ -8,7 +8,7 @@ versions = "https://github.com/ScoopInstaller/Versions"
 [scoop]
 buckets = ["extras"]
 bootstrap = ["7zip", "git", "aria2", "sudo"]
-packages = [
+base = [
     "chezmoi",
     "everything",
     "zoxide",
@@ -28,14 +28,18 @@ packages = [
     "mpv",
     "yt-dlp",
     "gsudo",
-    {{- if eq .chezmoi.hostname "work" }}
+work = [
     "games/epic-games-launcher",
     "extras/slack",
-    "extras/ripcord"
-    {{ else if eq .chezmoi.hostname "personal" }}
-    {{- end }}
-    # "archisteamfarm",
+    "extras/ripcord",
+    "main/glab"
+]
+game = [
 
+]
+personal = [
+    # "archisteamfarm",
+]
     # # Ps modules
     # "scoop-completion",
     # "dockercompletion",
@@ -58,12 +62,10 @@ packages = [
 ]
 
 [winget]
-packages = [
-    {{- if eq .chezmoi.hostname "work" }}
+work = [
     "TeamDriveSystems.TeamDrive",
-    {{ else if eq .chezmoi.hostname "personal" }}
+]
+game = [
     "MyGames.GameCenter --ignore-security-hash",
-    {{- end }}
-    # The DSC resource cannot (?) install the below
 ]
 
