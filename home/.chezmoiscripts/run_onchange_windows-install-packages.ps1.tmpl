@@ -41,19 +41,19 @@
 
 ### Winget ###
 
-{{ if (and (.data.isWork) (gt 0 (len .winget.work))) -}}
+{{ if (and (.isWork) (gt 0 (len .winget.work))) -}}
 {{  	range .winget.work -}}
             winget install -e --disable-interactivity {{ . | quote }}
 {{      end -}} 
 {{ end -}}
 
-{{ if (and (.data.isHome) (gt 0 (len .winget.home))) -}}
+{{ if (and (.isHome) (gt 0 (len .winget.home))) -}}
 {{  	range .winget.home -}}
             winget install -e --disable-interactivity {{ . | quote }}
 {{      end -}} 
 {{ end -}}
 
-{{ if (and (.data.isGaming) (gt 0 (len .winget.gaming))) -}}
+{{ if (and (.isGaming) (gt 0 (len .winget.gaming))) -}}
 {{  	range .winget.gaming -}}
             winget install -e --disable-interactivity {{ . | quote }}
 {{      end -}} 
