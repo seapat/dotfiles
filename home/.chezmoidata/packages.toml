@@ -6,6 +6,7 @@ nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
 versions = "https://github.com/ScoopInstaller/Versions"
 rodrigost23_scoop-bucket= "https://github.com/rodrigost23/scoop-bucket"
 hoilc_scoop-lemon= "https://github.com/hoilc/scoop-lemon"
+nonportable=""
 
 [scoop]
 bootstrap = ["7zip", "git", "aria2", "gsudo", "wixtoolset", "innounp"]
