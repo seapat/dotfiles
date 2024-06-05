@@ -2,11 +2,11 @@
 
 {{- $email := promptStringOnce . "email" "Email address" "seapat@users.noreply.github.com" -}}
 
-{{- $isWork := promptBoolOnce . "isWork" "Install Work Packages" false -}}
-{{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" false -}}
-{{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" false -}}
+{{- $isWork := promptBoolOnce . "isWork" "Install Work Packages" -}}
+{{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" -}}
+{{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" -}}
 
-{{- $atomicPackages := promptBool "Wipe existing scoop packages?" false -}}
+{{- $atomicPackages := promptBool "Wipe existing scoop packages?" true -}}
 
 {{- $configdir := "" }}
 {{- if eq .chezmoi.os "windows" }}
