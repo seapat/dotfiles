@@ -7,7 +7,7 @@ versions = "https://github.com/ScoopInstaller/Versions"
 
 [scoop]
 buckets = {"extras"="", "games"="" }
-bootstrap = ["7zip", "git", "aria2", "sudo"]
+bootstrap = ["7zip", "git", "aria2", "gsudo"]
 base = [
     "chezmoi",
     "everything",
@@ -27,7 +27,6 @@ base = [
     "scoop-search",
     "mpv",
     "yt-dlp",
-    "gsudo",
     "waterfox",
     "floorp",
     "betterbird"
