@@ -5,13 +5,17 @@
 
 {{ if ( or (.scoop.repositories) (gt (len .scoop.packages) 0)) -}}
 
+    {{if (promptBool . "Wipe existing scoop packages?" false)}}
+        scoop uninstall --all
+    {{ end -}}
+
     # Install scoop if the command is not available
     if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){
 
         Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
         Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
     }
-    {{ end -}} 
+    {{ end -}}
     scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} 
     
     # iterate over scoop packages in .chezmoidata/packages
@@ -21,12 +25,16 @@
 
     scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
 
-    {{- if "work" .chezmoi.profiles }}
+    {{- if .isWork }}
         scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
-    {{- if "personal" .chezmoi.profiles }}
+    {{- if .isPersonal }}
         scoop install {{ range .scoop.personal -}} {{ . | quote }} {{ end -}} 
+    {{ end -}}
+
+    {{- if .isGaming }}
+        scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
 {{ end -}}
