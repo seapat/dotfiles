@@ -1,4 +1,3 @@
-{{- $email := promptStringOnce . "email" "Email address" "seapat@users.noreply.github.com" -}}
 {{- $hostname := promptStringOnce . "hostname" "Host / Device name" "desktop" -}}
 
 {{- $configdir := "" }}
@@ -43,17 +42,18 @@ pager = "less -R"
 
 [data]
     username = "seapat"
+    {{- $email := promptStringOnce . "email" "Email address" "seapat@users.noreply.github.com" -}}
     email = {{ $email | quote }}
     chassisType = {{ $chassisType | quote }}
     cores = {{ $cpuCores }}
     threads = {{ $cpuThreads }}
 
-    {{- $isWork := promptBoolOnce . "isWork" "Install Work Packages?" false -}}
-    {{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools?" false -}}
-    {{- $isHome := promptBoolOnce . "isHome" "Setup personal tools?" false -}}
-    isWork = {{ $isWork }}
-    isGaming = {{ $isGaming }}
-    isHome = {{ $isHome }}
+    {{- $isWork := promptBoolOnce . "isWork" "Install Work Packages" false -}}
+    isWork = {{ $isWork | quote -}}
+    {{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" false -}}
+    isHome = {{ $isHome | quote -}}
+    {{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" false -}}
+    isGaming = {{ $isGaming | quote -}}
 [git]
     autoCommit = false
     autoPush = true
