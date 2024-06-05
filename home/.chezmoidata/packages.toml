@@ -1,16 +1,12 @@
-[scoop.repositories]
+[scoop.buckets]
 extras = "https://github.com/ScoopInstaller/Extras"
 games = "https://github.com/Calinou/scoop-games"
 main = "https://github.com/ScoopInstaller/Main"
 nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
 versions = "https://github.com/ScoopInstaller/Versions"
+rodrigost23_scoop-bucket="https://github.com/rodrigost23/scoop-bucket"
 
 [scoop]
-buckets = {
-    "extras"="", 
-    "games"="", 
-    "rodrigost23_scoop-bucket"="https://github.com/rodrigost23/scoop-bucket"
-}
 bootstrap = ["7zip", "git", "aria2", "gsudo"]
 base = [
     "chezmoi",
@@ -49,7 +45,7 @@ gaming = [
     "games/steam"
 ]
 home = [
-    "extras/archisteamfarm",
+    "extras/archisteamfarm"
 ]
     # # Ps modules
     # "scoop-completion",
