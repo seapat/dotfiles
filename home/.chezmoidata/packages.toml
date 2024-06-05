@@ -67,4 +67,5 @@ work = [
 game = [
     "MyGames.GameCenter --ignore-security-hash",
 ]
+home = []
 
