@@ -4,7 +4,8 @@ games = "https://github.com/Calinou/scoop-games"
 main = "https://github.com/ScoopInstaller/Main"
 nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
 versions = "https://github.com/ScoopInstaller/Versions"
-rodrigost23_scoop-bucket="https://github.com/rodrigost23/scoop-bucket"
+rodrigost23_scoop-bucket= "https://github.com/rodrigost23/scoop-bucket"
+hoilc_scoop-lemon= "https://github.com/hoilc/scoop-lemon"
 
 [scoop]
 bootstrap = ["7zip", "git", "aria2", "gsudo", "wixtoolset", "innounp"]
@@ -29,7 +30,7 @@ base = [
     "yt-dlp",
     "waterfox",
     "floorp",
-    "betterbird",
+    "hoilc_scoop-lemon/betterbird",
     "notepadplusplus",
     "vscode",
     "carapace"
