@@ -31,7 +31,8 @@ base = [
     "floorp",
     "betterbird",
     "notepadplusplus",
-    "vscode"
+    "vscode",
+    "carapace"
 ]
 work = [
     "games/epic-games-launcher",
