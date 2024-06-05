@@ -6,6 +6,8 @@
 {{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" false -}}
 {{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" false -}}
 
+{{- $wipeScoop := promptBool "Wipe existing scoop packages?" false -}}
+
 {{- $configdir := "" }}
 {{- if eq .chezmoi.os "windows" }}
 {{-     $configdir = "~/AppData/Roaming" -}}
@@ -56,6 +58,8 @@ pager = "less -R"
     isWork = {{ $isWork | quote }}
     isHome = {{ $isHome | quote }}
     isGaming = {{ $isGaming | quote }}
+
+    wipeScoop = {{ $wipeScoop | quote }}
 [git]
     autoCommit = false
     autoPush = true

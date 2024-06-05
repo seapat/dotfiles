@@ -5,7 +5,7 @@
 
 {{ if ( or (.scoop.repositories) (gt (len .scoop.packages) 0)) -}}
 
-    {{ if ( promptBool "Wipe existing scoop packages?" false) -}}
+    {{ if .wipeScoop -}}
         scoop uninstall --all
     {{ end -}}
 
