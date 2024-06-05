@@ -1,63 +1,65 @@
+### WINDOWS ###
 {{- if eq .chezmoi.os "windows" -}}
 
-### WINDOWS ###
-### Scoop ###
+    ### Scoop ###
 
-{{ if ( or (.scoop.buckets) (gt 0 (len .scoop.work)) (gt 0 (len .scoop.home)) (gt 0 (len .scoop.gaming)) ) -}}
+    {{- if ( or (.scoop.buckets) (gt 0 (len .scoop.work)) (gt 0 (len .scoop.home)) (gt 0 (len .scoop.gaming)) ) -}}
 
-    # {{ if .Atomic -}}
-    #     scoop uninstall scoop -p
-    # {{ end -}}
+        # {{ if .Atomic -}}
+        #     scoop uninstall scoop -p
+        # {{ end -}}
 
-    # Install scoop if the command is not available
-    if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){
+        # Install scoop if the command is not available
+        if((Get-Command "scoop" -ErrorAction SilentlyContinue) -eq $null){
 
-        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-        Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-    }
-    {{ end -}}
-    scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} 
-    
-    # iterate over scoop packages in .chezmoidata/packages
-    {{ range $key, $value := .scoop.buckets -}}
-        scoop bucket add {{ $key | quote}} {{ $value | quote}}
-    {{ end -}}
+            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+            Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+        }
+        
+        scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} 
+        
+        # iterate over scoop packages in .chezmoidata/packages
+        {{ range $key, $value := .scoop.buckets -}}
+            scoop bucket add {{ $key | quote}} {{ $value | quote}}
+        {{ end -}}
 
-    scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
-    
-    # TODO: generate list of profiles in chezmoi.toml via prompts, then just loop over and install same-named sets from data
-    {{- if (and (.isWork) (gt (len .scoop.work) 0)) }}
-        scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
-    {{ end -}}
+        scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
+        
+        # TODO: generate list of profiles in chezmoi.toml via prompts, then just loop over and install same-named sets from data
+        {{- if (and (.isWork) (gt (len .scoop.work) 0)) }}
+            scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
+        {{ end -}}
 
-    {{- if (and (.isHome) (gt (len .scoop.home) 0))}}
-        scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
-    {{ end -}}
+        {{- if (and (.isHome) (gt (len .scoop.home) 0))}}
+            scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
+        {{ end -}}
 
-    {{- if  (and (.isGaming) (gt (len .scoop.gaming) 0)) }}
-        scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
-    {{ end -}}
+        {{- if  (and (.isGaming) (gt (len .scoop.gaming) 0)) }}
+            scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
+        {{ end -}}
 
-{{ end -}}
+    {{- end -}}
 
-### Winget ###
+    ### Winget ###
 
-{{ if (and (.isWork) (gt 0 (len .winget.work))) -}}
-{{  	range .winget.work -}}
+    {{- if (and (.isWork) (gt 0 (len .winget.work))) -}}
+        {{ range .winget.work -}}
             winget install -e --disable-interactivity {{ . | quote }}
-{{      end -}} 
-{{ end -}}
+        {{ end }} 
+    {{ end }}
 
-{{ if (and (.isHome) (gt 0 (len .winget.home))) -}}
-{{  	range .winget.home -}}
+    {{- if (and (.isHome) (gt 0 (len .winget.home))) -}}
+        {{ range .winget.home -}}
             winget install -e --disable-interactivity {{ . | quote }}
-{{      end -}} 
-{{ end -}}
+        {{ end }} 
+    {{ end }}
 
-{{ if (and (.isGaming) (gt 0 (len .winget.gaming))) -}}
-{{  	range .winget.gaming -}}
+    {{- if (and (.isGaming) (gt 0 (len .winget.gaming))) -}}
+        {{ range .winget.gaming -}}
             winget install -e --disable-interactivity {{ . | quote }}
-{{      end -}} 
+        {{ end }} 
+    {{ end }}
+
 {{ end -}}
 
 ### DARWIN ###

@@ -30,7 +30,8 @@ base = [
     "waterfox",
     "floorp",
     "betterbird",
-    "notepadplusplus"
+    "notepadplusplus",
+    "vscode"
 ]
 work = [
     "games/epic-games-launcher",
