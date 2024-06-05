@@ -29,7 +29,8 @@ base = [
     "yt-dlp",
     "waterfox",
     "floorp",
-    "betterbird"
+    "betterbird",
+    "notepadplusplus"
 ]
 work = [
     "games/epic-games-launcher",
