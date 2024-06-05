@@ -49,11 +49,11 @@ pager = "less -R"
     threads = {{ $cpuThreads }}
 
     {{- $isWork := promptBoolOnce . "isWork" "Install Work Packages" false -}}
-    isWork = {{ $isWork | quote -}}
+    isWork = {{ $isWork }}
     {{- $isHome := promptBoolOnce . "isHome" "Setup personal tools" false -}}
-    isHome = {{ $isHome | quote -}}
+    isHome = {{ $isHome }}
     {{- $isGaming := promptBoolOnce . "isGaming" "Install Game launchers and tools" false -}}
-    isGaming = {{ $isGaming | quote -}}
+    isGaming = {{ $isGaming }}
 [git]
     autoCommit = false
     autoPush = true
