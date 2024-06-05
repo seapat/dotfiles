@@ -33,7 +33,7 @@ base = [
     "hoilc_scoop-lemon/betterbird",
     "notepadplusplus",
     "vscode",
-    "carapace"
+    "carapace-bin"
 ]
 work = [
     "games/epic-games-launcher",
