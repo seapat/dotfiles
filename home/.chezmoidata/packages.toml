@@ -6,7 +6,11 @@ nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
 versions = "https://github.com/ScoopInstaller/Versions"
 
 [scoop]
-buckets = {"extras"="", "games"="" }
+buckets = {
+    "extras"="", 
+    "games"="", 
+    "rodrigost23_scoop-bucket"="https://github.com/rodrigost23/scoop-bucket"
+}
 bootstrap = ["7zip", "git", "aria2", "gsudo"]
 base = [
     "chezmoi",
@@ -36,9 +40,10 @@ base = [
 ]
 work = [
     "games/epic-games-launcher",
-    "extras/slack",
     # "extras/ripcord",
-    "main/glab"
+    "extras/slack",
+    "main/glab",
+    "rodrigost23_scoop-bucket/alienfx-tools"
 ]
 gaming = [
     "games/steam"

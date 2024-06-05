@@ -29,15 +29,15 @@
         
         # TODO: generate list of profiles in chezmoi.toml via prompts, then just loop over and install same-named sets from data
         {{- if (and (.isWork) (gt (len .scoop.work) 0)) }}
-            scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
+            gsudo scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
         {{- if (and (.isHome) (gt (len .scoop.home) 0))}}
-            scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
+            gsudo scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
         {{- if  (and (.isGaming) (gt (len .scoop.gaming) 0)) }}
-            scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
+            gsudo scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
     {{- end -}}
