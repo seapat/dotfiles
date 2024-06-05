@@ -33,7 +33,7 @@
         scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
-    {{- if  (and (data.isGaming) (gt (len .scoop.gaming) 0)) }}
+    {{- if  (and (.isGaming) (gt (len .scoop.gaming) 0)) }}
         scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
