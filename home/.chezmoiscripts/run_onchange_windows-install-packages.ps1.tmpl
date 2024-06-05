@@ -1,11 +1,17 @@
 # packages.toml hash: {{ include ".chezmoidata/packages.toml" | sha256sum }}
 
+
+
+
 ### WINDOWS ###
 {{- if eq .chezmoi.os "windows" -}}
 
     ### Scoop ###
 
     {{- if ( or (.scoop.buckets) (gt 0 (len .scoop.work)) (gt 0 (len .scoop.home)) (gt 0 (len .scoop.gaming)) ) -}}
+
+        $Env:SCOOP = $Env:Userprofile+"/scoop"
+        $Env:SCOOP_GLOBAL = $Env:ProgramData+"/scoop"
 
         {{ if .isAtomic -}}
             # scoop uninstall scoop
@@ -16,6 +22,9 @@
 
             Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
             Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+            sudo Add-MpPreference -ExclusionPath $Env:SCOOP_GLOBAL
+            sudo Add-MpPreference -ExclusionPath $Env:SCOOP
         }
 
         scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} 
@@ -28,15 +37,15 @@
         scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
         
         # TODO: generate list of profiles in chezmoi.toml via prompts, then just loop over and install same-named sets from data
-        {{- if (and (.isWork) (gt (len .scoop.work) 0)) }}
+        {{- if (and (.isWork) (gt (len 0 .scoop.work))) }}
             gsudo scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
-        {{- if (and (.isHome) (gt (len .scoop.home) 0))}}
+        {{- if (and (.isHome) (gt (len 0 .scoop.home)))}}
             gsudo scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
-        {{- if  (and (.isGaming) (gt (len .scoop.gaming) 0)) }}
+        {{- if  (and (.isGaming) (gt 0 (len .scoop.gaming))) }}
             gsudo scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
