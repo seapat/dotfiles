@@ -37,11 +37,11 @@
         scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
         
         # TODO: generate list of profiles in chezmoi.toml via prompts, then just loop over and install same-named sets from data
-        {{- if (and (.isWork) (gt (len 0 .scoop.work))) }}
+        {{- if (and (.isWork) (gt 0 (len 0 .scoop.work))) }}
             gsudo scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
-        {{- if (and (.isHome) (gt (len 0 .scoop.home)))}}
+        {{- if (and (.isHome) (gt 0 (len 0 .scoop.home)))}}
             gsudo scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
