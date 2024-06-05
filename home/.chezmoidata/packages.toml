@@ -60,8 +60,6 @@ personal = [
     # "clink-completions",
     # "clink-flex-prompt"
 
-]
-
 [winget]
 work = [
     "TeamDriveSystems.TeamDrive",
