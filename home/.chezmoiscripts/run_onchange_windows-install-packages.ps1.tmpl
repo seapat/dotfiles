@@ -7,7 +7,7 @@
 
     {{- if ( or (.scoop.buckets) (gt 0 (len .scoop.work)) (gt 0 (len .scoop.home)) (gt 0 (len .scoop.gaming)) ) -}}
 
-        {{ if .atomic -}}
+        {{ if .isAtomic -}}
             scoop uninstall scoop -p
         {{ end -}}
 
