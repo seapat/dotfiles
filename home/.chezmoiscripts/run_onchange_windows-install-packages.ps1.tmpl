@@ -3,7 +3,7 @@
 ### WINDOWS ###
 ### Scoop ###
 
-{{ if ( or (.scoop.repositories) (gt (len .scoop.packages) 0)) -}}
+{{ if ( or (.scoop.buckets) (gt 0 (len .scoop.work)) (gt 0 (len .scoop.home)) (gt 0 (len .scoop.gaming)) ) -}}
 
     {{ if .wipeScoop -}}
         scoop uninstall --all
@@ -19,21 +19,21 @@
     scoop install {{ range .scoop.bootstrap -}} {{ . | quote }} {{ end -}} 
     
     # iterate over scoop packages in .chezmoidata/packages
-    {{ range $key, $value := .scoop.repositories -}}
+    {{ range $key, $value := .scoop.buckets -}}
         scoop bucket add {{ $key | quote}} {{ $value | quote}}
     {{ end -}}
 
     scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
 
-    {{- if .isWork }}
+    {{- if (and (.data.isWork) (gt (len .scoop.work) 0)) }}
         scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
-    {{- if .isHome }}
+    {{- if (and (.data.isHome) (gt (len .scoop.home) 0))}}
         scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
-    {{- if .isGaming }}
+    {{- if  (and (.data.isGaming) (gt (len .scoop.gaming) 0)) }}
         scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
     {{ end -}}
 
@@ -41,8 +41,20 @@
 
 ### Winget ###
 
-{{ if (gt (len .winget.packages) 0) -}}
-{{  	range .winget.packages -}}
+{{ if (and (.data.isWork) (gt 0 (len .winget.work))) -}}
+{{  	range .winget.work -}}
+            winget install -e --disable-interactivity {{ . | quote }}
+{{      end -}} 
+{{ end -}}
+
+{{ if (and (.data.isHome) (gt 0 (len .winget.home))) -}}
+{{  	range .winget.home -}}
+            winget install -e --disable-interactivity {{ . | quote }}
+{{      end -}} 
+{{ end -}}
+
+{{ if (and (.data.isGaming) (gt 0 (len .winget.gaming))) -}}
+{{  	range .winget.gaming -}}
             winget install -e --disable-interactivity {{ . | quote }}
 {{      end -}} 
 {{ end -}}
