@@ -47,7 +47,7 @@ $env.GITHUB_ACCESS_TOKEN = (gh auth token)
 
 
 # TODO: replace Paths with something that is not hardcoded (perhaps setup xdg dirs on windows)
-let cache_path = $"/Users/($env.USERNAME)/.cache/nushell"
+let cache_path = $"($env.USERPROFILE)/.cache/nushell" # FIXME: XDG_CACHEDIR/nushell on linux
 mkdir ($cache_path)
 
 print "finished loading libs"
@@ -56,7 +56,6 @@ $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 carapace _carapace nushell | save --force $"($cache_path)/carapace.nu"
 
 if ((which starship | length) > 0) {
-    mkdir ~/.cache/starship
     starship init nu | save -f $"($cache_path)/starship.nu"
 } else {
     source ($nu.default-config-dir | path join 'prompt.nu')
