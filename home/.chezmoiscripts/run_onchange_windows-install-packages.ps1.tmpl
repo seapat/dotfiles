@@ -1,8 +1,5 @@
 # packages.toml hash: {{ include ".chezmoidata/packages.toml" | sha256sum }}
 
-
-
-
 ### WINDOWS ###
 {{- if eq .chezmoi.os "windows" -}}
 
@@ -37,35 +34,35 @@
         gsudo scoop install {{ range .scoop.base -}} {{ . | quote }} {{ end -}} 
         
         # TODO: generate list of profiles in chezmoi.toml via prompts, then just loop over and install same-named sets from data
-        {{- if (and (.isWork) (gt 0 (len .scoop.work))) }}
-            gsudo scoop install {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
+        {{- if (and (.isWork) (gt (len .scoop.work) 0)) }}
+            gsudo scoop install -s {{ range .scoop.work -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
-        {{- if (and (.isHome) (gt 0 (len .scoop.home)))}}
-            gsudo scoop install {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
+        {{- if (and (.isHome) (gt (len .scoop.home) 0))}}
+            gsudo scoop install -s {{ range .scoop.home -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
-        {{- if  (and (.isGaming) (gt 0 (len .scoop.gaming))) }}
-            gsudo scoop install {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
+        {{- if  (and (.isGaming) (gt (len .scoop.gaming) 0)) }}
+            gsudo scoop install -s {{ range .scoop.gaming -}} {{ . | quote }} {{ end -}} 
         {{ end -}}
 
     {{- end -}}
 
     ### Winget ###
 
-    {{- if (and (.isWork) (gt 0 (len .winget.work))) -}}
-        {{ range .winget.work -}}se
+    {{- if (and (.isWork) (gt (len .winget.work) 0)) -}}
+        {{ range .winget.work -}}
             winget install -e --disable-interactivity {{ . | quote }}
         {{ end }} 
     {{ end }}
 
-    {{- if (and (.isHome) (gt 0 (len .winget.home))) -}}
+    {{- if (and (.isHome) (gt (len .winget.home) 0)) -}}
         {{ range .winget.home -}}
             winget install -e --disable-interactivity {{ . | quote }}
         {{ end }} 
     {{ end }}
 
-    {{- if (and (.isGaming) (gt 0 (len .winget.gaming))) -}}
+    {{- if (and (.isGaming) (gt (len .winget.gaming) 0)) -}}
         {{ range .winget.gaming -}}
             winget install -e --disable-interactivity {{ . | quote }}
         {{ end }} 
