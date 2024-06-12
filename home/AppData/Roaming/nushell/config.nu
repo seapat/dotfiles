@@ -927,6 +927,8 @@ use completions/typst-completions.nu *
 use completions/tldr-completions.nu *
 use completions/nix-completions.nu *
 
+use vscode-completions
+
 # put content on system clipboard with `clip`
 source clip.nu
 
