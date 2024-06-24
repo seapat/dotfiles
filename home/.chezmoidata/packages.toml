@@ -6,6 +6,7 @@ nerd-fonts = "https://github.com/matthewjberger/scoop-nerd-fonts"
 versions = "https://github.com/ScoopInstaller/Versions"
 rodrigost23_scoop-bucket= "https://github.com/rodrigost23/scoop-bucket"
 hoilc_scoop-lemon= "https://github.com/hoilc/scoop-lemon"
+JourneyOver_scoop-buckets="https://github.com/JourneyOver/scoop-buckets"
 nonportable=""
 
 [scoop]
@@ -71,10 +72,10 @@ home = [
 
 [winget]
 work = [
-    "TeamDriveSystems.TeamDrive",
+    "TeamDriveSystems.TeamDrive"
 ]
 gaming = [
-    "MyGames.GameCenter --ignore-security-hash",
+    "MyGames.GameCenter --ignore-security-hash"
 ]
 home = []
 

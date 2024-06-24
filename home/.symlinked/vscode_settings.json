@@ -96,5 +96,6 @@
   "scm.repositories.sortOrder": "name",
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.highlightModifiedTabs": true,
-  "window.density.editorTabHeight": "compact"
+  "window.density.editorTabHeight": "compact",
+  "workbench.editor.alwaysShowEditorActions": true
 }
