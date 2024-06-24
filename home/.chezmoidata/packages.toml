@@ -10,7 +10,7 @@ JourneyOver_scoop-buckets="https://github.com/JourneyOver/scoop-buckets"
 nonportable=""
 
 [scoop]
-bootstrap = ["7zip", "git", "aria2", "gsudo", "wixtoolset", "innounp"]
+bootstrap = ["7zip", "git", "aria2", "gsudo", "wixtoolset", "innounp", "vcredist", ]
 base = [
     "chezmoi",
     "everything",
@@ -18,6 +18,11 @@ base = [
     "rga",
     "starship",
     "nu",
+	"pueue",
+    "carapace-bin",
+	
+	"rclone",
+	
     "pwsh",
     "mingw",
     "wezterm",
@@ -26,7 +31,10 @@ base = [
     "lazygit",
     "delta",
     "bat",
+    "rga",
+	"lsd",
     "sfsu",
+	
     "scoop-search",
     # "mpv",
     "nonportable/icaros-np",
@@ -43,7 +51,7 @@ work = [
     # "extras/ripcord",
     "extras/slack",
     "main/glab",
-    "rodrigost23_scoop-bucket/alienfx-tools"
+    "extras/sharpkeys"
 ]
 gaming = [
     "games/steam"
@@ -78,4 +86,3 @@ gaming = [
     "MyGames.GameCenter --ignore-security-hash"
 ]
 home = []
-
